@@ -17,3 +17,20 @@ alias gco='git checkout'
 alias gcb='git copy-branch-name'
 alias gb='git branch'
 alias gs='git status -sb' # upgrade your git if -sb breaks for you. it's fun.
+
+# my own git aliases
+alias gib='branch'
+alias gip='git branch --merged master | grep -v "master$" | xargs git branch -d'
+alias gis='git status -sb'
+alias gid='git diff'
+alias gids='git diff --staged'
+
+# pretty colors
+alias gl='git log --graph --pretty=format:'\''%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset'\'' --abbrev-commit'
+alias gil='git log --decorate --stat --graph --pretty=format:"%d %Cgreen%h%Creset (%ar - %Cred%an%Creset), %s%n"'
+alias gild='git log --decorate'
+
+# the following are dangerous operations
+# use only if you are a madman
+# i hate git pull, do the most dangerous thing quickly
+alias gupdate='git fetch origin master; git rebase origin/master'

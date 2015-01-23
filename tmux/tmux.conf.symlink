@@ -1,0 +1,22 @@
+set-option -g default-shell $SHELL
+# use my freaking system pasteboard
+# run brew install `reattach-to-user-namespace` beforehand
+set -gw default-command "reattach-to-user-namespace -l $SHELL"
+# open new windows in whatever that's not my home
+bind % split-window -h -c "#{pane_current_path}"
+bind '"' split-window -c "#{pane_current_path}"
+bind c new-window -c "#{pane_current_path}"
+bind z resize-pane -Z
+# bind a new prefix
+set -gw prefix2 '`'
+# Mouse mode
+set -g mode-mouse on
+set -g mouse-resize-pane on
+set -g mouse-select-pane on
+set -g mouse-select-window on
+# set vi style keys
+setw -g mode-keys vi
+bind-key -t vi-copy 'v' begin-selection
+bind-key -t vi-copy 'y' copy-selection
+# set title
+set-option -g set-titles on
