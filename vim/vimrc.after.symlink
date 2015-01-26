@@ -34,3 +34,8 @@ let g:ctrlp_custom_ignore = {
 \ 'dir':  '\.git$\|\.yardoc\|node_modules\|public\|bower_components\|dist\|build\|log\|tmp\|pages\|data$',
 \ 'file': '\.so$\|\.dat$|\.DS_Store$'
 \ }
+
+"add any local configs that need to be added, if they exist
+if filereadable(glob("~/.vimrc.local"))
+  source ~/.vimrc.local
+endif
