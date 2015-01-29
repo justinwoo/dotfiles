@@ -19,7 +19,7 @@ alias gb='git branch'
 alias gs='git status -sb' # upgrade your git if -sb breaks for you. it's fun.
 
 # my own git aliases
-alias gib='branch'
+alias gib='git branch -v'
 alias gip='git branch --merged master | grep -v "master$" | xargs git branch -d'
 alias gis='git status -sb'
 alias gid='git diff'
