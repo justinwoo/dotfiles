@@ -1,0 +1,27 @@
+'.source.js':
+  'console.log':
+    'prefix': 'log'
+    'body': 'console.log($1);'
+  'console.log variable':
+    'prefix': 'lov'
+    'body': 'console.log("$1: ", $1);'
+  'jshignore':
+    'prefix': 'jsh'
+    'body': '/* jshint ignore:start */\n$1\n/* jshint ignore:end */'
+  'map with anonymous function':
+    'prefix': 'map'
+    'body': 'map(function (${1:value}) {\n\t$2\n});'
+  'filter with anonymous function':
+    'prefix': 'filter'
+    'body': 'filter(function (${1:value}) {\n\t$2\n});'
+'.source.json':
+  '"key" : "object"':
+    'prefix': 'ko'
+    'body': '"${1:key}": {\n\t$2\n}'
+  '"key" : "value"':
+    'prefix': 'kv'
+    'body': '"${1:key}": "${2:value}"$3'
+'.text.html':
+  'script tag for resources':
+    'prefix': 'scr'
+    'body': '<script src="${1:url}"></script>'
