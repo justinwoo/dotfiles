@@ -1,12 +1,12 @@
 #!/bin/sh
 
-mkdir -p ~/code
+mkdir -p ~/Install
 
-if [[ ! -a ~/code/z ]]
+if [[ ! -a ~/Install/z ]]
 then
-  git clone https://github.com/rupa/z.git ~/code/z
-  chmod +x ~/code/z/z.sh
+  git clone https://github.com/rupa/z.git ~/Install/z
+  chmod +x ~/Install/z/z.sh
 else
-  cd ~/code/z
+  cd ~/Install/z
   git pull
 fi

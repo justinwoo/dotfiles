@@ -1,2 +1,2 @@
 # start up z
-. $HOME/code/z/z.sh
+. $HOME/Install/z/z.sh
