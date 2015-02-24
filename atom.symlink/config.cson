@@ -17,10 +17,6 @@
       "exception-reporting"
       "metrics"
     ]
-    themes: [
-      "unity-ui"
-      "glacier-syntax"
-    ]
     audioBeep: false
   "spell-check":
     grammars: [
@@ -33,3 +29,6 @@
   "release-notes":
     viewedVersion: "0.89.0"
   "go-plus": {}
+  react: {}
+  jshint:
+    supportLintingJsx: true
