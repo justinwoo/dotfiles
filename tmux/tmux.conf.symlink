@@ -49,8 +49,8 @@ set-option -g pane-border-bg default
 
 # Status
 set -g status-left ''
-set -g status-right '#[fg=yellow] %d #[fg=yellow]%b,#[fg=yellow] %Y #[fg=yellow]%R '
+set -g status-right '#[fg=black] %d %b, %Y %R '
 set -g status-right-length 100
-set -g status-bg default
+set -g status-bg white
 setw -g window-status-format '#[fg=black,bg=yellow] #I #[fg=black,bg=white,bold] #W '
 setw -g window-status-current-format '#[fg=black,bg=green] #I #[fg=black,bg=white] #W '
