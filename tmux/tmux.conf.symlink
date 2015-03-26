@@ -9,11 +9,8 @@ bind c new-window -c "#{pane_current_path}"
 bind z resize-pane -Z
 # bind a new prefix
 set -gw prefix2 '`'
-# Mouse mode
-set -g mode-mouse on
-set -g mouse-resize-pane on
-set -g mouse-select-pane on
-set -g mouse-select-window on
+# god i hate mouse mode turn it off
+set -g mode-mouse off
 # set vi style keys
 setw -g mode-keys vi
 bind-key -t vi-copy 'v' begin-selection
