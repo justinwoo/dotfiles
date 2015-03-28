@@ -17,7 +17,7 @@ alias gco='git checkout'
 alias gcb='git copy-branch-name'
 alias gb='git branch'
 alias gs='git status -sb' # upgrade your git if -sb breaks for you. it's fun.
-alias gicm='git checkout masater' # because this gets done so much and im lazy
+alias gicm='git checkout master' # because this gets done so much and im lazy
 
 # my own git aliases
 alias gib='git branch -v'
