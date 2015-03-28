@@ -17,6 +17,7 @@ alias gco='git checkout'
 alias gcb='git copy-branch-name'
 alias gb='git branch'
 alias gs='git status -sb' # upgrade your git if -sb breaks for you. it's fun.
+alias gicm='git checkout masater' # because this gets done so much and im lazy
 
 # my own git aliases
 alias gib='git branch -v'
@@ -33,4 +34,4 @@ alias gild='git log --decorate'
 # the following are dangerous operations
 # use only if you are a madman
 # i hate git pull, do the most dangerous thing quickly
-alias gupdate='git fetch origin master; git rebase origin/master'
+alias gupdate='git fetch origin master && git rebase origin/master'
