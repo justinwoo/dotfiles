@@ -17,7 +17,6 @@ alias gco='git checkout'
 alias gcb='git copy-branch-name'
 alias gb='git branch'
 alias gs='git status -sb' # upgrade your git if -sb breaks for you. it's fun.
-alias gicm='git checkout master' # because this gets done so much and im lazy
 
 # my own git aliases
 alias gib='git branch -v'
@@ -25,6 +24,9 @@ alias gip='git branch --merged master | grep -v "master$" | xargs git branch -d'
 alias gis='git status -sb'
 alias gid='git diff'
 alias gids='git diff --staged'
+alias gicm='git checkout master' # because this gets done so much and im lazy
+alias getlastcommit='git show --oneline | awk NR==1'
+alias glc='getlastcommit'
 
 # pretty colors
 alias gl='git log --graph --pretty=format:'\''%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset'\'' --abbrev-commit'
