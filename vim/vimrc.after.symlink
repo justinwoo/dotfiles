@@ -39,3 +39,5 @@ let g:ctrlp_custom_ignore = {
 if filereadable(glob("~/.vimrc.local"))
   source ~/.vimrc.local
 endif
+
+let g:jsx_ext_required = 0
