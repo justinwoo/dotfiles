@@ -3,12 +3,6 @@ path = require 'path'
 # background update interval by seconds
 update_interval = 60 * 10
 
-atom.workspaceView.eachEditorView (editorView) ->
-  editor = editorView.getEditor()
-  filepath = editor.getPath()
-  if path.extname(editor.getPath()) is '.md'
-    editor.setSoftWrap(true)
-
 # function (image_url: String)
 # takes url of an image to be set as the background image
 setBackground = (image_url) ->
