@@ -32,3 +32,6 @@
   react: {}
   jshint:
     supportLintingJsx: true
+  "bracket-matcher":
+    autocompleteSmartQuotes: false
+    autocompleteBrackets: false
