@@ -18,6 +18,12 @@ bind-key -t vi-copy 'y' copy-selection
 # set title
 set-option -g set-titles on
 
+# use mouse mode again i guess
+set -g mode-mouse on
+set -g mouse-resize-pane on
+set -g mouse-select-pane on
+set -g mouse-select-window on
+
 # take some of JaredCTaylor's tmux config
 set -sg escape-time 0
 set-option -g renumber-windows on
