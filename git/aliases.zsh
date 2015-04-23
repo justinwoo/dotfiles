@@ -27,6 +27,8 @@ alias gids='git diff --staged'
 alias gicm='git checkout master' # because this gets done so much and im lazy
 alias getlastcommit='git show --oneline | awk NR==1'
 alias glc='getlastcommit'
+alias push-current-branch-to-origin='git push -u origin $(git rev-parse --abbrev-ref HEAD)'
+alias gpo='push-current-branch-to-origin'
 
 # pretty colors
 alias gl='git log --graph --pretty=format:'\''%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset'\'' --abbrev-commit'
