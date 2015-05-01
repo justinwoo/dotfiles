@@ -1,0 +1,28 @@
+"make commands easier to input
+map ; :
+
+"reaching for esc is hard
+imap kj <Esc>
+
+"rebind ex mode to replay q macro
+map Q @q
+
+"map ' to \ since i dont use it either
+"i like having two keys bound to the same thing
+map ' \
+
+"make changing panes easier
+map <leader>o <C-W><C-W>
+map `o <C-W><C-W>
+
+"closing easier
+map <leader>q :q<cr>
+
+"make opening splits easy
+map <leader>v :vsplit<cr><C-W><C-W>
+map <leader>s :split<cr><C-W><C-W>
+
+"add any local configs that need to be added, if they exist
+if filereadable(glob("~/.vimrc.local"))
+  source ~/.vimrc.local
+endif
