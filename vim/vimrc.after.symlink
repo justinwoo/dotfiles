@@ -31,7 +31,7 @@ map <leader>s :split<cr><C-W><C-W>
 
 "make ctrl-p ignore better directories
 let g:ctrlp_custom_ignore = {
-\ 'dir':  '\.git$\|\.yardoc\|node_modules\|public\|bower_components\|dist\|build\|log\|tmp\|pages\|data$',
+\ 'dir':  '\.git$\|\.yardoc\|node_modules\|^public\|bower_components\|dist\|build\|log\|tmp\|pages\|data$',
 \ 'file': '\.so$\|\.dat$|\.DS_Store$'
 \ }
 

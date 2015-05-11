@@ -5,6 +5,6 @@ set columns=140
 ""set me some lines
 set lines=80
 ""set transparency
-set transparency=15
+set transparency=5
 ""set gui colors
 colors ir_black
