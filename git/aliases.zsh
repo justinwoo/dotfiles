@@ -19,6 +19,8 @@ alias gb='git branch'
 alias gs='git status -sb' # upgrade your git if -sb breaks for you. it's fun.
 
 # my own git aliases
+alias get-git-branch-name='git rev-parse --abbrev-ref HEAD'
+alias ggbn='get-git-branch-name'
 alias gib='git branch -v'
 alias gip='git branch --merged master | grep -v "master$" | xargs git branch -d'
 alias gis='git status -sb'
@@ -39,3 +41,5 @@ alias gild='git log --decorate'
 # use only if you are a madman
 # i hate git pull, do the most dangerous thing quickly
 alias gupdate='git fetch origin master && git rebase origin/master'
+# same thing for upstream branch
+alias gupstream='git fetch origin $(ggbn) && git rebase FETCH_HEAD'
