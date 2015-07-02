@@ -1,3 +1,3 @@
-easy_install SpoofMAC
+#easy_install SpoofMAC
 
-mkdir -p $WORKON_HOME
+#mkdir -p $WORKON_HOME
