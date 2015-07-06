@@ -7,4 +7,4 @@ set lines=80
 ""set transparency
 set transparency=5
 ""set gui colors
-colors ir_black
+colors molokai
