@@ -1,0 +1,23 @@
+;; theme
+(setq-default dotspacemacs-themes '(leuven zenburn))
+
+;; font settings
+(setq-default dotspacemacs-default-font '("Source Code Pro"
+                                          :size 15
+                                          :weight normal
+                                          :width normal
+                                          :powerline-scale 1.5))
+
+;; set the actual freakin font size
+(set-face-attribute 'default nil :height 150)
+
+;; post init crapk
+(defun dotspacemacs/config ()
+  ;; load up the terns
+  (add-to-list 'load-path "~/Install/tern/emacs/")
+  (autoload 'tern-mode "tern.el" nil t)
+  (add-hook 'js-mode-hook (lambda () (tern-mode t)))
+  (eval-after-load 'tern
+  '(progn
+      (require 'tern-auto-complete)
+      (tern-ac-setup))))
