@@ -153,12 +153,15 @@
 
 ;; post init crap
 (defun dotspacemacs/config ()
+  ;; colors
+  (setq-default dotspacemacs-themes '(zenburn))
+
   ;; load up the terns
-  ;; (add-to-list 'load-path "~/Install/tern/emacs/")
-  ;; (eval-after-load 'tern
-  ;;   '(progn
-  ;;      (require 'tern-auto-complete)
-  ;;      (tern-ac-setup)))
+  (add-hook 'js-mode-hook (lambda () (tern-mode t)))
+  (eval-after-load 'tern
+    '(progn
+       (require 'tern-auto-complete)
+       (tern-ac-setup)))
 
   ;; font settings
   (setq-default dotspacemacs-default-font '("Source Code Pro"
