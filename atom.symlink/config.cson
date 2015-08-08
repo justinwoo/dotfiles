@@ -1,8 +1,9 @@
 "*":
   editor:
-    fontFamily: "Menlo"
     showIndentGuide: true
     invisibles: {}
+    fontSize: 16
+    fontFamily: "Menlo"
   core:
     ignoredNames: [
       ".bundle"
@@ -18,6 +19,7 @@
       "metrics"
     ]
     audioBeep: false
+    excludeVcsIgnoredPaths: false
   "spell-check":
     grammars: [
       "text.plain"
