@@ -34,6 +34,7 @@
    '(f
      let-alist
      s
+     mo-git-blame
      clojure-mode
      haml-mode
      elm-mode)
@@ -178,6 +179,9 @@
 
   ;; make ; do :
   (define-key evil-normal-state-map (kbd ";") 'evil-ex)
+
+  ;; make Q do @q
+  (define-key evil-normal-state-map (kbd "Q") 'evil-execute-macro)
 
   ;; line nums
   (global-linum-mode t)
