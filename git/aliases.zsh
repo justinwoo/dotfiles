@@ -19,6 +19,7 @@ alias gb='git branch'
 alias gs='git status -sb' # upgrade your git if -sb breaks for you. it's fun.
 
 # my own git aliases
+alias gpp='git pull --prune'
 alias get-git-branch-name='git rev-parse --abbrev-ref HEAD'
 alias ggbn='get-git-branch-name'
 alias gib='git branch -v'
@@ -33,6 +34,8 @@ alias push-current-branch-to-origin='git push -u origin $(git rev-parse --abbrev
 alias gpo='push-current-branch-to-origin'
 alias hey-mom-i-fixed-it='echo fixed in $(ggbn): $(glc)'
 alias hmifi='hey-mom-i-fixed-it'
+alias delete-merged-branches='git delete-merged-branches'
+alias dmb='delete-merged-branches';
 
 # pretty colors
 alias gl='git log --graph --pretty=format:'\''%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset'\'' --abbrev-commit'
