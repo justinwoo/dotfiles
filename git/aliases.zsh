@@ -48,3 +48,6 @@ alias gild='git log --decorate'
 alias gupdate='git fetch origin master && git rebase origin/master'
 # same thing for upstream branch
 alias gupstream='git fetch origin $(ggbn) && git rebase FETCH_HEAD'
+# update children
+alias gpullallchildren='gls -d */ | xargs -P10 -I{} git -C {} pull origin master'
+alias gpac='gpullallchildren'
