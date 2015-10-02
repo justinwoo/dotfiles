@@ -19,7 +19,7 @@ set -g prefix '`'
 bind-key ` send-prefix
 # even better, toggle that shit off
 bind 'C-\' set-option -g prefix 'C-\'
-bind 'C-S-\' set-option -g prefix '`'
+bind 'C-]' set-option -g prefix '`'
 
 # set vi style keys
 setw -g mode-keys vi
