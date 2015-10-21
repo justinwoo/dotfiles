@@ -2,7 +2,7 @@
   editor:
     showIndentGuide: true
     invisibles: {}
-    fontSize: 16
+    fontSize: 18
     fontFamily: "Menlo"
   core:
     ignoredNames: [
@@ -20,6 +20,10 @@
     ]
     audioBeep: false
     excludeVcsIgnoredPaths: false
+    themes: [
+      "one-dark-ui"
+      "base16-tomorrow-dark-theme"
+    ]
   "spell-check":
     grammars: [
       "text.plain"
@@ -37,3 +41,4 @@
   "bracket-matcher":
     autocompleteSmartQuotes: false
     autocompleteBrackets: false
+  "one-dark-ui": {}
