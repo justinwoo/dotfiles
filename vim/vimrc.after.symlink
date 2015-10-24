@@ -2,6 +2,10 @@
 ""note to self: this is still totally broken in terminal
 set clipboard=unnamed
 
+""stfu vim, i don't care if i 'crashed' or have multiple instances
+""it's 2015 god damn it, editing shit simultaneously and corrupting files is normal
+set shortmess+=A
+
 ""set term colors
 colors molokai
 
