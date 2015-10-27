@@ -26,21 +26,21 @@ values."
      ;; auto-completion
      ;; better-defaults
      emacs-lisp
-     ;; git
-     ;; markdown
+     git
+     markdown
      ;; org
      ;; (shell :variables
      ;;        shell-default-height 30
      ;;        shell-default-position 'bottom)
      ;; spell-checking
      ;; syntax-checking
-     ;; version-control
+     version-control
      )
    ;; List of additional packages that will be installed without being
    ;; wrapped in a layer. If you need some configuration for these
    ;; packages then consider to create a layer, you can also put the
    ;; configuration in `dotspacemacs/config'.
-   dotspacemacs-additional-packages '()
+   dotspacemacs-additional-packages '(s)
    ;; A list of packages and/or extensions that will not be install and loaded.
    dotspacemacs-excluded-packages '()
    ;; If non-nil spacemacs will delete any orphan packages, i.e. packages that
@@ -198,6 +198,43 @@ user code."
   "Configuration function for user code.
  This function is called at the very end of Spacemacs initialization after
 layers configuration. You are free to put any user code."
+  ;; font settings
+  (setq-default dotspacemacs-default-font '("Source Code Pro"
+                                            :size 15
+                                            :weight normal
+                                            :width normal
+                                            :powerline-scale 1.5))
+
+  ;; set the actual freakin font size
+  (set-face-attribute 'default nil :height 150)
+
+  ;; make ; do :
+  (define-key evil-normal-state-map (kbd ";") 'evil-ex)
+
+  ;; make Q do @q
+  (define-key evil-normal-state-map (kbd "Q") 'evil-execute-macro)
+
+  ;; line nums
+  (global-linum-mode t)
+
+  ;; some actual kj handling for insert state
+  (evil-define-command cofi/maybe-exit ()
+    :repeat change
+    (interactive)
+    (let ((modified (buffer-modified-p)))
+      (insert "k")
+      (let ((evt (read-event (format "Insert %c to exit insert state" ?j)
+                             nil 0.5)))
+        (cond
+         ((null evt) (message ""))
+         ((and (integerp evt) (char-equal evt ?j))
+          (delete-char -1)
+          (set-buffer-modified-p modified)
+          (push 'escape unread-command-events))
+         (t (setq unread-command-events (append unread-command-events
+                                                (list evt))))))))
+
+  (define-key evil-insert-state-map "k" #'cofi/maybe-exit)
 )
 
 ;; Do not write anything past this comment. This is where Emacs will
