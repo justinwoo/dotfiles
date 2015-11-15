@@ -23,11 +23,12 @@ values."
      ;; Uncomment some layer names and press <SPC f e R> (Vim style) or
      ;; <M-m f e R> (Emacs style) to install them.
      ;; ----------------------------------------------------------------
-     ;; auto-completion
-     ;; better-defaults
+     auto-completion
+     better-defaults
      emacs-lisp
      git
      markdown
+     ws-butler
      ;; org
      ;; (shell :variables
      ;;        shell-default-height 30
@@ -235,6 +236,15 @@ layers configuration. You are free to put any user code."
                                                 (list evt))))))))
 
   (define-key evil-insert-state-map "k" #'cofi/maybe-exit)
+
+  ;; wtf who doesn't use 2-space JS indent
+  (setq js-indent-level 2)
+
+  ;; handlebars is web mode?
+  (add-to-list 'auto-mode-alist '("\\.foo\\'" . foo-mode))
+
+  ;; web mode for shit
+  (add-to-list 'auto-mode-alist '("\\.hbs?\\'" . web-mode))
 )
 
 ;; Do not write anything past this comment. This is where Emacs will
