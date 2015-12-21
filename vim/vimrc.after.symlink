@@ -37,8 +37,8 @@ map <leader>u :GundoToggle<cr><C-W><C-W>
 
 "make ctrl-p ignore better directories
 let g:ctrlp_custom_ignore = {
-\ 'dir':  '\.git$\|\.yardoc\|node_modules\|^public\|bower_components\|dist\|build\|log\/\|tmp\|^pages\|data$',
-\ 'file': '\.so$\|\.dat$|\.DS_Store$'
+\ 'dir':  '\.git$\|\.yardoc\|node_modules\|^public\|bower_components\|dist\|build\|log\/\|tmp\|data$',
+\ 'file': '\.gz$\|\.so$\|\.dat$\|\.DS_Store$'
 \ }
 
 "add any local configs that need to be added, if they exist
