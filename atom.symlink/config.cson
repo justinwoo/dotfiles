@@ -1,44 +1,9 @@
 "*":
-  editor:
-    showIndentGuide: true
-    invisibles: {}
-    fontSize: 18
-    fontFamily: "Menlo"
-  core:
-    ignoredNames: [
-      ".bundle"
-      ".git"
-      "log"
-      "repositories"
-      "tmp"
-      "vendor"
-    ]
-    disabledPackages: [
-      "background-tips"
-      "exception-reporting"
-      "metrics"
-    ]
-    audioBeep: false
-    excludeVcsIgnoredPaths: false
-    themes: [
-      "one-dark-ui"
-      "base16-tomorrow-dark-theme"
-    ]
-  "spell-check":
-    grammars: [
-      "text.plain"
-      "source.gfm"
-      "text.git-commit"
-    ]
+  "exception-reporting":
+    userId: "2a02be6a-d91a-998e-0abe-bbe3d07e3dd4"
   welcome:
     showOnStartup: false
-  "release-notes":
-    viewedVersion: "0.89.0"
-  "go-plus": {}
-  react: {}
-  jshint:
-    supportLintingJsx: true
-  "bracket-matcher":
-    autocompleteSmartQuotes: false
-    autocompleteBrackets: false
-  "one-dark-ui": {}
+  "git-plus": {}
+  core: {}
+  editor:
+    invisibles: {}

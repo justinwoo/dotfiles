@@ -1,0 +1,65 @@
+# Workspace
+# -------------------------
+# [other package] need to install cursor-history and paner
+'atom-workspace:not([mini])':
+  'ctrl-i': 'cursor-history:next'
+  'ctrl-o': 'cursor-history:prev'
+  'ctrl-cmd-i': 'cursor-history:next-within-editor'
+  'ctrl-cmd-o': 'cursor-history:prev-within-editor'
+  # Paner's split command sync scroll ratio when split vertically, horizontally.
+  # So you won't get lost where cursor is?
+  'cmd-2': 'paner:split-down'  # I don't use ctrl-w s.
+  'cmd-3': 'paner:split-right' # I don't use ctrl-w v.
+
+# All mode except insert
+# -------------------------
+'atom-text-editor.vim-mode-plus:not(.insert-mode)':
+  # overwrite default 'vim-mode-plus:move-to-last-nonblank-character-of-line-and-down' which I never use.
+  'g _': 'vim-mode-plus:snake-case'
+
+# Normal, Visual
+# -------------------------
+'atom-text-editor.vim-mode-plus.normal-mode, atom-text-editor.vim-mode-plus.visual-mode':
+  '_': 'vim-mode-plus:replace-with-register'
+
+# Operator pending, Visual
+# -------------------------
+'atom-text-editor.vim-mode-plus.operator-pending-mode, atom-text-editor.vim-mode-plus.visual-mode':
+  # 'is' is mapped to inner-any-pair by default(so you can use `vis`, `cis` etc).
+  # By mapping `;` here, I can choose inner-any-pair with like `c;`, `v;`.
+  # And more, I can expand selection across any-pair with `vi;;;;` or `va;;;;`.
+  ';': 'vim-mode-plus:inner-any-pair'
+  # I overwrite vim-mode-plus:inner-single-quote here so that I can select any Quoted pair with single quote.
+  "'": 'vim-mode-plus:inner-any-quote'
+
+# Normal
+# -------------------------
+'atom-text-editor.vim-mode-plus.normal-mode':
+  'S': 'vim-mode-plus:surround-word'
+  'd s': 'vim-mode-plus:delete-surround-any-pair'
+  'c s': 'vim-mode-plus:change-surround-any-pair'
+
+  # [other package] need to install open-this
+  'g f': 'open-this:here'
+  'ctrl-w f': 'open-this:split-down'
+  'ctrl-w F': 'open-this:split-right' # not exists in pure Vim
+
+  # [othe package] To maximize(zen-mode) current pane like ZoomWin vim.
+  'cmd-enter': 'paner:maximize'
+
+# cc to change cursor word instead of ciw
+'atom-text-editor.vim-mode-plus.operator-pending-mode':
+  'c': 'vim-mode-plus:inner-word'
+
+# Other
+# -------------------------
+# when you want to search `[`, `]`, `;`, input `ctrl-v` following these keys.
+'atom-text-editor.vim-mode-plus-search':
+  '[': 'vim-mode-plus:search-visit-prev'
+  ']': 'vim-mode-plus:search-visit-next'
+  ';': 'vim-mode-plus:search-confirm'
+  'space': 'vim-mode-plus:search-insert-wild-pattern'
+  'ctrl-g': 'vim-mode-plus:search-cancel'
+
+'atom-text-editor.vim-mode-plus-input':
+  'ctrl-g': 'vim-mode-plus:input-cancel'
