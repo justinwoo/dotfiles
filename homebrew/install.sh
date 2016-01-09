@@ -18,10 +18,13 @@ then
   then
     ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/linuxbrew/go/install)"
   fi
-  
+
 fi
 
-# Install homebrew packages
-brew install grc coreutils spark
+echo 'time to brew install'
+# Install homebrew packages - what the hell, default is so stupid
+# brew install grc coreutils spark
+brew install $(tr '\n' ' ' < $ZSH/homebrew/packages)
+echo 'done'
 
 exit 0
