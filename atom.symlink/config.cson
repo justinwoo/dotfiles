@@ -4,6 +4,26 @@
   welcome:
     showOnStartup: false
   "git-plus": {}
-  core: {}
+  core:
+    disabledPackages: [
+      "tree-view"
+    ]
   editor:
     invisibles: {}
+  "file-watcher":
+    promptWhenFileHasChangedOnDisk: false
+  nuclide:
+    "nuclide-home":
+      showHome: false
+    "nuclide-arcanist": {}
+    "nuclide-buck-files": {}
+    "nuclide-debugger-hhvm": {}
+    "nuclide-flow":
+      enableStructuredTypeHints: true
+    "nuclide-format-js": {}
+    "nuclide-health": {}
+    "nuclide-ocaml": {}
+    "nuclide-blame-provider-hg": {}
+  react:
+    enabledForAllJavascriptFiles: true
+  "language-babel": {}
