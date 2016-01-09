@@ -1,0 +1,10 @@
+[ui]
+username = Justin Woo <moomoowoo@gmail.com>
+ignore = ~/.hgignore
+editor = vim
+
+[diff]
+git = 1
+unified = 8
+showfunc = True
+nodates = True
