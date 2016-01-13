@@ -4,7 +4,13 @@
     'body': 'console.log($1);'
   'console.log variable':
     'prefix': 'lov'
-    'body': 'console.log("$1: ", $1);'
+    'body': 'console.log(\'$1\', $1);'
+  'flowtype annotation':
+    'prefix': 'flow'
+    'body': '/* @flow */'
+  'jasmine test':
+    'prefix': 'it'
+    'body': 'it(\'$1\', () => {\n\t$2\n});'
 '.source.json':
   '"key" : "object"':
     'prefix': 'ko'

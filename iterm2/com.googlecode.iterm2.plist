@@ -229,7 +229,7 @@
 	<key>NSWindow Frame Preferences</key>
 	<string>326 296 924 485 0 0 1920 1177 </string>
 	<key>NSWindow Frame iTerm Window 0</key>
-	<string>3 88 1913 1082 0 0 1920 1177 </string>
+	<string>3 56 1914 1119 0 0 1920 1177 </string>
 	<key>New Bookmarks</key>
 	<array>
 		<dict>
@@ -390,11 +390,11 @@
 			<key>Background Color</key>
 			<dict>
 				<key>Blue Component</key>
-				<real>0.060732308775186539</real>
+				<real>0.079567305743694305</real>
 				<key>Green Component</key>
-				<real>0.031698465347290039</real>
+				<real>0.018533069640398026</real>
 				<key>Red Component</key>
-				<real>0.097195513546466827</real>
+				<real>0.013590903952717781</real>
 			</dict>
 			<key>Background Image Is Tiled</key>
 			<false/>
@@ -970,7 +970,7 @@
 	<key>NoSyncTimeOfLastPromo</key>
 	<real>453222735.54150301</real>
 	<key>NoSyncTimeOfLastPromoDownload</key>
-	<real>471347771.00991201</real>
+	<real>474117546.56624597</real>
 	<key>OnlyWhenMoreTabs</key>
 	<true/>
 	<key>OpenArrangementAtStartup</key>
@@ -1037,7 +1037,7 @@
 	<key>SUHasLaunchedBefore</key>
 	<true/>
 	<key>SULastCheckTime</key>
-	<date>2015-12-09T09:56:06Z</date>
+	<date>2016-01-10T11:19:01Z</date>
 	<key>SavePasteHistory</key>
 	<false/>
 	<key>ShowBookmarkName</key>
