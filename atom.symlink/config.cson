@@ -1,29 +1,34 @@
 "*":
-  "exception-reporting":
-    userId: "2a02be6a-d91a-998e-0abe-bbe3d07e3dd4"
-  welcome:
-    showOnStartup: false
-  "git-plus": {}
+  blame:
+    dateFormat: "MM/DD/YY"
   core:
     disabledPackages: [
       "tree-view"
     ]
+    packagesWithKeymapsDisabled: [
+      "blame"
+    ]
   editor:
     invisibles: {}
+  "exception-reporting":
+    userId: "2a02be6a-d91a-998e-0abe-bbe3d07e3dd4"
   "file-watcher":
     promptWhenFileHasChangedOnDisk: false
+  "git-plus": {}
+  "language-babel": {}
   nuclide:
-    "nuclide-home":
-      showHome: false
     "nuclide-arcanist": {}
+    "nuclide-blame-provider-hg": {}
     "nuclide-buck-files": {}
     "nuclide-debugger-hhvm": {}
     "nuclide-flow":
       enableStructuredTypeHints: true
     "nuclide-format-js": {}
     "nuclide-health": {}
+    "nuclide-home":
+      showHome: false
     "nuclide-ocaml": {}
-    "nuclide-blame-provider-hg": {}
   react:
     enabledForAllJavascriptFiles: true
-  "language-babel": {}
+  welcome:
+    showOnStartup: false
