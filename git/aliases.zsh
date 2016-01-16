@@ -38,6 +38,7 @@ alias hey-mom-i-fixed-it='echo fixed in $(ggbn): $(glc)'
 alias hmifi='hey-mom-i-fixed-it'
 alias delete-merged-branches='git delete-merged-branches'
 alias dmb='delete-merged-branches';
+alias gcane='git commit --amend --no-edit'
 
 # pretty colors
 alias gl='git log --graph --pretty=format:'\''%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset'\'' --abbrev-commit'
