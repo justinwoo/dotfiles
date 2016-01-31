@@ -10,6 +10,7 @@
     ]
   editor:
     invisibles: {}
+    preferredLineLength: 120
   "exception-reporting":
     userId: "2a02be6a-d91a-998e-0abe-bbe3d07e3dd4"
   "file-watcher":
@@ -17,17 +18,21 @@
   "git-plus": {}
   "language-babel": {}
   nuclide:
+    installRecommendedPackages: true
     "nuclide-arcanist": {}
     "nuclide-blame-provider-hg": {}
     "nuclide-buck-files": {}
     "nuclide-debugger-hhvm": {}
+    "nuclide-diagnostics-store": {}
     "nuclide-flow":
+      diagnosticsOnFly: true
       enableStructuredTypeHints: true
     "nuclide-format-js": {}
     "nuclide-health": {}
     "nuclide-home":
       showHome: false
     "nuclide-ocaml": {}
+    "nuclide-output": {}
   react:
     enabledForAllJavascriptFiles: true
   welcome:
