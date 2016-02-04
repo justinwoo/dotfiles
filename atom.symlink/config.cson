@@ -9,6 +9,7 @@
       "blame"
     ]
   editor:
+    fontFamily: "\"Fira Code\""
     invisibles: {}
     preferredLineLength: 120
   "exception-reporting":
