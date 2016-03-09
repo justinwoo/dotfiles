@@ -19,17 +19,22 @@
   "git-plus": {}
   "ide-purescript": {}
   "language-babel": {}
+  "language-elm": {}
+  linter:
+    errorPanelHeight: 277
   nuclide:
     installRecommendedPackages: true
     "nuclide-arcanist": {}
     "nuclide-blame-provider-hg": {}
     "nuclide-buck-files": {}
     "nuclide-debugger-hhvm": {}
-    "nuclide-diagnostics-store": {}
+    "nuclide-diagnostics-store":
+      consumeLegacyLinters: false
     "nuclide-flow":
       diagnosticsOnFly: true
       enableStructuredTypeHints: true
     "nuclide-format-js": {}
+    "nuclide-hack": {}
     "nuclide-health": {}
     "nuclide-home":
       showHome: false
@@ -39,6 +44,9 @@
     enabledForAllJavascriptFiles: true
   welcome:
     showOnStartup: false
+".elm.source":
+  editor:
+    preferredLineLength: 120
 ".psci.purescript.source":
   editor:
     preferredLineLength: 120

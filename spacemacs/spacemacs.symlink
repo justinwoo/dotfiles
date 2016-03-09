@@ -36,6 +36,9 @@ values."
      ;; spell-checking
      ;; syntax-checking
      version-control
+
+     ;; some layers?
+     haskell
      )
    ;; List of additional packages that will be installed without being
    ;; wrapped in a layer. If you need some configuration for these
@@ -200,7 +203,7 @@ user code."
  This function is called at the very end of Spacemacs initialization after
 layers configuration. You are free to put any user code."
   ;; font settings
-  (setq-default dotspacemacs-default-font '("Source Code Pro"
+  (setq-default dotspacemacs-default-font '("Fira Code"
                                             :size 15
                                             :weight normal
                                             :width normal
@@ -214,9 +217,6 @@ layers configuration. You are free to put any user code."
 
   ;; make Q do @q
   (define-key evil-normal-state-map (kbd "Q") 'evil-execute-macro)
-
-  ;; line nums
-  (global-linum-mode t)
 
   ;; some actual kj handling for insert state
   (evil-define-command cofi/maybe-exit ()

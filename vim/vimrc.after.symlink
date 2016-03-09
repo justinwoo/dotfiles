@@ -7,7 +7,7 @@ set clipboard=unnamed
 set shortmess+=A
 
 ""set term colors
-colors molokai
+colors elflord
 
 "make commands easier to input
 map ; :
