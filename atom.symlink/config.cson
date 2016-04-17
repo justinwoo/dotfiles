@@ -2,6 +2,18 @@
   blame:
     dateFormat: "MM/DD/YY"
   core:
+    customFileTypes:
+      "source.ini": [
+        ".buckconfig"
+        ".flowconfig"
+      ]
+      "source.json": [
+        ".arcconfig"
+        "BUCK.autodeps"
+      ]
+      "source.python": [
+        "BUCK"
+      ]
     disabledPackages: [
       "tree-view"
     ]
@@ -19,9 +31,10 @@
   "git-plus": {}
   "ide-purescript": {}
   "language-babel": {}
-  "language-elm": {}
+  "language-elm":
+    elmOraclePath: "/Users/jwoo/.npm/bin/elm-oracle"
   linter:
-    errorPanelHeight: 277
+    errorPanelHeight: 212
   nuclide:
     installRecommendedPackages: true
     "nuclide-arcanist": {}
