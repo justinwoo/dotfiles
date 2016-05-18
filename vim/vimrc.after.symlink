@@ -47,3 +47,4 @@ if filereadable(glob("~/.vimrc.local"))
 endif
 
 let g:jsx_ext_required = 0
+let g:psc_ide_log_level = 2

@@ -20,21 +20,28 @@
     packagesWithKeymapsDisabled: [
       "blame"
     ]
+    themes: [
+      "one-dark-ui"
+      "atom-material-syntax"
+    ]
   editor:
     fontFamily: "\"Fira Code\""
+    fontSize: 16
     invisibles: {}
     preferredLineLength: 120
+    showIndentGuide: true
   "exception-reporting":
     userId: "2a02be6a-d91a-998e-0abe-bbe3d07e3dd4"
   "file-watcher":
     promptWhenFileHasChangedOnDisk: false
   "git-plus": {}
   "ide-purescript": {}
-  "language-babel": {}
+  "language-babel":
+    createTranspiledCode: true
   "language-elm":
     elmOraclePath: "/Users/jwoo/.npm/bin/elm-oracle"
   linter:
-    errorPanelHeight: 212
+    errorPanelHeight: 84
   nuclide:
     installRecommendedPackages: true
     "nuclide-arcanist": {}
@@ -57,9 +64,18 @@
     enabledForAllJavascriptFiles: true
   welcome:
     showOnStartup: false
+".babel.regexp.source":
+  editor:
+    preferredLineLength: 120
 ".elm.source":
   editor:
     preferredLineLength: 120
+".js.jsx.source":
+  editor:
+    preferredLineLength: 120
 ".psci.purescript.source":
+  editor:
+    preferredLineLength: 120
+".purescript.source":
   editor:
     preferredLineLength: 120
