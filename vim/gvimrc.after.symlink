@@ -1,10 +1,6 @@
 ""set my font size to be legible and glorious ligatures
 set macligatures
 set guifont=Fira\ Code:h16
-""set me some columns
-set columns=140
-""set me some lines
-set lines=80
 ""set transparency
 set transparency=5
 ""set gui colors

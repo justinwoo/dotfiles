@@ -64,9 +64,6 @@
     enabledForAllJavascriptFiles: true
   welcome:
     showOnStartup: false
-".babel.regexp.source":
-  editor:
-    preferredLineLength: 120
 ".elm.source":
   editor:
     preferredLineLength: 120

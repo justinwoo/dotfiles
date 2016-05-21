@@ -29,6 +29,9 @@ map `o <C-W><C-W>
 "closing easier
 map <leader>q :q<cr>
 
+"want some familiar keybindings
+map <leader>n :NERDTreeTabsToggle
+
 "make opening splits easy
 map <leader>v :vsplit<cr><C-W><C-W>
 map <leader>s :split<cr><C-W><C-W>
@@ -48,3 +51,20 @@ endif
 
 let g:jsx_ext_required = 0
 let g:psc_ide_log_level = 2
+
+"some shit required by Reason
+
+if !empty(system('which opam'))
+  " Merlin plugin
+  let s:ocamlmerlin=substitute(system('opam config var share'),'\n$','','') . "/merlin"
+  execute "set rtp+=".s:ocamlmerlin."/vim"
+  execute "set rtp+=".s:ocamlmerlin."/vimbufsync"
+  let g:syntastic_ocaml_checkers=['merlin']
+
+  " Reason plugin which uses Merlin
+  let s:reasondir=substitute(system('opam config var share'),'\n$','','') . "/reason"
+  execute "set rtp+=".s:reasondir."/editorSupport/VimReason"
+  let g:syntastic_reason_checkers=['merlin']
+else
+
+endif
