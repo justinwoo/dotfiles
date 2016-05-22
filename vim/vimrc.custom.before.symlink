@@ -1,2 +1,0 @@
-"configure TS-vim?
-let g:typescript_compiler_options = 'target ES5'

@@ -1,7 +1,0 @@
-""set my font size to be legible and glorious ligatures
-set macligatures
-set guifont=Fira\ Code:h16
-""set transparency
-set transparency=5
-""set gui colors
-colors molokai
