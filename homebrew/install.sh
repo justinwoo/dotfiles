@@ -25,6 +25,8 @@ echo 'time to brew install'
 # Install homebrew packages - what the hell, default is so stupid
 # brew install grc coreutils spark
 brew install $(tr '\n' ' ' < $ZSH/homebrew/packages)
+brew install macvim --with-cscope --python --HEAD
+brew linkapps
 echo 'done'
 
 exit 0
