@@ -20,10 +20,6 @@
     packagesWithKeymapsDisabled: [
       "blame"
     ]
-    themes: [
-      "one-dark-ui"
-      "atom-material-syntax"
-    ]
   editor:
     fontFamily: "\"Fira Code\""
     fontSize: 16
