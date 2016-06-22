@@ -123,6 +123,9 @@
   ;; wtf who doesn't use 2-space JS indent
   (setq js-indent-level 2)
 
+  ;; holy fucking hell package rot
+  (setq ghc-report-errors nil)
+
   ;; handlebars is web mode?
   (add-to-list 'auto-mode-alist '("\\.foo\\'" . foo-mode))
 
