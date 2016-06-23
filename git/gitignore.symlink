@@ -6,3 +6,5 @@
 .ackrc
 npm-debug.log
 TAGS
+.\#*
+dump.rdb
