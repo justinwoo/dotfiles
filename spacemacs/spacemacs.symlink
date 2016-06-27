@@ -16,6 +16,8 @@
      ws-butler
      org
      elm
+     purescript
+     elixir
      (shell :variables
              shell-default-height 30
              shell-default-position 'bottom
@@ -70,7 +72,7 @@
    dotspacemacs-loading-progress-bar nil
    dotspacemacs-fullscreen-at-startup nil
    dotspacemacs-fullscreen-use-non-native nil
-   dotspacemacs-maximized-at-startup nil
+   dotspacemacs-maximized-at-startup t
    dotspacemacs-active-transparency 90
    dotspacemacs-inactive-transparency 90
    dotspacemacs-smooth-scrolling nil
@@ -82,8 +84,6 @@
    ))
 
 (defun dotspacemacs/user-init ()
-  (add-to-list 'load-path "/Users/jwoo/Code/purescript-mode")
-  (require 'purescript-mode-autoloads)
   )
 
 (defun dotspacemacs/user-config ()
