@@ -1,3 +1,5 @@
+zsh
+zsh-completions
 grc
 coreutils
 spark
@@ -7,8 +9,10 @@ liquidprompt
 mercurial
 watchman
 wget
-opam
 node
 ag
 ack
 tmux
+haskell-stack
+postgres
+redis
