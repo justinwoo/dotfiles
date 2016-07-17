@@ -17,17 +17,15 @@
      org
      elm
      purescript
-     elixir
+     haskell
+     ;; elixir
      (shell :variables
              shell-default-height 30
              shell-default-position 'bottom
-             shell-default-term-shell "bin/zsh")
+             shell-default-term-shell "/usr/local/bin/zsh")
      syntax-checking
      version-control
      html
-
-     ;; some layers?
-     haskell
      )
    dotspacemacs-additional-packages '()
    dotspacemacs-excluded-packages '()
