@@ -14,5 +14,6 @@ ag
 ack
 tmux
 haskell-stack
+ruby
 postgres
 redis
