@@ -1,1 +1,5 @@
 call janus#disable_plugin('vim-snipmate')
+
+if filereadable(glob("~/.dotfiles/vim/neocomplete-config.vimrc"))
+  source ~/.dotfiles/vim/neocomplete-config.vimrc
+endif
