@@ -15,7 +15,7 @@
         "BUCK"
       ]
     disabledPackages: [
-      "nuclide"
+      "tree-view"
     ]
     packagesWithKeymapsDisabled: [
       "blame"
@@ -43,7 +43,6 @@
     "nuclide-arcanist": {}
     "nuclide-blame-provider-hg": {}
     "nuclide-buck-files": {}
-    "nuclide-debugger-hhvm": {}
     "nuclide-diagnostics-store":
       consumeLegacyLinters: false
     "nuclide-flow":

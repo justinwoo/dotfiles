@@ -1,0 +1,58 @@
+""use the system clipboard
+""note to self: this is still totally broken in terminal
+set clipboard=unnamed
+
+""stfu vim, i don't care if i 'crashed' or have multiple instances
+""it's 2015 god damn it, editing shit simultaneously and corrupting files is normal
+set shortmess+=A
+
+""show me the numbers
+set number
+
+"make commands easier to input
+map ; :
+
+"reaching for esc is hard
+imap kj <Esc>
+
+"rebind ex mode to replay q macro
+map Q @q
+
+"map ' to \ since i dont use it either
+"i like having two keys bound to the same thing
+map ' \
+
+"make changing panes easier
+map <leader>o <C-W><C-W>
+map `o <C-W><C-W>
+
+"closing easier
+map <leader>q :q<cr>
+
+"want some familiar keybindings
+map <leader>n :NERDTreeTabsToggle<cr>
+vmap <leader>/ <c-_><c-_>
+map <leader>/ <c-_><c-_>
+map <C-P> :CtrlP<cr>
+map <leader>gb :Gblame<cr>
+map <leader>gd :Gdiff<cr>
+
+"make opening splits easy
+map <leader>v :vsplit<cr><C-W><C-W>
+map <leader>s :split<cr><C-W><C-W>
+map <leader>z :ZoomWin<cr><C-W><C-W>
+map <leader>u :GundoToggle<cr><C-W><C-W>
+
+"make ctrl-p ignore better directories
+let g:ctrlp_custom_ignore = {
+\ 'dir':  '\.git$\|\.yardoc\|node_modules\|^public\|bower_components\|dist\|build\|log\/\|tmp\|data|\bundle$',
+\ 'file': '\.gz$\|\.so$\|\.dat$\|\.DS_Store$'
+\ }
+
+"add any local configs that need to be added, if they exist
+if filereadable(glob("~/.vimrc.local"))
+  source ~/.vimrc.local
+endif
+
+let g:jsx_ext_required = 0
+let g:psc_ide_log_level = 2
