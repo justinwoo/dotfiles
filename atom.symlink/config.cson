@@ -14,9 +14,6 @@
       "source.python": [
         "BUCK"
       ]
-    disabledPackages: [
-      "tree-view"
-    ]
     packagesWithKeymapsDisabled: [
       "blame"
     ]
@@ -58,6 +55,7 @@
     "nuclide-output": {}
   react:
     enabledForAllJavascriptFiles: true
+  "tool-bar": {}
   welcome:
     showOnStartup: false
 ".elm.source":
