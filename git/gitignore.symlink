@@ -4,6 +4,7 @@
 .idea
 *.iml
 .ackrc
+.psc-ide-port
 npm-debug.log
 TAGS
 .\#*
