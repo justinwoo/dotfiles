@@ -14,6 +14,9 @@
       "source.python": [
         "BUCK"
       ]
+    disabledPackages: [
+      "nuclide"
+    ]
     packagesWithKeymapsDisabled: [
       "blame"
     ]
@@ -58,7 +61,19 @@
   "tool-bar": {}
   welcome:
     showOnStartup: false
+".ansi.text":
+  editor:
+    preferredLineLength: 120
 ".elm.source":
+  editor:
+    preferredLineLength: 120
+".hack.html.text":
+  editor:
+    preferredLineLength: 120
+".hackfragment.source":
+  editor:
+    preferredLineLength: 120
+".hg-commit.text":
   editor:
     preferredLineLength: 120
 ".js.jsx.source":
