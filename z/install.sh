@@ -8,5 +8,6 @@ then
   chmod +x ~/Code/z/z.sh
 else
   cd ~/Code/z
+  git stash
   git pull
 fi
