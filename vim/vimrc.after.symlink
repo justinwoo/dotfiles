@@ -30,7 +30,7 @@ map `o <C-W><C-W>
 map <leader>q :q<cr>
 
 "want some familiar keybindings
-map <leader>n :NERDTreeTabsToggle<cr>
+map <leader>n :NERDTreeToggle<cr>
 vmap <leader>/ <c-_><c-_>
 map <leader>/ <c-_><c-_>
 map <C-P> :CtrlP<cr>
