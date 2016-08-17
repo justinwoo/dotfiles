@@ -26,6 +26,7 @@ echo 'time to brew install'
 # brew install grc coreutils spark
 brew install $(tr '\n' ' ' < $ZSH/homebrew/packages)
 brew install macvim --with-cscope --with-lua
+bbrew install vim --with-lua
 brew tap d12frosted/emacs-plus
 brew install emacs-plus --with-cocoa --with-gnutls --with-librsvg --with-imagemagick --with-spacemacs-icon
 brew linkapps
