@@ -16,13 +16,13 @@
       ]
     disabledPackages: [
       "tree-view"
+      "linter"
     ]
     packagesWithKeymapsDisabled: [
       "blame"
     ]
   editor:
     fontFamily: "\"Fira Code\""
-    fontSize: 16
     invisibles: {}
     preferredLineLength: 120
     showIndentGuide: true
@@ -82,5 +82,8 @@
   editor:
     preferredLineLength: 120
 ".purescript.source":
+  editor:
+    preferredLineLength: 120
+".source.swift":
   editor:
     preferredLineLength: 120
