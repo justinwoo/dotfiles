@@ -16,7 +16,6 @@
       ]
     disabledPackages: [
       "tree-view"
-      "linter"
     ]
     packagesWithKeymapsDisabled: [
       "blame"
@@ -28,8 +27,6 @@
     showIndentGuide: true
   "exception-reporting":
     userId: "2a02be6a-d91a-998e-0abe-bbe3d07e3dd4"
-  "file-watcher":
-    promptWhenFileHasChangedOnDisk: false
   "git-plus": {}
   "ide-purescript": {}
   "language-babel":
