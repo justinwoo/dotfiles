@@ -16,6 +16,7 @@
       ]
     disabledPackages: [
       "tree-view"
+      "haskell-grammar"
     ]
     packagesWithKeymapsDisabled: [
       "blame"
