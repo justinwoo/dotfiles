@@ -18,6 +18,7 @@
      elm
      purescript
      haskell
+     ocaml
      ;; elixir
      (shell :variables
              shell-default-height 30
