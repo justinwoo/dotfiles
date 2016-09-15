@@ -5,7 +5,7 @@
 *.iml
 .ackrc
 .psc-ide-port
-npm-debug.log
+npm-debug.log*
 TAGS
 .\#*
 dump.rdb
