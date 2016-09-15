@@ -39,6 +39,8 @@ alias hmifi='hey-mom-i-fixed-it'
 alias delete-merged-branches='git delete-merged-branches'
 alias dmb='delete-merged-branches';
 alias gcane='git commit --amend --no-edit'
+alias ga='git add'
+alias gap='git add -p'
 
 # pretty colors
 alias gl='git log --graph --pretty=format:'\''%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset'\'' --abbrev-commit'
