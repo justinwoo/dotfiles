@@ -1,6 +1,9 @@
 "*":
   blame:
     dateFormat: "MM/DD/YY"
+  "bracket-matcher":
+    autocompleteBrackets: false
+    autocompleteSmartQuotes: false
   core:
     customFileTypes:
       "source.ini": [
@@ -15,8 +18,13 @@
         "BUCK"
       ]
     disabledPackages: [
-      "tree-view"
       "haskell-grammar"
+      "autocomplete-haskell"
+      "haskell-ghc-mod"
+      "ide-haskell"
+      "ide-haskell-cabal"
+      "language-haskell"
+      "tree-view"
     ]
     packagesWithKeymapsDisabled: [
       "blame"
@@ -35,7 +43,7 @@
   "language-elm":
     elmOraclePath: "/Users/jwoo/.npm/bin/elm-oracle"
   linter:
-    errorPanelHeight: 84
+    errorPanelHeight: 92
   nuclide:
     installRecommendedPackages: true
     "nuclide-arcanist": {}

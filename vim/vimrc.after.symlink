@@ -6,6 +6,9 @@ set clipboard=unnamed
 ""it's 2015 god damn it, editing shit simultaneously and corrupting files is normal
 set shortmess+=A
 
+"" molokai colors maybe
+colors molokai
+
 ""show me the numbers
 set number
 
