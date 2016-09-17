@@ -1,5 +1,5 @@
 alias reload!='. ~/.zshrc'
-alias vi='mvim'
+alias vi='nvim'
 alias nv="nvim"
 alias gemacs='open -a Emacs'
 alias em='emacs'
