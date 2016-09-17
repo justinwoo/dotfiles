@@ -1,2 +1,2 @@
-export EDITOR='mvim -f --nomru -c "au VimLeave * !open -a iTerm"' >> ~/.bashrc
-export GIT_EDITOR='mvim -f --nomru -c "au VimLeave * !open -a iTerm"' >> ~/.bashrc
+export EDITOR='nvim' >> ~/.bashrc
+export GIT_EDITOR='nvim' >> ~/.bashrc
