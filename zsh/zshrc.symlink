@@ -41,6 +41,9 @@ do
   source $file
 done
 
+# autocompletions
+source ~/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
+
 unset config_files
 
 export NVM_DIR="/Users/jwoo/.nvm"
@@ -50,4 +53,4 @@ export NVM_DIR="/Users/jwoo/.nvm"
 [ -f /Users/jwoo/.travis/travis.sh ] && source /Users/jwoo/.travis/travis.sh
 
 # OPAM configuration
-. /Users/jwoo/.opam/opam-init/init.zsh > /dev/null 2> /dev/null || true
+# . /Users/jwoo/.opam/opam-init/init.zsh > /dev/null 2> /dev/null || true
