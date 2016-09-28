@@ -2,4 +2,11 @@
 
 mkdir -p ~/.zsh
 
-git clone git://github.com/zsh-users/zsh-autosuggestions ~/.zsh/zsh-autosuggestions
+if [[ ! -a ~/.zsh/zsh-autosuggestions ]]
+then
+  git clone git://github.com/zsh-users/zsh-autosuggestions ~/.zsh/zsh-autosuggestions
+else
+  cd ~/.zsh/zsh-autosuggestions
+  git stash
+  git pull
+fi
