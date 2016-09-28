@@ -39,6 +39,7 @@ alias hmifi='hey-mom-i-fixed-it'
 alias delete-merged-branches='git delete-merged-branches'
 alias dmb='delete-merged-branches';
 alias gcane='git commit --amend --no-edit'
+alias gcanera='git commit --amend --no-edit --reset-author'
 alias ga='git add'
 alias gap='git add -p'
 
