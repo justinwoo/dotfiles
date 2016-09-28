@@ -9,3 +9,5 @@ atom.symlink/.apm
 
 git/gitconfig.symlink
 **npm-debug.log
+
+vim/path*
