@@ -1,0 +1,15 @@
+#!/bin/bash
+if [ "$#" -ne 1 ]
+then
+  echo "Supply an input markdown file for this script to work."
+  exit 1
+fi
+input="$1"
+output="$1-output.html"
+rm $output*
+pygmentize -S default -f html > default.css
+pandoc $1 > intermediate.html -c default.css
+python -m premailer -f intermediate.html -o $output
+sed -i -E 's/class="[^"]*" //g' $output
+rm intermediate.html
+cat $output | pbcopy
