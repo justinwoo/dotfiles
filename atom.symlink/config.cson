@@ -26,6 +26,8 @@
       "ide-haskell-cabal"
       "language-haskell"
       "tree-view"
+      "atom-reason"
+      "atom-reason-loader"
     ]
     packagesWithKeymapsDisabled: [
       "blame"
