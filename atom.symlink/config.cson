@@ -21,10 +21,6 @@
     disabledPackages: [
       "haskell-grammar"
       "autocomplete-haskell"
-      "haskell-ghc-mod"
-      "ide-haskell"
-      "ide-haskell-cabal"
-      "language-haskell"
       "tree-view"
       "atom-reason"
       "atom-reason-loader"
@@ -32,6 +28,7 @@
     packagesWithKeymapsDisabled: [
       "blame"
     ]
+    telemetryConsent: "no"
   editor:
     fontFamily: "\"Fira Code\""
     invisibles: {}
