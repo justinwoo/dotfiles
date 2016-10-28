@@ -27,7 +27,7 @@ echo 'time to brew install'
 brew install neovim/neovim/neovim
 brew install $(tr '\n' ' ' < $ZSH/homebrew/packages)
 brew tap d12frosted/emacs-plus
-brew install emacs-plus --with-cocoa --with-gnutls --with-librsvg --with-imagemagick --with-spacemacs-icon
+brew install emacs-plus
 brew linkapps
 echo 'done'
 
