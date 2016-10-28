@@ -86,6 +86,7 @@
 (defun dotspacemacs/user-init ()
   )
 
+
 (defun dotspacemacs/user-config ()
   (setq-default dotspacemacs-default-font '("Fira Code"
                                             :size 15
@@ -102,24 +103,8 @@
   ;; make Q do @q
   (define-key evil-normal-state-map (kbd "Q") 'evil-execute-macro)
 
-  ;; some actual kj handling for insert state
-  (evil-define-command cofi/maybe-exit ()
-    :repeat change
-    (interactive)
-    (let ((modified (buffer-modified-p)))
-      (insert "k")
-      (let ((evt (read-event (format "Insert %c to exit insert state" ?j)
-                             nil 0.5)))
-        (cond
-         ((null evt) (message ""))
-         ((and (integerp evt) (char-equal evt ?j))
-          (delete-char -1)
-          (set-buffer-modified-p modified)
-          (push 'escape unread-command-events))
-         (t (setq unread-command-events (append unread-command-events
-                                                (list evt))))))))
-
-  (define-key evil-insert-state-map "k" #'cofi/maybe-exit)
+  ;; escape key sequence
+  (setq-default evil-escape-key-sequence "kj")
 
   ;; wtf who doesn't use 2-space JS indent
   (setq-default js-indent-level 2)
