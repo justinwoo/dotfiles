@@ -19,7 +19,7 @@
      react
      purescript
      typescript
-     haskell
+     (haskell :variables haskell-enable-hindent-style "johan-tibell")
      ocaml
      (shell :variables
              shell-default-height 30
