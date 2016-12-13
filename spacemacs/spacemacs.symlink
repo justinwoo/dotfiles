@@ -97,6 +97,9 @@
   ;; set the actual freakin font size
   (set-face-attribute 'default nil :height 150)
 
+  ;; no powerline freaking separator
+  (setq powerline-default-separator 'nil)
+
   ;; make ; do :
   (define-key evil-normal-state-map (kbd ";") 'evil-ex)
 
