@@ -20,7 +20,6 @@
      purescript
      typescript
      (haskell :variables haskell-enable-hindent-style "johan-tibell")
-     ocaml
      (shell :variables
              shell-default-height 30
              shell-default-position 'bottom
