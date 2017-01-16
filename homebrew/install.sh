@@ -24,7 +24,6 @@ fi
 echo 'time to brew install'
 # Install homebrew packages - what the hell, default is so stupid
 # brew install grc coreutils spark
-brew install neovim/neovim/neovim
 brew install $(tr '\n' ' ' < $ZSH/homebrew/packages)
 brew tap d12frosted/emacs-plus
 brew install emacs-plus
