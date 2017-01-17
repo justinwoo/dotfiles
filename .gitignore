@@ -8,6 +8,6 @@ atom.symlink/themes
 atom.symlink/.apm
 
 git/gitconfig.symlink
-**npm-debug.log
+npm-debug.log
 
 vim/path*
