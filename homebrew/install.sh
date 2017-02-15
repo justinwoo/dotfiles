@@ -28,6 +28,8 @@ brew install $(tr '\n' ' ' < $ZSH/homebrew/packages)
 brew tap d12frosted/emacs-plus
 brew install emacs-plus
 brew linkapps
+# Install shell extensions
+/usr/local/opt/fzf/install
 echo 'done'
 
 exit 0

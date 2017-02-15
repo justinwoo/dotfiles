@@ -17,3 +17,4 @@ haskell-stack
 ruby
 postgres
 redis
+fzf
