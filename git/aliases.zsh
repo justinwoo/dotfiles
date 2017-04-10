@@ -42,6 +42,7 @@ alias gcane='git commit --amend --no-edit'
 alias gcanera='git commit --amend --no-edit --reset-author'
 alias ga='git add'
 alias gap='git add -p'
+alias gac='ga . ; gc'
 
 # pretty colors
 alias gl='git log --graph --pretty=format:'\''%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset'\'' --abbrev-commit'
