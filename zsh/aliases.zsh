@@ -2,6 +2,7 @@ alias reload!='. ~/.zshrc'
 alias vi='vim'
 alias nv="mvim"
 alias emd='emacs --daemon'
+alias emk='killall QUIT Emacs'
 alias em='emacsclient -t'
 alias ge='emacsclient -c'
 alias pb='pbcopy'
