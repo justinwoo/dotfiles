@@ -53,6 +53,7 @@ alias gild='git log --decorate'
 # use only if you are a madman
 # i hate git pull, do the most dangerous thing quickly
 alias gupdate='git fetch origin master && git rebase origin/master'
+alias gudev='git fetch origin dev && git rebase origin/dev'
 # same thing for upstream branch
 alias gupstream='git fetch origin $(ggbn) && git rebase FETCH_HEAD'
 # update children
