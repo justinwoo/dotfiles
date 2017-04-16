@@ -94,6 +94,9 @@
                                             :width normal
                                             :powerline-scale 1.5))
 
+  ;; jumalauta who thought this is helpful
+  (fset 'evil-visual-update-x-selection 'ignore)
+
   ;; set the actual freakin font size
   (set-face-attribute 'default nil :height 150)
 
