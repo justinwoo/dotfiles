@@ -14,13 +14,13 @@
      git
      markdown
      org
-     elm
+     ;; elm
      osx
      react
      purescript
      typescript
      (haskell :variables haskell-enable-hindent-style "johan-tibell")
-     scala
+     ;; scala
      (shell :variables
              shell-default-height 30
              shell-default-position 'bottom
@@ -113,7 +113,6 @@
   (setq-default evil-escape-key-sequence "kj")
 
   ;; wtf who doesn't use 2-space JS indent
-
   (setq-default
    ;; js2-mode
    js2-basic-offset 2
