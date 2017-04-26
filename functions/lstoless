@@ -1,0 +1,3 @@
+lstoless() {
+  gls -lAht --color $1 | less -r
+}
