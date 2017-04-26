@@ -41,9 +41,6 @@ do
   source $file
 done
 
-# autocompletions
-source ~/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
-
 unset config_files
 
 export NVM_DIR="/Users/jwoo/.nvm"
