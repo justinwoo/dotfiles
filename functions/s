@@ -1,4 +1,4 @@
 # salt the earth
 s () {
-  rg -iF $1 $2
+  rg -iF $2 $1
 }
