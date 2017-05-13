@@ -1,7 +1,11 @@
-""set my font size to be legible and glorious ligatures
-set macligatures
-set guifont=Fira\ Code:h16
-""set transparency
-set transparency=5
+"" some things are only on mac
+if has("gui_macvim")
+  set macligatures
+  ""set transparency
+  set transparency=5
+  ""set my font size to be legible and glorious ligatures
+  set guifont=Fira\ Code:h16
+endif
+
 "" set guicolors
 colors molokai

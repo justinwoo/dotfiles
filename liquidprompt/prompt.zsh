@@ -1,3 +1,2 @@
-if [ -f `brew --prefix`/share/liquidprompt ]; then
-  . `brew --prefix`/share/liquidprompt
-fi
+# Only load Liquid Prompt in interactive shells, not from a script or from scp
+[[ $- = *i* ]] && source $PROJECTS/liquidprompt/liquidprompt
