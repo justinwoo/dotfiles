@@ -52,4 +52,9 @@ export NVM_DIR="/Users/jwoo/.nvm"
 # OPAM configuration
 # . /Users/jwoo/.opam/opam-init/init.zsh > /dev/null 2> /dev/null || true
 
+# run fzf if installed
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+
+# run vte if exists
+[ -f /etc/profile.d/vte.sh ] && . /etc/profile.d/vte.sh
+

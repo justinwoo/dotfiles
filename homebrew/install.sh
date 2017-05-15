@@ -6,30 +6,22 @@
 # using Homebrew.
 
 # Check for Homebrew
-if test ! $(which brew)
+if test "$(uname)" = "Darwin"
 then
-  echo "  Installing Homebrew for you."
-
-  # Install the correct homebrew for each OS type
-  if test "$(uname)" = "Darwin"
+  if test ! $(which brew)
   then
     ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
-  elif test "$(expr substr $(uname -s) 1 5)" = "Linux"
-  then
-    ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/linuxbrew/go/install)"
   fi
 
+  echo "  Installing Homebrew for you."
+  echo 'time to brew install'
+  # Install homebrew packages - what the hell, default is so stupid
+  # brew install grc coreutils spark
+  brew install $(tr '\n' ' ' < $ZSH/homebrew/packages)
+  brew tap d12frosted/emacs-plus
+  brew install emacs-plus
+  brew linkapps
+  echo 'done'
 fi
-
-echo 'time to brew install'
-# Install homebrew packages - what the hell, default is so stupid
-# brew install grc coreutils spark
-brew install $(tr '\n' ' ' < $ZSH/homebrew/packages)
-brew tap d12frosted/emacs-plus
-brew install emacs-plus
-brew linkapps
-# Install shell extensions
-/usr/local/opt/fzf/install
-echo 'done'
 
 exit 0
