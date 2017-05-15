@@ -10,7 +10,7 @@ alias chrome-remote-debug='/Applications/Google\ Chrome.app/Contents/MacOS/Googl
 alias recent='ls -lht | head -10'
 alias ll='lstoless'
 
-if test ! $(which xclip)
+if [[ -a $(which xclip) ]]
 then
   alias pbcopy='xclip -selection clipboard'
   alias pbpaste='xclip -selection clipboard -o'
