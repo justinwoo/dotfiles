@@ -93,6 +93,8 @@
                                             :weight normal
                                             :width normal
                                             :powerline-scale 1.5))
+  ;; i wish this were two separate commands
+  (setq-default git-magit-status-fullscreen t)
 
   ;; jumalauta who thought this is helpful
   (fset 'evil-visual-update-x-selection 'ignore)
@@ -128,6 +130,19 @@
 
   (setq c-default-style "java")
   (setq-default c-basic-offset 2)
+
+  ;; god damn it tide
+  (setq tide-format-options
+        '(:insertSpaceAfterFunctionKeywordForAnonymousFunctions
+          t
+          :placeOpenBraceOnNewLineForFunctions nil
+          :indentSize 2
+          :tabSize 2))
+  (add-to-list 'auto-mode-alist '("\\.tsx\\'" . web-mode))
+  (add-hook 'web-mode-hook
+            (lambda ()
+              (when (string-equal "tsx" (file-name-extension buffer-file-name))
+                (setup-tide-mode))))
 
   ;; holy fucking hell package rot
   (setq ghc-report-errors nil)
