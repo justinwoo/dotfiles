@@ -1,7 +1,7 @@
 set-option -g default-shell $SHELL
 # use my freaking system pasteboard
 # run brew install `reattach-to-user-namespace` beforehand
-set -gw default-command "reattach-to-user-namespace -l $SHELL"
+# set -gw default-command "reattach-to-user-namespace -l $SHELL"
 
 # open new windows in whatever that's not my home
 bind % split-window -h -c "#{pane_current_path}"
