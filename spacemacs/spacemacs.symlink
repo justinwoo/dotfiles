@@ -93,6 +93,9 @@
                                             :weight normal
                                             :width normal
                                             :powerline-scale 1.5))
+  ;; what kind fo weirdo uses the normal one
+  (global-set-key (kbd "C-SPC") 'company-complete)
+
   ;; i wish this were two separate commands
   (setq-default git-magit-status-fullscreen t)
 
