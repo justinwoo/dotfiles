@@ -23,8 +23,6 @@ bind 'C-]' set-option -g prefix '`'
 
 # set vi style keys
 setw -g mode-keys vi
-bind-key -t vi-copy 'v' begin-selection
-bind-key -t vi-copy 'y' copy-selection
 
 # new omniconfig for mouse
 set-option -g -q mouse on
@@ -40,7 +38,6 @@ set -g pane-base-index 1
 
 # random styling
 # status line
-set -g status-utf8 on
 set -g status-justify left
 set -g status-bg default
 set -g status-bg colour234
