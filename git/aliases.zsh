@@ -9,7 +9,6 @@ fi
 # The rest of my fun git aliases
 alias gl='git pull --prune'
 alias glog="git log --graph --pretty=format:'%Cred%h%Creset %an: %s - %Creset %C(yellow)%d%Creset %Cgreen(%cr)%Creset' --abbrev-commit --date=relative"
-alias gp='git push origin HEAD'
 alias gd='git diff'
 alias gc='git commit'
 alias gco='git checkout'
@@ -37,6 +36,7 @@ alias hey-mom-i-fixed-it='echo fixed in $(ggbn): $(glc)'
 alias hmifi='hey-mom-i-fixed-it'
 alias delete-merged-branches='git delete-merged-branches'
 alias dmb='delete-merged-branches';
+alias gcd='git co dev'
 alias gca='git commit --amend'
 alias gcane='git commit --amend --no-edit'
 alias gcanera='git commit --amend --no-edit --reset-author'
