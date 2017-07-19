@@ -93,6 +93,10 @@
                                             :weight normal
                                             :width normal
                                             :powerline-scale 1.5))
+  ;; guess im using this or something dunno
+  (setq org-agenda-files
+        '("~/Code/notes/notes.org"))
+
   ;; what kind fo weirdo uses the normal one
   (global-set-key (kbd "C-SPC") 'company-complete)
 
