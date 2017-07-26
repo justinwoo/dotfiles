@@ -95,7 +95,12 @@
                                             :powerline-scale 1.5))
   ;; guess im using this or something dunno
   (setq org-agenda-files
-        '("~/Code/notes/notes.org"))
+        '("~/Code/notes/notes.org"
+          "~/.work.org"
+          ))
+
+  ;; yolo
+  (global-company-mode)
 
   ;; what kind fo weirdo uses the normal one
   (global-set-key (kbd "C-SPC") 'company-complete)

@@ -21,7 +21,6 @@
     disabledPackages: [
       "haskell-grammar"
       "autocomplete-haskell"
-      "tree-view"
       "atom-reason"
       "atom-reason-loader"
     ]
@@ -42,8 +41,7 @@
     createTranspiledCode: true
   "language-elm":
     elmOraclePath: "/Users/jwoo/.npm/bin/elm-oracle"
-  linter:
-    errorPanelHeight: 92
+  linter: {}
   nuclide:
     installRecommendedPackages: true
     "nuclide-arcanist": {}
@@ -61,6 +59,10 @@
       showHome: false
     "nuclide-ocaml": {}
     "nuclide-output": {}
+  "prettier-atom":
+    prettierOptions:
+      semi: false
+      singleQuote: true
   react:
     enabledForAllJavascriptFiles: true
   "tool-bar": {}
