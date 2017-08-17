@@ -5,10 +5,12 @@
    dotspacemacs-configuration-layer-path '()
    dotspacemacs-configuration-layers
    '(
+     typescript
      (auto-completion :variables
                       auto-completion-enable-snippets-in-popup t
                       auto-completion-return-key-behavior nil
                       auto-completion-tab-key-behavior 'complete)
+
      better-defaults
      emacs-lisp
      git
@@ -100,6 +102,9 @@
 
   ;; what kind fo weirdo uses the normal one
   (global-set-key (kbd "C-SPC") 'company-complete)
+
+  ;; jesus christ delay popups are annoying
+  (setq company-idle-delay 'nil)
 
   ;; i wish this were two separate commands
   (setq-default git-magit-status-fullscreen t)
