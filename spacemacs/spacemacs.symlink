@@ -5,6 +5,7 @@
    dotspacemacs-configuration-layer-path '()
    dotspacemacs-configuration-layers
    '(
+     javascript
      typescript
      (auto-completion :variables
                       auto-completion-enable-snippets-in-popup t
