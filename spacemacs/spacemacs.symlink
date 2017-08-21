@@ -95,7 +95,7 @@
   ;; guess im using this or something dunno
   (setq org-agenda-files
         '("~/Code/notes/notes.org"
-          "~/.work.org"
+          "~/Code/notes/work.org"
           ))
 
   ;; yolo
