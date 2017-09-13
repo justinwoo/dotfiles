@@ -11,7 +11,7 @@ alias ll='lstoless'
 
 if test "$(uname)" = "Darwin"
 then
-  alias emk='killall QUIT Emacs'
+  alias emk="ps -ef | grep emacs | awk '{print }' | xargs kill"
 else
   alias emk='killall emacs'
 fi
@@ -24,5 +24,6 @@ fi
 if [[ -a $(which xclip) ]]
 then
   alias pbcopy='xclip -selection clipboard'
+  alias pbout='xclip -selection clipboard -o'
   alias pbpaste='xclip -selection clipboard -o'
 fi

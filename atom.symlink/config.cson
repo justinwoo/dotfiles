@@ -28,8 +28,13 @@
       "blame"
     ]
     telemetryConsent: "no"
+    themes: [
+      "one-light-ui"
+      "one-light-syntax"
+    ]
   editor:
     fontFamily: "\"Fira Code\""
+    fontSize: 12
     invisibles: {}
     preferredLineLength: 120
     showIndentGuide: true
