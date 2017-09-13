@@ -11,9 +11,9 @@ alias ll='lstoless'
 
 if test "$(uname)" = "Darwin"
 then
-  alias emk="ps -ef | grep emacs | awk '{print }' | xargs kill"
+  alias emk='killall QUIT emacs'
 else
-  alias emk='killall emacs'
+  alias emk="ps -ef | grep emacs | awk '{print \$2}' | xargs kill"
 fi
 
 if [[ -a $(which gxargs) ]]
