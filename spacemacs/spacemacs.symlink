@@ -94,6 +94,9 @@
   ;; ;; load some local config
   (load "~/.user-config.el")
 
+  ;; no more hl line
+  (global-hl-line-mode -1)
+
   ;; guess im using this or something dunno
   (setq org-agenda-files
         '("~/Code/notes/notes.org"
