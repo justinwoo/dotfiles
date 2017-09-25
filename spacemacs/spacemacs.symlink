@@ -157,14 +157,11 @@
           :placeOpenBraceOnNewLineForFunctions nil
           :indentSize 2
           :tabSize 2))
-  (add-to-list 'auto-mode-alist '("\\.tsx\\'" . web-mode))
-  (add-hook 'web-mode-hook
-            (lambda ()
-              (when (string-equal "tsx" (file-name-extension buffer-file-name))
-                (setup-tide-mode))))
 
+  ;; turn on fuckin typescript mode
+  (add-to-list 'auto-mode-alist '("\\.tsx?\\'" . typescript-mode))
   ;; use prettier
-  (add-hook 'web-mode-hook 'prettier-js-mode)
+  (add-hook 'typescript-mode-hook 'prettier-js-mode)
 
   ;; holy fucking hell package rot
   (setq ghc-report-errors nil)
