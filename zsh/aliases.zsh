@@ -10,12 +10,7 @@ alias l='ls -lht --color'
 alias recent='ls -lht --color | head -10'
 alias ll='lstoless'
 
-if test "$(uname)" = "Darwin"
-then
-  alias emk='killall QUIT emacs'
-else
-  alias emk="ps -ef | grep emacs | awk '{print \$2}' | xargs kill"
-fi
+alias emk="ps -ef | grep emacs | awk '{print \$2}' | xargs kill"
 
 if [[ -a $(which gxargs) ]]
 then
