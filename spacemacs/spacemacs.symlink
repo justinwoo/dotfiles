@@ -109,6 +109,10 @@
   ;; what kind fo weirdo uses the normal one
   (global-set-key (kbd "C-SPC") 'company-complete)
 
+  ;; why doesn't this work by default?
+  (global-set-key (kbd "C-i") 'evil-jump-forward)
+
+
   ;; jesus christ delay popups are annoying
   (setq company-idle-delay 'nil)
 
