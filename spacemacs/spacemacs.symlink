@@ -166,8 +166,6 @@
   (add-to-list 'auto-mode-alist '("\\.tsx?\\'" . typescript-mode))
   ;; use prettier
   (add-hook 'typescript-mode-hook 'prettier-js-mode)
-  ;; might as well use this even though it's painful
-  (add-hook 'typescript-mode-hook 'web-mode)
 
   ;; holy fucking hell package rot
   (setq ghc-report-errors nil)
