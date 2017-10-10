@@ -6,6 +6,7 @@
    dotspacemacs-configuration-layers
    '(
      javascript
+     react
      typescript
      (auto-completion :variables
                       auto-completion-enable-snippets-in-popup t
@@ -38,7 +39,7 @@
    dotspacemacs-verbose-loading nil
    dotspacemacs-startup-banner 'official
    dotspacemacs-startup-lists '(recents projects)
-   dotspacemacs-themes '(zenburn
+   dotspacemacs-themes '(deeper-blue
                          monokai
                          material
                          material-light
@@ -87,7 +88,7 @@
 
 (defun dotspacemacs/user-config ()
   (setq-default dotspacemacs-default-font '("Fantasque Sans Mono"
-                                            :size 18
+                                            :size 24
                                             :weight normal
                                             :width normal
                                             :powerline-scale 1.1))
