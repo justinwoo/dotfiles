@@ -88,12 +88,16 @@
 
 (defun dotspacemacs/user-config ()
   (setq-default dotspacemacs-default-font '("Fantasque Sans Mono"
-                                            :size 24
+                                            :size 16
                                             :weight normal
                                             :width normal
                                             :powerline-scale 1.1))
   ;; ;; load some local config
   (load "~/.user-config.el")
+
+  ;; rebind /
+  (evil-leader/set-key "/" 'spacemacs/helm-project-do-ag)
+  (setq helm-ag-base-command "rg --vimgrep --no-heading --smart-case")
 
   ;; no more hl line
   (global-hl-line-mode -1)

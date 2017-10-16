@@ -10,6 +10,14 @@ bind z resize-pane -Z
 set -g status-keys vi
 set -g history-limit 10000
 
+# clipboard should work or i want a refund
+# move x clipboard into tmux paste buffer
+unbind C-p
+bind C-p run "tmux set-buffer \"$(xclip -o -selection clipboard)\"; tmux paste-buffer"
+# move tmux copy buffer into x clipboard
+unbind C-c
+bind C-c run "tmux show-buffer | xclip -i -selection clipboard &>/dev/null"
+
 # bind a new prefix
 set -g prefix '`'
 # allow me to freaking use grave
@@ -36,10 +44,9 @@ set -g pane-base-index 1
 # random styling
 # status line
 set -g status-justify left
-set -g status-bg default
-set -g status-bg colour234
+set -g status-bg colour235
 set -g status-fg white
-set -g status-interval 4
+set -g status-interval 30
 
 # Split
 set-option -g pane-active-border-fg green
@@ -48,8 +55,10 @@ set-option -g pane-border-fg yellow
 set-option -g pane-border-bg default
 
 # Status
-set -g status-left ' #[fg=black,bg=white]#S '
-set -g status-right '#[fg=black] %d %b, %Y %R '
+set -g status-left '#[fg=green]#S#[fg=blue] #I:#P#[default]'
+set -g status-left-length 100
+set-option -g status-right '#[fg=green]#H#[default] %m/%d/%y %I:%M\
+ #[fg=red]#(battery discharging)#[default]#(battery charging)'
 set -g status-right-length 100
 set -g status-bg white
 set -g status-position bottom
