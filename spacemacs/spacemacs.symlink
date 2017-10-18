@@ -39,15 +39,14 @@
    dotspacemacs-verbose-loading nil
    dotspacemacs-startup-banner 'official
    dotspacemacs-startup-lists '(recents projects)
-   dotspacemacs-themes '(deeper-blue
+   dotspacemacs-themes '(leuven
                          monokai
                          material
                          material-light
                          spacemacs-dark
                          spacemacs-light
                          solarized-light
-                         solarized-dark
-                         leuven)
+                         solarized-dark)
    dotspacemacs-colorize-cursor-according-to-state t
    dotspacemacs-default-font '("Fantasque Mono"
                                :size 18
