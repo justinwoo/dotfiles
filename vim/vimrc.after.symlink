@@ -1,6 +1,5 @@
 ""use the system clipboard
-""note to self: this is still totally broken in terminal
-set clipboard=unnamed
+set clipboard=unnamedplus
 
 ""stfu vim, i don't care if i 'crashed' or have multiple instances
 ""it's 2015 god damn it, editing shit simultaneously and corrupting files is normal

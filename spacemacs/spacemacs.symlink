@@ -95,8 +95,9 @@
   ;; ;; load some local config
   (load "~/.user-config.el")
 
-  ;; rebind /
+  ;; rebind spc / and *
   (evil-leader/set-key "/" 'spacemacs/helm-project-do-ag)
+  (evil-leader/set-key "*" 'spacemacs/helm-project-do-ag-region-or-symbol)
   (setq helm-ag-base-command "rg --vimgrep --no-heading --smart-case")
 
   ;; no more hl line
