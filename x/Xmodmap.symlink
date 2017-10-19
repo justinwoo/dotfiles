@@ -1,1 +1,1 @@
-xmodmap -e "keycode 94 = Shift_L"
+keycode 94 = Shift_L

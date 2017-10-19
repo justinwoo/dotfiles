@@ -19,8 +19,11 @@ import XMonad.StackSet(greedyView)
 myStartupHook = do
   spawnOnce "xmodmap ~/.Xmodmap"
   spawnOnce "gnome-settings-daemon"
+  spawnOnce "stalonetray --dockapp-mode simple"
+  spawnOnce "nm-applet"
+  spawnOnce "fdpowermon"
 
-myConfig = gnomeConfig
+myConfig = defaultConfig
   { startupHook = myStartupHook
   , terminal = "gnome-terminal"
   }
