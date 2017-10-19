@@ -26,5 +26,5 @@ myConfig = gnomeConfig
   }
 
 main = do
-  mproc <- spawnPipe "/usr/bin/xmobar ~/.xmonad/.xmobarrc"
+  mproc <- spawnPipe "/usr/bin/xmobar"
   xmonad myConfig
