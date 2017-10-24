@@ -3,19 +3,20 @@
 exec /usr/libexec/gnome-settings-daemon
 
 # set the font
-font pango:DejaVu Sans Mono 13
+font pango:DejaVu Sans Mono 16
 
 # aliases
-set $up h
+set $up k
 set $down j
-set $left l
-set $right k
+set $left h
+set $right l
 
 # use Mouse+Mod1 to drag floating windows to their wanted position
 floating_modifier Mod1
 
 # start a terminal
-bindsym Mod1+Return exec i3-sensible-terminal
+#bindsym Mod1+Return exec i3-sensible-terminal
+bindsym Mod1+Return exec gnome-terminal
 
 # kill focused window
 bindsym Mod1+Shift+q kill
@@ -34,10 +35,10 @@ bindsym Mod1+$up focus up
 bindsym Mod1+$right focus right
 
 # alternatively, you can use the cursor keys:
-bindsym Mod1+Left focus left
-bindsym Mod1+Down focus down
-bindsym Mod1+Up focus up
-bindsym Mod1+Right focus right
+# bindsym Mod1+Left focus left
+# bindsym Mod1+Down focus down
+# bindsym Mod1+Right focus right
+# bindsym Mod1+Up focus up
 
 # move focused window
 bindsym Mod1+Shift+$left move left

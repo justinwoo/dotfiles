@@ -39,8 +39,7 @@
    dotspacemacs-verbose-loading nil
    dotspacemacs-startup-banner 'official
    dotspacemacs-startup-lists '(recents projects)
-   dotspacemacs-themes '(leuven
-                         monokai
+   dotspacemacs-themes '(monokai
                          material
                          material-light
                          spacemacs-dark
