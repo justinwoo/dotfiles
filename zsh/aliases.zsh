@@ -9,6 +9,7 @@ alias chrome-remote-debug='/Applications/Google\ Chrome.app/Contents/MacOS/Googl
 alias l='ls -lht --color'
 alias recent='ls -lht --color | head -10'
 alias ll='lstoless'
+alias pp='psc-package'
 
 alias emk="ps -ef | grep emacs | awk '{print \$2}' | xargs kill"
 
