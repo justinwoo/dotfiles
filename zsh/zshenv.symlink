@@ -1,3 +1,6 @@
-xmodmap -e "keycode 94 = Shift_L"
-xmodmap -e "keycode 67 = Escape"
+if [[ -a $(which xmodmap) ]]
+then
+  xmodmap -e "keycode 94 = Shift_L"
+  xmodmap -e "keycode 67 = Escape"
+fi
 source ~/.zshrc
