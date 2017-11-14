@@ -1,10 +1,11 @@
 alias reload!='. ~/.zshrc'
-alias vi='vim'
+alias vi='nvim'
 alias nv="nvim"
 alias emd='emacs --daemon'
 alias em='emacsclient -t'
 alias ge='emacsclient -nc'
 alias pb='pbcopy'
+alias po='pbpaste'
 alias chrome-remote-debug='/Applications/Google\ Chrome.app/Contents/MacOS/Google\ Chrome --remote-debugging-port=9222'
 alias l='ls -lht --color'
 alias recent='ls -lht --color | head -10'
