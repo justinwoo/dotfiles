@@ -60,3 +60,8 @@ helptags ~/.local/share/nvim/plugged/psc-ide-vim/doc
 if filereadable(glob("~/.vimrc.local"))
   source ~/.vimrc.local
 endif
+
+"fucking nerdtree
+let NERDTreeShowHidden=1
+let NERDTreeDirArrowExpandable = '+'
+let NERDTreeDirArrowCollapsible = '-'

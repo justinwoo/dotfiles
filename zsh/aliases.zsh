@@ -10,6 +10,7 @@ alias l='ls -lht --color'
 alias recent='ls -lht --color | head -10'
 alias ll='lstoless'
 alias pp='psc-package'
+alias f='fd --type f | fzf'
 
 alias emk="ps -ef | grep emacs | awk '{print \$2}' | xargs kill"
 
