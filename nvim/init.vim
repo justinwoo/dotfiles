@@ -30,6 +30,7 @@ map Q @q
 "map ' to \ since i dont use it either
 "i like having two keys bound to the same thing
 map ' \
+map <space> \
 
 "make changing panes easier
 map <leader>o <C-W><C-W>
