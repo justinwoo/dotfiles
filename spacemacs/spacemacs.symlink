@@ -97,7 +97,8 @@
                                             :width normal
                                             :powerline-scale 1.1))
   ;; ;; load some local config
-  (load "~/.user-config.el")
+  (when (file-exists-p "~/.user-config.el")
+    (load-file "~/.user-config.el"))
 
   ;; rebind spc / and *
   (evil-leader/set-key "/" 'spacemacs/helm-project-do-ag)
