@@ -41,9 +41,8 @@ map <leader>q :q<cr>
 
 "want some familiar keybindings
 map <leader>n :NERDTreeToggle<cr>
-vmap <leader>/ <c-_><c-_>
-map <leader>/ <c-_><c-_>
 map <C-P> :FZF <cr>
+map <leader>/ :Ack 
 map <leader>gb :Gblame<cr>
 map <leader>gd :Gdiff<cr>
 
@@ -66,3 +65,8 @@ endif
 let NERDTreeShowHidden=1
 let NERDTreeDirArrowExpandable = '+'
 let NERDTreeDirArrowCollapsible = '-'
+
+"Ackvim use rg
+if executable('rg')
+  let g:ackprg = 'rg --vimgrep'
+endif
