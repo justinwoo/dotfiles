@@ -121,9 +121,11 @@
   (global-company-mode)
 
   ;; what kind fo weirdo uses the normal one
+  ;; use some company complete
   (global-set-key (kbd "C-SPC") 'company-complete)
+  (define-key evil-insert-state-map (kbd "<tab>") 'company-complete-common)
 
-  ;; why doesn't this work by default?
+  ;; Why doesn't this work by default?
   (global-set-key (kbd "C-i") 'evil-jump-forward)
 
 
