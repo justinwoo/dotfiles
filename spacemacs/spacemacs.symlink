@@ -120,6 +120,10 @@
   ;; yolo
   (global-company-mode)
 
+  ;; actual madness
+  (define-key evil-normal-state-map (kbd "i") 'evil-emacs-state)
+  (define-key evil-normal-state-map (kbd "M-i") 'evil-insert)
+
   ;; what kind fo weirdo uses the normal one
   ;; use some company complete
   (global-set-key (kbd "C-SPC") 'company-complete)
@@ -127,7 +131,6 @@
 
   ;; Why doesn't this work by default?
   (global-set-key (kbd "C-i") 'evil-jump-forward)
-
 
   ;; jesus christ delay popups are annoying
   (setq company-idle-delay 'nil)
