@@ -18,19 +18,19 @@ import XMonad.Util.SpawnOnce
 import XMonad.StackSet(greedyView)
 
   
-myKeys x = [
-           -- , ((modMask x,               xK_Left),  prevWS)
-           -- , ((modMask x .|. shiftMask, xK_Right), shiftToNext)
-           -- , ((modMask x .|. shiftMask, xK_Left),  shiftToPrev)
-           -- , ((modMask x,               xK_t),     toggleWS)
-           -- , ((modMask x,               xK_s),     spawn "dmenu_run -b -fn 'Droid Sans Mono-14'")
-           -- , ((mod1Mask .|. controlMask, xK_l),    spawn "xtrlock -b")
-           -- , ((0                , 0x1008ff11),     spawn "amixer -c 1 sset Master 4-")
-           -- , ((0                , 0x1008ff13),     spawn "amixer -c 1 sset Master 4+")
-           -- , ((0                , 0x1008ff03),     spawn "xbacklight -inc -10%")
-           -- , ((0                , 0x1008ff02),     spawn "xbacklight -inc +10%")
+myKeys x = [ ((modMask x,               xK_Left),  prevWS)
+           , ((modMask x,               xK_Left),  nextWS)
+           , ((modMask x .|. shiftMask, xK_Right), shiftToNext)
+           , ((modMask x .|. shiftMask, xK_Left),  shiftToPrev)
+           , ((modMask x,               xK_t),     toggleWS)
+           , ((modMask x,               xK_s),     spawn "dmenu_run -b -fn 'Droid Sans Mono-14'")
+           , ((mod1Mask .|. controlMask, xK_l),    spawn "xtrlock -b")
+           , ((0                , 0x1008ff11),     spawn "amixer -c 1 sset Master 4-")
+           , ((0                , 0x1008ff13),     spawn "amixer -c 1 sset Master 4+")
+           , ((0                , 0x1008ff03),     spawn "xbacklight -inc -10%")
+           , ((0                , 0x1008ff02),     spawn "xbacklight -inc +10%")
 
-           -- , ((0                , 0x1008ff12),     spawn "amixer sset Master toggle")
+           , ((0                , 0x1008ff12),     spawn "amixer sset Master toggle")
            ]
 
 newKeys x  = M.union (keys defaultConfig x) (M.fromList (myKeys x))
@@ -38,21 +38,6 @@ newKeys x  = M.union (keys defaultConfig x) (M.fromList (myKeys x))
 myManageHook = composeAll (
     [ manageHook gnomeConfig
     , resource  =? "stalonetray" --> doIgnore
-    -- , className =? "Unity-2d-panel" --> doIgnore
-    -- , className =? "Unity-2d-launcher" --> doIgnore
-    -- , className =? "dota2" --> doIgnore
-    -- , className =? "DyingLightGame" --> doFloat doesn't work either way.
-    -- , className =? "Verdun.x86_64" --> doIgnore
-    -- , className =? "PillarsOfEternity" --> doIgnore
-    -- , className =? "hl2_linux" --> doIgnore
-    -- , className =? "eu4" --> doIgnore
-    -- , className =? "csgo_linux" --> doIgnore
-    -- , className =? "RocketLeague" --> doIgnore
-    -- , className =? "Gimp"      --> doFloat
-    -- , className =? "Vncviewer" --> doFloat
-    -- , className =? "Steam" --> doFloat
-    -- , className =? "steam" --> doIgnore -- bigpicture-mode
-    -- , className =? "MainThrd" --> doFloat
     , manageDocks
     ])
 
@@ -65,10 +50,8 @@ myStartupHook = do
   spawnOnce "pasystray"
   spawnOnce "fdpowermon"
 
--- myLayoutHook = noBorders Full ||| noBorders (tabbed shrinkText defaultTheme) ||| Accordion
-
 main = do
-    xmproc <- spawnPipe "/usr/bin/xmobar /home/callen/.xmobarrc"
+    xmproc <- spawnPipe "/usr/bin/xmobar /home/justin/.xmobarrc"
     xmonad $ gnomeConfig {
          manageHook = myManageHook
        , layoutHook = avoidStruts $ smartBorders $ layoutHook defaultConfig
@@ -80,9 +63,7 @@ main = do
        , modMask = mod4Mask
        , keys = newKeys
        , terminal = "gnome-terminal"
-       -- , terminal = "alacritty"
        , handleEventHook =
          mconcat [ docksEventHook
                  , handleEventHook defaultConfig ]
-       -- , handleEventHook = handleEventHook defaultConfig <+> fullscreenEventHook
        }
