@@ -120,10 +120,6 @@
   ;; yolo
   (global-company-mode)
 
-  ;; actual madness
-  (define-key evil-normal-state-map (kbd "i") 'evil-emacs-state)
-  (define-key evil-normal-state-map (kbd "M-i") 'evil-insert)
-
   ;; what kind fo weirdo uses the normal one
   ;; use some company complete
   (global-set-key (kbd "C-SPC") 'company-complete)

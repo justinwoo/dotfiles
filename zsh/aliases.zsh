@@ -27,3 +27,8 @@ then
   alias pbout='xclip -selection clipboard -o'
   alias pbpaste='xclip -selection clipboard -o'
 fi
+
+if [[ -a /bin/open ]]
+then
+  alias open='xdg-open'
+fi
