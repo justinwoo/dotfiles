@@ -16,6 +16,11 @@ set $down j
 set $left h
 set $right l
 
+# back and forth
+bindsym $mod+Tab workspace back_and_forth
+bindsym $sup+Tab workspace next
+bindsym $sup+Shift+Tab workspace prev
+
 # use Mouse+$sup to drag floating windows to their wanted position
 floating_modifier $sup
 
