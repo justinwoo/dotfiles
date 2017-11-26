@@ -29,6 +29,7 @@ floating_modifier $sup
 
 # suspend and lock?
 bindsym $sup+$mod+l exec i3lock && systemctl suspend
+bindsym XF86PowerOff exec i3lock && systemctl suspend
 
 # start a terminal
 #bindsym $sup+Return exec i3-sensible-terminal
