@@ -1,6 +1,6 @@
 # i3 config file (v4)
 # start up the gnome daemon
-exec /usr/bin/gnome-settings-daemon
+exec ~/.dotfiles/i3/gnome-settings-daemon
 
 # start up wifi manager?
 exec /usr/bin/nm-applet
