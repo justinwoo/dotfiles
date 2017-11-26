@@ -21,6 +21,9 @@ bindsym $mod+Tab workspace back_and_forth
 bindsym $sup+Tab workspace next
 bindsym $sup+Shift+Tab workspace prev
 
+# screenshot
+bindsym Print exec gnome-screenshot
+
 # use Mouse+$sup to drag floating windows to their wanted position
 floating_modifier $sup
 
