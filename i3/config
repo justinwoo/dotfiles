@@ -19,6 +19,9 @@ set $right l
 # use Mouse+$sup to drag floating windows to their wanted position
 floating_modifier $sup
 
+# suspend and lock?
+bindsym $sup+$mod+l exec i3lock && systemctl suspend
+
 # start a terminal
 #bindsym $sup+Return exec i3-sensible-terminal
 bindsym $sup+Return exec gnome-terminal
