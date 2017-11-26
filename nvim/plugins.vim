@@ -57,6 +57,9 @@ Plug 'leafgarland/typescript-vim', { 'for': 'typescript' } " typescript support
 Plug 'purescript-contrib/purescript-vim', { 'for': ['purescript', 'purs'] }
 Plug 'FrigoEU/psc-ide-vim', { 'for': ['purescript', 'purs'] }
 
+" Haskell
+Plug 'neovimhaskell/haskell-vim'
+
 " styles
 Plug 'wavded/vim-stylus', { 'for': ['stylus', 'markdown'] } " markdown support
 " Plug 'ap/vim-css-color', { 'for': ['css','stylus','scss'] } " set the background of hex color values to the color
