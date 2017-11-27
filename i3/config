@@ -6,7 +6,7 @@ exec ~/.dotfiles/i3/gnome-settings-daemon
 exec /usr/bin/nm-applet
 
 # set the font
-font pango:DejaVu Sans Mono 10
+font pango:DejaVu Sans Mono 11
 
 # aliases
 set $sup Mod4
@@ -101,6 +101,7 @@ bindsym $sup+Shift+minus move scratchpad
 # Show the next scratchpad window or hide the focused scratchpad window.
 # If there are multiple scratchpad windows, this command cycles through them.
 bindsym $sup+minus scratchpad show
+bindsym $sup+grave scratchpad show
 
 # switch to workspace
 bindsym $sup+1 workspace 1
