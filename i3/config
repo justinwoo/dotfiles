@@ -102,6 +102,7 @@ bindsym $sup+Shift+minus move scratchpad
 # If there are multiple scratchpad windows, this command cycles through them.
 bindsym $sup+minus scratchpad show
 bindsym $sup+grave scratchpad show
+bindsym $mod+grave scratchpad show
 
 # switch to workspace
 bindsym $sup+1 workspace 1
