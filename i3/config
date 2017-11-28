@@ -19,7 +19,9 @@ set $right l
 # back and forth
 bindsym $mod+Tab workspace back_and_forth
 bindsym $sup+Tab workspace next
+bindsym $sup+bracketright workspace next
 bindsym $sup+Shift+Tab workspace prev
+bindsym $sup+bracketleft workspace prev
 
 # screenshot
 bindsym Print exec gnome-screenshot
