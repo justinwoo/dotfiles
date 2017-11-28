@@ -54,10 +54,10 @@ bindsym $sup+$up focus up
 bindsym $sup+$right focus right
 
 # alternatively, you can use the cursor keys:
-# bindsym $sup+Left focus left
-# bindsym $sup+Down focus down
-# bindsym $sup+Right focus right
-# bindsym $sup+Up focus up
+bindsym $sup+Left focus left
+bindsym $sup+Down focus down
+bindsym $sup+Right focus right
+bindsym $sup+Up focus up
 
 # move focused window
 bindsym $sup+Shift+$left move left
