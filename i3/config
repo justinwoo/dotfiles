@@ -18,6 +18,7 @@ for_window [window_role="pop-up"] move window to scratchpad, scratchpad show
 # aliases
 set $sup Mod4
 set $mod Mod1
+set $ctrl Control
 set $up k
 set $down j
 set $left h
@@ -149,6 +150,11 @@ bindsym $sup+Shift+r restart
 # exit i3 (logs you out of your X session)
 bindsym $sup+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -b 'Yes, exit i3' 'i3-msg exit'"
 
+#resize
+bindsym $ctrl+$sup+$left  resize shrink width 25 px or 10 ppt
+bindsym $ctrl+$sup+$down  resize grow height 25 px or 10 ppt
+bindsym $ctrl+$sup+$up    resize shrink height 25 px or 10 ppt
+bindsym $ctrl+$sup+$right resize grow width 25 px or 10 ppt
 # resize window (you can also use the mouse for that)
 mode "resize" {
         # These bindings trigger as soon as you enter the resize mode
@@ -161,6 +167,10 @@ mode "resize" {
         bindsym $down       resize grow height 10 px or 10 ppt
         bindsym $up         resize shrink height 10 px or 10 ppt
         bindsym $right      resize grow width 10 px or 10 ppt
+        bindsym Shift+$left resize shrink width 100 px or 10 ppt
+        bindsym Shift+$down  resize grow height 100 px or 10 ppt
+        bindsym Shift+$up    resize shrink height 100 px or 10 ppt
+        bindsym Shift+$right resize grow width 100 px or 10 ppt
 
         # same bindings, but for the arrow keys
         bindsym Left        resize shrink width 10 px or 10 ppt
