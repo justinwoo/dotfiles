@@ -8,6 +8,11 @@ exec /usr/bin/nm-applet
 # set the font
 font pango:DejaVu Sans Mono 11
 
+# for_window
+for_window [instance="nautilus"] move window to scratchpad, scratchpad show
+for_window [instance="vlc"] move window to scratchpad, scratchpad show
+for_window [window_role="pop-up"] move window to scratchpad, scratchpad show
+
 # aliases
 set $sup Mod4
 set $mod Mod1
