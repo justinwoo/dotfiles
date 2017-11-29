@@ -98,6 +98,7 @@ bindsym $sup+a focus parent
 #bindsym $sup+d focus child
 
 # move the currently focused window to the scratchpad
+bindsym $sup+Shift+grave move scratchpad
 bindsym $sup+Shift+minus move scratchpad
 
 # Show the next scratchpad window or hide the focused scratchpad window.
