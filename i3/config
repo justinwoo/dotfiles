@@ -103,7 +103,7 @@ bindsym $sup+space focus mode_toggle
 bindsym $sup+a focus parent
 
 # focus the child container
-#bindsym $sup+d focus child
+bindsym $sup+q focus child
 
 # move the currently focused window to the scratchpad
 bindsym $sup+Shift+grave move scratchpad
