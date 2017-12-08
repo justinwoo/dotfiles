@@ -201,6 +201,8 @@ bindsym XF86AudioStop exec playerctl stop
 bindsym XF86AudioNext exec playerctl next
 bindsym XF86AudioPrev exec playerctl previous
 bindsym $sup+End exec playerctl play-pause
+bindsym $sup+Shift+Prior exec playerctl previous
+bindsym $sup+Shift+Next exec playerctl next
 
 # Sreen brightness controls
 bindsym XF86MonBrightnessUp exec xbacklight -inc 20 # increase screen brightness

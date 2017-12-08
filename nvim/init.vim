@@ -3,6 +3,10 @@ source ~/.config/nvim/plugins.vim
 ""use the system clipboard
 set clipboard=unnamedplus
 
+""god damn
+set ignorecase
+set smartcase
+
 "undofile
 set undofile
 set undodir=~/.local/share/nvim/undo
