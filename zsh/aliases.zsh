@@ -13,7 +13,8 @@ alias ll='lstoless'
 alias pp='psc-package'
 alias f='fd --type f | fzf'
 
-alias emk="ps -ef | grep emacs | awk '{print \$2}' | xargs kill"
+alias emk="emacsclient -e '(kill-emacs)'"
+alias emk2="ps -ef | grep emacs | awk '{print \$2}' | xargs kill"
 
 if [[ -a $(which gxargs) ]]
 then
