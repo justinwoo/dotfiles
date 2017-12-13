@@ -180,6 +180,8 @@
   (add-to-list 'auto-mode-alist '("\\.tsx?\\'" . typescript-mode))
   ;; use prettier
   (add-hook 'typescript-mode-hook 'prettier-js-mode)
+  (evil-leader/set-key "pm" 'prettier-js-mode)
+  (evil-leader/set-key "pp" 'prettier-js)
   (add-hook 'scss-mode-hook 'prettier-js-mode)
 
   ;; holy fucking hell package rot
