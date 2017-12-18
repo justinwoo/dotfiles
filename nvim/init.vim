@@ -1,5 +1,7 @@
 source ~/.config/nvim/plugins.vim
 
+colorscheme onedark
+
 ""use the system clipboard
 set clipboard=unnamedplus
 

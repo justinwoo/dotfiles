@@ -1,2 +1,2 @@
-export EDITOR='vim' >> ~/.bashrc
-export GIT_EDITOR='vim' >> ~/.bashrc
+export EDITOR='nvim' >> ~/.bashrc
+export GIT_EDITOR='nvim' >> ~/.bashrc
