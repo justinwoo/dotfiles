@@ -40,8 +40,8 @@ bindsym $sup+Print exec gnome-screenshot -a
 floating_modifier $sup
 
 # suspend and lock?
-bindsym $ctrl+$sup+$mod+l exec i3lock -t -i ~/.dotfiles/i3/lockscreen.png && systemctl suspend
-bindsym XF86PowerOff exec i3lock -t -i ~/.dotfiles/i3/lockscreen.png && systemctl suspend
+bindsym $ctrl+$sup+$mod+l exec lockscreen && systemctl suspend
+bindsym XF86PowerOff exec lockscreen && systemctl suspend
 
 # start a terminal
 #bindsym $sup+Return exec i3-sensible-terminal
