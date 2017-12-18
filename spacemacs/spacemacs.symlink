@@ -90,8 +90,8 @@
   (push '(helm . "melpa-stable") package-pinned-packages))
 
 (defun dotspacemacs/user-config ()
-  (setq-default dotspacemacs-default-font '("Fantasque Sans Mono"
-                                            :size 18
+  (setq-default dotspacemacs-default-font '("Ubuntu Mono"
+                                            :size 20
                                             :weight normal
                                             :width normal
                                             :powerline-scale 1.1))
