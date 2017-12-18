@@ -6,7 +6,7 @@ exec ~/.dotfiles/i3/gnome-settings-daemon
 exec /usr/bin/nm-applet
 
 # set the font
-font pango:DejaVu Sans Mono 11
+font pango:Ubuntu Mono Regular 14
 
 # for_window
 for_window [instance="nautilus"] move window to scratchpad, scratchpad show
