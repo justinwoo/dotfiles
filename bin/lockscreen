@@ -1,6 +1,6 @@
 #!/bin/bash
 image="/tmp/lockscreen.png"
 scrot -m $image
-convert -scale 10% -scale 1000% $image $image
+convert -scale 5% -scale 2000% $image $image
 composite -blend 50x50 $image ~/.dotfiles/i3/lockscreen.png $image
 i3lock -i $image
