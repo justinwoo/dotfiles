@@ -45,7 +45,8 @@
    dotspacemacs-verbose-loading nil
    dotspacemacs-startup-banner 'official
    dotspacemacs-startup-lists '(recents projects)
-   dotspacemacs-themes '(material
+   dotspacemacs-themes '(wombat
+                         material
                          material-light
                          spacemacs-dark
                          spacemacs-light
@@ -179,7 +180,8 @@
   ;; turn on fuckin typescript mode
   (add-to-list 'auto-mode-alist '("\\.tsx?\\'" . typescript-mode))
   ;; use prettier
-  (add-hook 'typescript-mode-hook 'prettier-js-mode)
+  ;; let's not turn this on by default?
+  ;; (add-hook 'typescript-mode-hook 'prettier-js-mode)
   (evil-leader/set-key "mpm" 'prettier-js-mode)
   (evil-leader/set-key "mpp" 'prettier-js)
   (add-hook 'scss-mode-hook 'prettier-js-mode)
