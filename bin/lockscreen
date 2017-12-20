@@ -1,6 +1,7 @@
 #!/bin/bash
 image="/tmp/lockscreen.png"
+background="$(ls ~/.dotfiles/images/**/*.jpg | shuf -n 1)"
 scrot -m $image
 convert -scale 5% -scale 2000% $image $image
-composite -blend 50x50 $image ~/.dotfiles/i3/lockscreen.png $image
+composite -blend 50x50 -gravity center $background $image $image
 i3lock -i $image
