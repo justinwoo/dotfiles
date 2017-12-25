@@ -1,3 +1,4 @@
+alias nr='npm run'
 alias nrb='npm run build'
 alias nrt='npm run test'
 alias jw='jest --watch'
