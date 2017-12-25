@@ -41,6 +41,7 @@
   "exception-reporting":
     userId: "2a02be6a-d91a-998e-0abe-bbe3d07e3dd4"
   "git-plus": {}
+  "haskell-ghc-mod": {}
   "ide-purescript": {}
   "language-babel":
     createTranspiledCode: true
