@@ -1,9 +1,7 @@
 source ~/.config/nvim/plugins.vim
 
-colorscheme slate
-
 ""use the system clipboard
-set clipboard=unnamed
+set clipboard=unnamedplus
 
 ""god damn
 set ignorecase
