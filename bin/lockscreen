@@ -1,7 +1,10 @@
 #!/bin/bash
+screenshot="/tmp/lockscreen.jpg"
+resized="/tmp/resized_background.jpg"
 image="/tmp/lockscreen.png"
 background="$(ls ~/.dotfiles/images/**/*.jpg | shuf -n 1)"
-scrot -m $image
-convert -scale 5% -scale 2000% $image $image
-composite -blend 50x50 -gravity center $background $image $image
+convert $background -resize $(xdpyinfo | awk '/dimensions/{print $2}') $resized
+scrot -m $screenshot
+convert -scale 5% -scale 2000% $screenshot $screenshot
+composite -blend 50x50 -gravity center $resized $screenshot $image
 i3lock -i $image
