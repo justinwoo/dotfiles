@@ -3,6 +3,9 @@ source ~/.config/nvim/plugins.vim
 ""use the system clipboard
 set clipboard=unnamedplus
 
+"asdfsdf
+set shiftwidth=2
+
 ""god damn
 set ignorecase
 set smartcase
