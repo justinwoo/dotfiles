@@ -2,6 +2,9 @@
 # start up the gnome daemon
 exec ~/.dotfiles/i3/gnome-settings-daemon
 
+# backgrounds
+exec ~/.dotfiles/bin/set-bg
+
 # start up wifi manager?
 exec /usr/bin/nm-applet
 
