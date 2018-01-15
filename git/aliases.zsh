@@ -47,7 +47,7 @@ alias gac='ga . ; gc'
 
 # pretty colors
 alias gl='git log --graph --pretty=format:'\''%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset'\'' --abbrev-commit'
-alias gil='git log --decorate --stat --graph --pretty=format:"%d %Cgreen%h%Creset (%ar - %Cred%an%Creset), %s%n"'
+alias gil='git log --decorate=full --stat --graph'
 alias gild='git log --decorate'
 
 # the following are dangerous operations
