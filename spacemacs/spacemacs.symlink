@@ -7,77 +7,71 @@
    dotspacemacs-configuration-layer-path '()
    dotspacemacs-configuration-layers
    '(
-     racket
-     ocaml
-     clojure
-     graphviz
-     vimscript
      yaml
-     ruby
      javascript
      react
      typescript
-     (auto-completion (haskell :variables haskell-completion-backend 'intero)
-                      :variables
-                      auto-completion-enable-snippets-in-popup t
-                      auto-completion-return-key-behavior nil
-                      auto-completion-tab-key-behavior 'complete)
-
+     auto-completion
      better-defaults
      helm
      emacs-lisp
      git
      markdown
+     neotree
      org
      purescript
-     (haskell :variables haskell-enable-hindent-style "johan-tibell")
-     (shell :variables
-             shell-default-height 30
-             shell-default-position 'bottom
-             shell-default-term-shell "/usr/local/bin/zsh")
+     haskell
+     shell
      syntax-checking
      version-control
      html
      )
    dotspacemacs-additional-packages
    '(prettier-js
-     string-inflection
      fzf
      )
+   dotspacemacs-frozen-packages '()
    dotspacemacs-excluded-packages '()
    dotspacemacs-install-packages 'used-only))
 
 (defun dotspacemacs/init ()
   (setq-default
+   dotspacemacs-elpa-https t
+   dotspacemacs-elpa-timeout 5
+   dotspacemacs-use-spacelpa nil
+   dotspacemacs-verify-spacelpa-archives nil
+   dotspacemacs-elpa-subdirectory 'emacs-version
    dotspacemacs-editing-style 'vim
    dotspacemacs-verbose-loading nil
    dotspacemacs-startup-banner 'official
-   dotspacemacs-startup-lists '(recents projects)
-   dotspacemacs-themes '(wombat
-                         material
+   dotspacemacs-startup-lists '((recents . 5)
+                                (projects . 7))
+   dotspacemacs-startup-buffer-responsive t
+   dotspacemacs-scratch-mode 'text-mode
+   dotspacemacs-themes '(material
                          material-light
                          spacemacs-dark
                          spacemacs-light
                          solarized-light
                          solarized-dark)
+   dotspacemacs-mode-line-theme 'spacemacs
    dotspacemacs-colorize-cursor-according-to-state t
-   dotspacemacs-default-font '("Fantasque Mono"
+   dotspacemacs-default-font '("Ubuntu Mono"
                                :size 16
                                :weight normal
                                :width normal
                                :powerline-scale 1.1)
    dotspacemacs-leader-key "SPC"
+   dotspacemacs-emacs-command-key "SPC"
+   dotspacemacs-ex-command-key ":"
    dotspacemacs-emacs-leader-key "M-m"
    dotspacemacs-major-mode-leader-key ","
    dotspacemacs-major-mode-emacs-leader-key "C-M-m"
-   dotspacemacs-command-key ":"
    dotspacemacs-remap-Y-to-y$ t
    dotspacemacs-auto-save-file-location 'cache
-   dotspacemacs-use-ido nil
    dotspacemacs-helm-resize nil
    dotspacemacs-helm-no-header nil
    dotspacemacs-helm-position 'bottom
-   dotspacemacs-enable-paste-micro-state nil
    dotspacemacs-which-key-delay 0.4
    dotspacemacs-which-key-position 'bottom
    dotspacemacs-loading-progress-bar nil
@@ -207,7 +201,11 @@
   ;; web mode for shit
   (add-to-list 'auto-mode-alist '("\\.hbs?\\'" . web-mode))
 )
-
+(defun dotspacemacs/emacs-custom-settings ()
+  "Emacs custom settings.
+This is an auto-generated function, do not modify its content directly, use
+Emacs customize menu instead.
+This function is called at the very end of Spacemacs initialization."
 (custom-set-variables
  ;; custom-set-variables was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
@@ -215,10 +213,11 @@
  ;; If there is more than one, they won't work right.
  '(package-selected-packages
    (quote
-    (alert git-commit dash-functional dash use-package string-inflection psc-ide intero helm-flx fzf evil-surround define-word ace-window ace-link cider evil goto-chg company helm helm-core yasnippet avy markdown-mode projectile org-plus-contrib magit async f js2-mode typescript-mode yaml-mode xterm-color ws-butler winum which-key web-mode web-beautify volatile-highlights vimrc-mode vi-tilde-fringe uuidgen utop unfill undo-tree tuareg toc-org tide tagedit spaceline smeargle slim-mode shell-pop scss-mode sass-mode rvm ruby-tools ruby-test-mode rubocop rspec-mode robe restart-emacs rbenv rake rainbow-delimiters racket-mode queue pug-mode psci prettier-js popwin persp-mode paradox orgit org-projectile org-present org-pomodoro org-download org-bullets open-junk-file ocp-indent neotree mwim multi-term move-text mmm-mode minitest merlin markdown-toc magit-gitflow macrostep lorem-ipsum livid-mode linum-relative link-hint less-css-mode json-mode js2-refactor js-doc info+ indent-guide hungry-delete htmlize hlint-refactor hl-todo hindent highlight-parentheses highlight-numbers highlight-indentation hide-comnt help-fns+ helm-themes helm-swoop helm-projectile helm-mode-manager helm-make helm-hoogle helm-gitignore helm-descbinds helm-css-scss helm-company helm-c-yasnippet helm-ag haskell-snippets graphviz-dot-mode google-translate golden-ratio gnuplot gitconfig-mode gitattributes-mode git-timemachine git-messenger git-link git-gutter-fringe git-gutter-fringe+ ghub gh-md fuzzy flycheck-pos-tip flycheck-haskell flx-ido fill-column-indicator fancy-battery eyebrowse expand-region exec-path-from-shell evil-visualstar evil-visual-mark-mode evil-unimpaired evil-tutor evil-search-highlight-persist evil-numbers evil-nerd-commenter evil-mc evil-matchit evil-magit evil-lisp-state evil-indent-plus evil-iedit-state evil-exchange evil-escape evil-ediff evil-args evil-anzu eshell-z eshell-prompt-extras esh-help emmet-mode elisp-slime-nav dumb-jump diminish diff-hl dactyl-mode company-web company-tern company-statistics company-ghci company-ghc company-cabal column-enforce-mode coffee-mode cmm-mode clojure-snippets clj-refactor clean-aindent-mode cider-eval-sexp-fu chruby bundler bind-key auto-yasnippet auto-highlight-symbol auto-compile aggressive-indent adaptive-wrap ace-jump-helm-line ac-ispell))))
+    (solarized-theme org-brain material-theme evil-org editorconfig dante browse-at-remote inf-ruby smartparens flycheck window-purpose imenu-list magit-popup let-alist with-editor hydra purescript-mode s alert git-commit dash-functional dash use-package string-inflection psc-ide intero helm-flx fzf evil-surround define-word ace-window ace-link cider evil goto-chg company helm helm-core yasnippet avy markdown-mode projectile org-plus-contrib magit async f js2-mode typescript-mode yaml-mode xterm-color ws-butler winum which-key web-mode web-beautify volatile-highlights vimrc-mode vi-tilde-fringe uuidgen utop unfill undo-tree tuareg toc-org tide tagedit spaceline smeargle slim-mode shell-pop scss-mode sass-mode rvm ruby-tools ruby-test-mode rubocop rspec-mode robe restart-emacs rbenv rake rainbow-delimiters racket-mode queue pug-mode psci prettier-js popwin persp-mode paradox orgit org-projectile org-present org-pomodoro org-download org-bullets open-junk-file ocp-indent neotree mwim multi-term move-text mmm-mode minitest merlin markdown-toc magit-gitflow macrostep lorem-ipsum livid-mode linum-relative link-hint less-css-mode json-mode js2-refactor js-doc info+ indent-guide hungry-delete htmlize hlint-refactor hl-todo hindent highlight-parentheses highlight-numbers highlight-indentation hide-comnt help-fns+ helm-themes helm-swoop helm-projectile helm-mode-manager helm-make helm-hoogle helm-gitignore helm-descbinds helm-css-scss helm-company helm-c-yasnippet helm-ag haskell-snippets graphviz-dot-mode google-translate golden-ratio gnuplot gitconfig-mode gitattributes-mode git-timemachine git-messenger git-link git-gutter-fringe git-gutter-fringe+ ghub gh-md fuzzy flycheck-pos-tip flycheck-haskell flx-ido fill-column-indicator fancy-battery eyebrowse expand-region exec-path-from-shell evil-visualstar evil-visual-mark-mode evil-unimpaired evil-tutor evil-search-highlight-persist evil-numbers evil-nerd-commenter evil-mc evil-matchit evil-magit evil-lisp-state evil-indent-plus evil-iedit-state evil-exchange evil-escape evil-ediff evil-args evil-anzu eshell-z eshell-prompt-extras esh-help emmet-mode elisp-slime-nav dumb-jump diminish diff-hl dactyl-mode company-web company-tern company-statistics company-ghci company-ghc company-cabal column-enforce-mode coffee-mode cmm-mode clojure-snippets clj-refactor clean-aindent-mode cider-eval-sexp-fu chruby bundler bind-key auto-yasnippet auto-highlight-symbol auto-compile aggressive-indent adaptive-wrap ace-jump-helm-line ac-ispell))))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
  )
+)
