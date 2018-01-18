@@ -1,0 +1,142 @@
+// vim:ts=4:sw=4:et
+{
+    // splith split container with 2 children
+    "border": "normal",
+    "floating": "auto_off",
+    "layout": "splith",
+    "percent": 1,
+    "type": "con",
+    "nodes": [
+        {
+            // splitv split container with 2 children
+            "border": "normal",
+            "floating": "auto_off",
+            "layout": "splitv",
+            "percent": 0.5,
+            "type": "con",
+            "nodes": [
+                {
+                    "border": "normal",
+                    "current_border_width": 2,
+                    "floating": "auto_off",
+                    "geometry": {
+                       "height": 1365,
+                       "width": 935,
+                       "x": 2,
+                       "y": 73
+                    },
+                    "name": "i3: Layout saving in i3 - Google Chrome",
+                    "percent": 0.6,
+                    "swallows": [
+                       {
+                       // "class": "^Google\\-chrome$",
+                        "instance": "^google\\-chrome$"
+                       }
+                    ],
+                    "type": "con"
+                },
+                {
+                    "border": "normal",
+                    "current_border_width": 3,
+                    "floating": "auto_off",
+                    "geometry": {
+                       "height": 982,
+                       "width": 1414,
+                       "x": 0,
+                       "y": 0
+                    },
+                    "name": "Terminal",
+                    "percent": 0.4,
+                    "swallows": [
+                       {
+                       // "class": "^Gnome\\-terminal$",
+                         "title": "^Terminal$"
+                       }
+                    ],
+                    "type": "con"
+                }
+            ]
+        },
+        {
+            // splitv split container with 2 children
+            "border": "normal",
+            "floating": "auto_off",
+            "layout": "splitv",
+            "percent": 0.5,
+            "type": "con",
+            "nodes": [
+                {
+                    "border": "normal",
+                    "current_border_width": 3,
+                    "floating": "auto_off",
+                    "geometry": {
+                       "height": 792,
+                       "width": 896,
+                       "x": 0,
+                       "y": 0
+                    },
+                    "name": ".emacs-wrapped@gomibako",
+                    "percent": 0.6,
+                    "swallows": [
+                       {
+                       // "class": "^Emacs$",
+                         "instance": "^_emacs\\-wrapped$"
+                       }
+                    ],
+                    "type": "con"
+                },
+                {
+                    // splith split container with 2 children
+                    "border": "normal",
+                    "floating": "auto_off",
+                    "layout": "splith",
+                    "percent": 0.4,
+                    "type": "con",
+                    "nodes": [
+                        {
+                            "border": "normal",
+                            "current_border_width": 2,
+                            "floating": "auto_off",
+                            "geometry": {
+                               "height": 563,
+                               "width": 806,
+                               "x": 1752,
+                               "y": 875
+                            },
+                            "name": "Slack - functional programming",
+                            "percent": 0.7,
+                            "swallows": [
+                               {
+                               // "class": "^Slack$",
+                                 "instance": "^slack$"
+                               }
+                            ],
+                            "type": "con"
+                        },
+                        {
+                            "border": "normal",
+                            "current_border_width": 3,
+                            "floating": "auto_off",
+                            "geometry": {
+                               "height": 900,
+                               "width": 1200,
+                               "x": 1320,
+                               "y": 630
+                            },
+                            "name": "Telegram",
+                            "percent": 0.3,
+                            "swallows": [
+                               {
+                               // "class": "^TelegramDesktop$",
+                                 "instance": "^Telegram$"
+                               }
+                            ],
+                            "type": "con"
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}
+
