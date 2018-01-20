@@ -25,7 +25,7 @@
                        "x": 2,
                        "y": 73
                     },
-                    "name": "i3: Layout saving in i3 - Google Chrome",
+                    "name": "Google Chrome",
                     "percent": 0.6,
                     "swallows": [
                        {
@@ -75,7 +75,7 @@
                        "x": 0,
                        "y": 0
                     },
-                    "name": ".emacs-wrapped@gomibako",
+                    "name": "Emacs",
                     "percent": 0.6,
                     "swallows": [
                        {
@@ -103,7 +103,7 @@
                                "x": 1752,
                                "y": 875
                             },
-                            "name": "Slack - functional programming",
+                            "name": "Slack",
                             "percent": 0.7,
                             "swallows": [
                                {
