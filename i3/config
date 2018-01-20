@@ -24,7 +24,7 @@ for_window [window_role="pop-up"] move window to scratchpad, scratchpad show
 for_window [class="^.*"] border pixel 5
 
 # gaps
-gaps inner 10
+gaps inner 5
 gaps outer 5
 
 # aliases
