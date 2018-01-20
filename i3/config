@@ -21,7 +21,11 @@ for_window [instance="Pinta"] move window to scratchpad, scratchpad show
 for_window [window_role="pop-up"] move window to scratchpad, scratchpad show
 
 # no border
-for_window [class="^.*"] border pixel 2
+for_window [class="^.*"] border pixel 5
+
+# gaps
+gaps inner 10
+gaps outer 5
 
 # aliases
 set $sup Mod4
