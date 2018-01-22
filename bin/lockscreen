@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env zsh
 screenshot="/tmp/lockscreen.jpg"
 resized="/tmp/resized_background.jpg"
 image="/tmp/lockscreen.png"
