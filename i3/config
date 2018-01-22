@@ -51,6 +51,7 @@ bindsym $sup+Print exec gnome-screenshot -a
 floating_modifier $sup
 
 # suspend and lock?
+bindsym $ctrl+$mod+l exec lockscreen
 bindsym $ctrl+$sup+$mod+l exec lockscreen && systemctl suspend
 bindsym XF86PowerOff exec lockscreen && systemctl suspend
 
