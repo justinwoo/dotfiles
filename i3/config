@@ -18,6 +18,7 @@ for_window [instance="eog"] move window to scratchpad, scratchpad show
 for_window [instance="filezilla"] move window to scratchpad, scratchpad show
 for_window [instance="gimp"] move window to scratchpad, scratchpad show
 for_window [instance="Pinta"] move window to scratchpad, scratchpad show
+for_window [instance="evince"] move window to scratchpad, scratchpad show
 for_window [window_role="pop-up"] move window to scratchpad, scratchpad show
 
 # no border
