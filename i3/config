@@ -56,6 +56,10 @@ bindsym $ctrl+$mod+l exec lockscreen
 bindsym $ctrl+$sup+$mod+l exec lockscreen && systemctl suspend
 bindsym XF86PowerOff exec lockscreen && systemctl suspend
 
+# disable and enable touchpad
+bindsym $ctrl+$sup+$mod+e exec touchpad-enable
+bindsym $ctrl+$sup+$mod+d exec touchpad-disable
+
 # start a terminal
 #bindsym $sup+Return exec i3-sensible-terminal
 bindsym $sup+Return exec gnome-terminal
