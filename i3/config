@@ -248,8 +248,6 @@ bindsym XF86MonBrightnessDown exec xbacklight -dec 20 # decrease screen brightne
 # finds out, if available)
 bar {
         status_command i3status --config ~/.dotfiles/i3/i3status.conf
-        #status_command i3status
-        #tray_output primary
         position top
         workspace_buttons yes
 }
