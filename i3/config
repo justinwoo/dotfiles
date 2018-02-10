@@ -244,6 +244,7 @@ bindsym XF86MonBrightnessDown exec xbacklight -dec 20 # decrease screen brightne
 # finds out, if available)
 bar {
         status_command i3status --config ~/.dotfiles/i3/i3status.conf
+        # status_command i3blocks -c ~/.dotfiles/i3/i3blocks.conf
         position top
         workspace_buttons yes
 }
