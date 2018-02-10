@@ -1,0 +1,3 @@
+emc () {
+  emacs $1 &>/dev/null & disown
+}
