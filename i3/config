@@ -21,8 +21,11 @@ for_window [instance="Pinta"] move window to scratchpad, scratchpad show
 for_window [instance="evince"] move window to scratchpad, scratchpad show
 for_window [window_role="pop-up"] move window to scratchpad, scratchpad show
 
+# gaps
+gaps inner 10
+gaps outer 10
 # border
-for_window [class="^.*"] border normal 2
+for_window [class="^.*"] border pixel 5
 
 # aliases
 set $sup Mod4
@@ -58,7 +61,7 @@ bindsym $ctrl+$sup+$mod+d exec touchpad-disable
 
 # start a terminal
 #bindsym $sup+Return exec i3-sensible-terminal
-bindsym $sup+Return exec gnome-terminal
+bindsym $sup+Return exec terminator
 
 # kill focused window
 bindsym $sup+Shift+q kill
