@@ -25,7 +25,7 @@ for_window [window_role="pop-up"] move window to scratchpad, scratchpad show
 gaps inner 10
 gaps outer 10
 # border
-for_window [class="^.*"] border pixel 5
+for_window [class="^.*"] border pixel 3
 
 # aliases
 set $sup Mod4
@@ -248,7 +248,7 @@ set $bg     #2c2c2e
 set $fg     #9f9f9f
 set $hi     #efef8f
 set $ac     #dd4500
-set $tx     #040404
+set $tx     #eeeeee
 set $ia     #8f8f8f
 set $be     #8faf9f
 set $yw     #ccdc90
@@ -273,7 +273,7 @@ bar {
             background          $bg
             statusline          $fg
             separator           $hi
-            focused_workspace   $gn        $bg        $ac
+            focused_workspace   $ac        $ac       $tx
             active_workspace    $gn        $ac        $tx
             inactive_workspace  $bg        $bg        $ia
             urgent_workspace    $rd        $bg        $ac
