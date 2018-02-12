@@ -40,9 +40,7 @@ imap kj <Esc>
 "rebind ex mode to replay q macro
 map Q @q
 
-"map ' to \ since i dont use it either
-"i like having two keys bound to the same thing
-map ' \
+"leader
 map <space> \
 
 "make changing panes easier
