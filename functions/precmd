@@ -1,0 +1,3 @@
+precmd() {
+  echo -en "\033]0;$("pwd")\a"
+}
