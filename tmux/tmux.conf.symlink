@@ -1,4 +1,8 @@
 set-option -g default-shell $SHELL
+set-option -g set-titles on
+set-option -g set-titles-string "tmux | #S | #W | #{pane_current_path}"
+set-window-option -g window-status-current-format '#[fg=white,bold]#{window_index} #[fg=green]#{pane_current_command} #[fg=blue]#(echo "#{pane_current_path}" | rev | cut -d'/' -f-1 | rev) #[fg=white]'
+set-window-option -g window-status-format '#[fg=gray,bold]#{window_index} #[fg=green]#{pane_current_command} #[fg=blue]#(echo "#{pane_current_path}" | rev | cut -d'/' -f-1 | rev) #[fg=white]'
 
 # open new windows in whatever that's not my home
 bind % split-window -h -c "#{pane_current_path}"
