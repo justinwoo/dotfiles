@@ -1,8 +1,4 @@
 set-option -g default-shell $SHELL
-set-option -g set-titles on
-set-option -g set-titles-string "tmux | #S | #W | #{pane_current_path}"
-set-window-option -g window-status-current-format '#[fg=white,bold]#{window_index} #[fg=green]#{pane_current_command} #[fg=blue]#(echo "#{pane_current_path}" | rev | cut -d'/' -f-1 | rev) #[fg=white]'
-set-window-option -g window-status-format '#[fg=gray,bold]#{window_index} #[fg=green]#{pane_current_command} #[fg=blue]#(echo "#{pane_current_path}" | rev | cut -d'/' -f-1 | rev) #[fg=white]'
 
 # open new windows in whatever that's not my home
 bind % split-window -h -c "#{pane_current_path}"
@@ -21,6 +17,9 @@ bind C-p run "tmux set-buffer \"$(xclip -o -selection clipboard)\"; tmux paste-b
 # move tmux copy buffer into x clipboard
 unbind C-c
 bind C-c run "tmux show-buffer | xclip -i -selection clipboard &>/dev/null"
+
+# reload shit
+bind r source-file ~/.tmux.conf
 
 # copy-mode-vi rebinds jesus
 bind -T copy-mode-vi 'C-v' send-keys -X rectangle-toggle
@@ -64,13 +63,12 @@ set-option -g pane-active-border-bg default
 set-option -g pane-border-fg yellow
 set-option -g pane-border-bg default
 
+# Title
+set-option -g set-titles on
+set-option -g set-titles-string "tmux | #S | #W | #{pane_current_path}"
+
 # Status
-# set -g status-left '#[fg=green]#S#[fg=blue] #I:#P#[default]'
-# set -g status-left-length 100
-# set-option -g status-right '#[fg=green]#H#[default] %m/%d/%y %I:%M\
- #[fg=red]#(battery discharging)#[default]#(battery charging)'
-# set -g status-right-length 100
-# set -g status-bg white
-# set -g status-position bottom
-# setw -g window-status-format ' #[fg=black,bg=yellow] #I #[fg=black,bg=white,bold] #W'
-# setw -g window-status-current-format '#[fg=black,bg=green] #I #[fg=black,bg=white] #W '
+set -g status-left '#[fg=yellow]#S #[default]'
+set-option -g status-right '#[fg=yellow]#H#[default] %d-%m-%Y %H:%M'
+set-window-option -g window-status-current-format '#[fg=white,bold]#{window_index} #[fg=green]#{pane_current_command} #[fg=blue]#(echo "#{pane_current_path}" | rev | cut -d'/' -f-1 | rev) #[fg=white]'
+set-window-option -g window-status-format '#[fg=gray,bold]#{window_index} #[fg=green]#{pane_current_command} #[fg=blue]#(echo "#{pane_current_path}" | rev | cut -d'/' -f-1 | rev) #[fg=white]'
