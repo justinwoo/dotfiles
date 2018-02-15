@@ -1,40 +1,22 @@
 "*":
+  "activate-power-mode":
+    plugins:
+      playAudio: true
+      screenShake: true
+    screenShake: {}
+  "autocomplete-plus":
+    enableAutoActivation: false
   blame:
-    dateFormat: "MM/DD/YY"
+    dateFormat: "DD/MM/YY"
   "bracket-matcher":
     autocompleteBrackets: false
     autocompleteSmartQuotes: false
   core:
-    customFileTypes:
-      "source.ini": [
-        ".buckconfig"
-        ".flowconfig"
-        ".hgrc"
-      ]
-      "source.json": [
-        ".arcconfig"
-        "BUCK.autodeps"
-      ]
-      "source.python": [
-        "BUCK"
-      ]
-    disabledPackages: [
-      "haskell-grammar"
-      "autocomplete-haskell"
-      "atom-reason"
-      "atom-reason-loader"
-    ]
-    packagesWithKeymapsDisabled: [
-      "blame"
-    ]
+    disabledPackages: []
     telemetryConsent: "no"
-    themes: [
-      "one-light-ui"
-      "one-light-syntax"
-    ]
   editor:
     fontFamily: "\"Fira Code\""
-    fontSize: 12
+    fontSize: 16
     invisibles: {}
     preferredLineLength: 120
     showIndentGuide: true
@@ -42,62 +24,20 @@
     userId: "2a02be6a-d91a-998e-0abe-bbe3d07e3dd4"
   "git-plus": {}
   "haskell-ghc-mod": {}
-  "ide-purescript": {}
+  "ide-purescript":
+    addPscPackageSources: true
   "language-babel":
     createTranspiledCode: true
-  "language-elm":
-    elmOraclePath: "/Users/jwoo/.npm/bin/elm-oracle"
   linter: {}
-  nuclide:
-    installRecommendedPackages: true
-    "nuclide-arcanist": {}
-    "nuclide-blame-provider-hg": {}
-    "nuclide-buck-files": {}
-    "nuclide-diagnostics-store":
-      consumeLegacyLinters: false
-    "nuclide-flow":
-      diagnosticsOnFly: true
-      enableStructuredTypeHints: true
-    "nuclide-format-js": {}
-    "nuclide-hack": {}
-    "nuclide-health": {}
-    "nuclide-home":
-      showHome: false
-    "nuclide-ocaml": {}
-    "nuclide-output": {}
-  "prettier-atom":
-    prettierOptions:
-      semi: false
-      singleQuote: true
-  react:
-    enabledForAllJavascriptFiles: true
   "tool-bar": {}
   welcome:
     showOnStartup: false
 ".ansi.text":
   editor:
     preferredLineLength: 120
-".elm.source":
-  editor:
-    preferredLineLength: 120
-".hack.html.text":
-  editor:
-    preferredLineLength: 120
-".hackfragment.source":
-  editor:
-    preferredLineLength: 120
-".hg-commit.text":
-  editor:
-    preferredLineLength: 120
-".js.jsx.source":
-  editor:
-    preferredLineLength: 120
 ".psci.purescript.source":
   editor:
     preferredLineLength: 120
 ".purescript.source":
-  editor:
-    preferredLineLength: 120
-".source.swift":
   editor:
     preferredLineLength: 120
