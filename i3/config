@@ -247,13 +247,13 @@ bindsym XF86MonBrightnessDown exec xbacklight -dec 20 # decrease screen brightne
 set $bg     #2c2c2e
 set $fg     #9f9f9f
 set $hi     #efef8f
-set $ac     #dd4500
+set $ac     #3465a4
 set $tx     #eeeeee
 set $ia     #8f8f8f
 set $be     #8faf9f
 set $yw     #ccdc90
 set $gn     #88b090
-set $rd     #e89393
+set $rd     #729fcf
 
 # set some nice colors      border     background  text
 client.focused              $ac        $ac         $tx
