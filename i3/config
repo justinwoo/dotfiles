@@ -254,7 +254,7 @@ set $inactive   #777777
 set $unused     #8faf9f
 set $yellow     #ccdc90
 set $green      #88b090
-set $red        #e89393
+set $red        #ef2929
 
 client.focused          $main-dark  $main-dark  $text
 client.unfocused        $background $background $inactive
@@ -275,6 +275,6 @@ bar {
             focused_workspace  $main-dark  $main-dark  $text
             active_workspace   $green      $main-dark  $text
             inactive_workspace $background $background $inactive
-            urgent_workspace   $red        $red        $main-dark
+            urgent_workspace   $red        $red        $text
         }
 }
