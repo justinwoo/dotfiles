@@ -1,8 +1,5 @@
 source ~/.config/nvim/plugins.vim
 
-"" colorscheem
-colorscheme slate
-
 ""use the system clipboard
 set clipboard=unnamedplus
 
