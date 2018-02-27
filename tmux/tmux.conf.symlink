@@ -72,3 +72,10 @@ set -g status-left '#[fg=yellow]#S #[default]'
 set-option -g status-right '#[fg=yellow]#H#[default] %d-%m-%Y %H:%M'
 set-window-option -g window-status-current-format '#[fg=white,bold]#{window_index} #[fg=green]#{pane_current_command} #[fg=blue]#(echo "#{pane_current_path}" | rev | cut -d'/' -f-1 | rev) #[fg=white]'
 set-window-option -g window-status-format '#[fg=gray,bold]#{window_index} #[fg=green]#{pane_current_command} #[fg=blue]#(echo "#{pane_current_path}" | rev | cut -d'/' -f-1 | rev) #[fg=white]'
+
+## tpm garbage, needs to be bottom
+set -g @plugin 'tmux-plugins/tpm'
+set -g @plugin 'tmux-plugins/tmux-sensible'
+
+# Initialize TMUX plugin manager (keep this line at the very bottom of tmux.conf)
+run '~/.dotfiles/installed/tpm/tpm'
