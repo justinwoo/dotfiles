@@ -65,7 +65,7 @@ set-option -g pane-border-bg default
 
 # Title
 set-option -g set-titles on
-set-option -g set-titles-string "tmux | #S | #W | #{pane_current_path}"
+set-option -g set-titles-string "#S | #W | #{pane_current_path}"
 
 # Status
 set -g status-left '#[fg=yellow]#S #[default]'
