@@ -25,15 +25,15 @@ bind r source-file ~/.tmux.conf
 bind -T copy-mode-vi 'C-v' send-keys -X rectangle-toggle
 bind -T copy-mode-vi 'v' send-keys -X begin-selection
 bind -T copy-mode-vi 'x' send-keys -X clear-selection
-bind -T copy-mode-vi 'y' send-keys -X copy-selection-and-cancel
+# bind -T copy-mode-vi 'y' send-keys -X copy-selection-and-cancel
+bind -T copy-mode-vi 'y' send-keys -X copy-pipe-and-cancel 'xclip -i -selection clipboard &>/dev/null'
+unbind ']'
+bind ']' run "tmux set-buffer \"$(xclip -o -selection clipboard)\"; tmux paste-buffer"
 
 # bind a new prefix
 set -g prefix '`'
 # allow me to freaking use grave
 bind-key ` send-prefix
-# even better, toggle that shit off
-bind 'C-\' set-option -g prefix 'C-\'
-bind 'C-]' set-option -g prefix '`'
 
 # set vi style keys
 setw -g mode-keys vi
@@ -72,10 +72,3 @@ set -g status-left '#[fg=yellow]#S #[default]'
 set-option -g status-right '#[fg=yellow]#H#[default] %d-%m-%Y %H:%M'
 set-window-option -g window-status-current-format '#[fg=white,bold]#{window_index} #[fg=green]#{pane_current_command} #[fg=blue]#(echo "#{pane_current_path}" | rev | cut -d'/' -f-1 | rev) #[fg=white]'
 set-window-option -g window-status-format '#[fg=gray,bold]#{window_index} #[fg=green]#{pane_current_command} #[fg=blue]#(echo "#{pane_current_path}" | rev | cut -d'/' -f-1 | rev) #[fg=white]'
-
-## tpm garbage, needs to be bottom
-set -g @plugin 'tmux-plugins/tpm'
-set -g @plugin 'tmux-plugins/tmux-sensible'
-
-# Initialize TMUX plugin manager (keep this line at the very bottom of tmux.conf)
-run '~/.dotfiles/installed/tpm/tpm'
