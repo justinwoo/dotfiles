@@ -1,12 +1,11 @@
 atop
-cabal
 ctags
 emacs
 fd
 git
 git
 hub
-i3
+i3-gaps
 i3status
 loc
 neovim
@@ -16,9 +15,7 @@ pandoc
 playerctl
 ripgrep
 scrot
-teensy
 terminator
-texlive
 tmux
 tree
 vim_configurable

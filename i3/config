@@ -239,9 +239,14 @@ bindsym $sup+End exec playerctl play-pause
 bindsym $sup+Shift+Prior exec playerctl previous
 bindsym $sup+Shift+Next exec playerctl next
 
+# mic?
+bindsym XF86AudioMicMute exec amixer set Capture toggle
+
 # Sreen brightness controls
 bindsym XF86MonBrightnessUp exec xbacklight -inc 20 # increase screen brightness
 bindsym XF86MonBrightnessDown exec xbacklight -dec 20 # decrease screen brightness
+bindsym $sup+$ctrl+Prior exec xbacklight -inc 20 # increase screen brightness
+bindsym $sup+$ctrl+Next exec xbacklight -dec 20 # decrease screen brightness
 
 #colors border background text
 set $background #2c2c2e

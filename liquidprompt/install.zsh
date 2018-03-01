@@ -1,8 +1,8 @@
 #!/bin/sh
 
-if [[ ! -a $PROJECTS/liquidprompt ]]
+if [[ ! -a $INSTALLED/liquidprompt ]]
 then
-  cd $PROJECTS
+  cd $INSTALLED
   git clone https://github.com/nojhan/liquidprompt.git
   source liquidprompt/liquidprompt
 fi

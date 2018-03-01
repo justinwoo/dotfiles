@@ -1,4 +1,5 @@
-if test $(which opam)
-then
-	. ~/.opam/opam-init/init.zsh > /dev/null 2> /dev/null || true
-fi
+#!/usr/bin/env zsh
+# if test $(which opam)
+# then
+# 	. ~/.opam/opam-init/init.zsh > /dev/null 2> /dev/null || true
+# fi

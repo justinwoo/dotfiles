@@ -17,10 +17,6 @@ set smartcase
 set undofile
 set undodir=~/.local/share/nvim/undo
 
-"undofile
-set undofile
-set undodir=~/.local/share/nvim/undo
-
 ""stfu vim, i don't care if i 'crashed' or have multiple instances
 ""it's 2015 god damn it, editing shit simultaneously and corrupting files is normal
 set shortmess+=A

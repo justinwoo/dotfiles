@@ -5,6 +5,8 @@
 cd "$(dirname "$0")/.."
 DOTFILES_ROOT=$(pwd)
 
+mkdir -p ~/Code
+
 set -e
 
 echo ''
