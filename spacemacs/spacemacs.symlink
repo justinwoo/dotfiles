@@ -199,6 +199,9 @@
   ;; let's not turn this on by default?
   ;; (add-hook 'typescript-mode-hook 'prettier-js-mode)
 
+  ;; fuck you
+  (setq js2-strict-missing-semi-warning nil)
+
   ;; prettier shit
   (evil-leader/set-key "mpm" 'prettier-js-mode)
   (evil-leader/set-key "mpp" 'prettier-js)
