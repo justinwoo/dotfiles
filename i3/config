@@ -1,6 +1,7 @@
 # i3 config file (v4)
 # start up the gnome daemon
 exec ~/.dotfiles/i3/gnome-settings-daemon
+exec fcitx-autostart
 
 # backgrounds
 exec ~/.dotfiles/bin/set-bg
