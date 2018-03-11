@@ -13,14 +13,6 @@ export PROJECTS=~/Code
 # workspace convention
 export WORKSPACE=~/workspace
 
-# Stash your environment variables in ~/.localrc. This means they'll stay out
-# of your main dotfiles repository (which may be public, like this one), but
-# you'll have access to them in your scripts.
-if [[ -a ~/.localrc ]]
-then
-  source ~/.localrc
-fi
-
 # all of our zsh files
 typeset -U config_files
 config_files=($ZSH/**/*.zsh)
@@ -63,4 +55,10 @@ export NVM_DIR="/Users/jwoo/.nvm"
 
 # run vte if exists
 [ -f /etc/profile.d/vte.sh ] && . /etc/profile.d/vte.sh
+
+# local should come last???
+if [[ -a ~/.localrc ]]
+then
+  source ~/.localrc
+fi
 
