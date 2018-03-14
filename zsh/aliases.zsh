@@ -12,7 +12,7 @@ alias recent='ls -lht --color | head -10'
 alias first='ls -t | head -1'
 alias ll='lstoless'
 alias pp='psc-package'
-alias ppp='pulp --psc-package'
+alias p='pulp --psc-package'
 alias f='fd --type f | fzf'
 
 alias emk="emacsclient -e '(kill-emacs)'"
