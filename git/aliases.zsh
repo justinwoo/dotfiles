@@ -55,13 +55,11 @@ alias gild='git log --decorate'
 # the following are dangerous operations
 # use only if you are a madman
 # i hate git pull, do the most dangerous thing quickly
+alias gu='git fetch origin master && git rebase origin/master'
 alias gupdate='git fetch origin master && git rebase origin/master'
 alias gudev='git fetch origin dev && git rebase origin/dev'
-# same thing for origin branch
 alias gorigin='git fetch origin $(ggbn) && git rebase FETCH_HEAD'
-# same thing for the upstream origin
 alias gupstream='git fetch upstream master && git rebase FETCH_HEAD'
-# same thing for the upstream origin
 # update children
 alias gpullallchildren='gls -d */ | xargs -P10 -I{} git -C {} pull'
 alias gpac='gpullallchildren'
