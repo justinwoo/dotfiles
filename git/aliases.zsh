@@ -60,6 +60,7 @@ alias gupdate='git fetch origin master && git rebase origin/master'
 alias gudev='git fetch origin dev && git rebase origin/dev'
 alias gorigin='git fetch origin $(ggbn) && git rebase FETCH_HEAD'
 alias gupstream='git fetch upstream master && git rebase FETCH_HEAD'
+alias greset='git fetch origin $(ggbn) && git reset --hard FETCH_HEAD'
 # update children
 alias gpullallchildren='gls -d */ | xargs -P10 -I{} git -C {} pull'
 alias gpac='gpullallchildren'
