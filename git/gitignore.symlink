@@ -14,3 +14,4 @@ dump.rdb
 .vscode
 UBER_SECRET_RUN
 .dir-locals.el
+dummy.sql
