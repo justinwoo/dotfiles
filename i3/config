@@ -63,7 +63,7 @@ bindsym $ctrl+$sup+$mod+d exec touchpad-disable
 
 # start a terminal
 #bindsym $sup+Return exec i3-sensible-terminal
-bindsym $sup+Return exec terminator
+bindsym $sup+Return exec gnome-terminal
 
 # kill focused window
 bindsym $sup+Shift+q kill
