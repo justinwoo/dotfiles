@@ -15,3 +15,4 @@ dump.rdb
 UBER_SECRET_RUN
 .dir-locals.el
 dummy.sql
+.psc-package-backup
