@@ -33,6 +33,14 @@
      fzf
      ;; im fucking blind
      (solarized-theme :location (recipe :fetcher github :repo "justinwoo/solarized-emacs"))
+     ;; fuck man
+     (helm-projectile
+      :location
+      (recipe
+       :fetcher github
+       :repo "justinwoo/helm-projectile"
+       :branch "rollback-20eb422"
+       ))
      )
    dotspacemacs-frozen-packages '()
    dotspacemacs-excluded-packages
