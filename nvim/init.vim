@@ -3,9 +3,6 @@ source ~/.config/nvim/plugins.vim
 ""use the system clipboard
 set clipboard=unnamedplus
 
-" yup....wtf
-set guicursor= 
-
 "asdfsdf
 set shiftwidth=2
 
