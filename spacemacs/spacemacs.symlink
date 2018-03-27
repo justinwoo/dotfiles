@@ -30,7 +30,6 @@
      )
    dotspacemacs-additional-packages
    '(prettier-js
-     fzf
      ;; im fucking blind
      (solarized-theme :location (recipe :fetcher github :repo "justinwoo/solarized-emacs"))
      ;; fuck man
@@ -125,9 +124,6 @@
   (evil-leader/set-key "*" 'spacemacs/helm-project-do-ag-region-or-symbol)
   (setq helm-ag-base-command "rg --vimgrep --no-heading --smart-case")
 
-  ;; use fzf-projectile sometimes
-  (evil-leader/set-key "pz" 'fzf-projectile)
-
   ;; no more hl line
   (global-hl-line-mode -1)
 
@@ -163,9 +159,6 @@
   ;; jumalauta who thought this is helpful
   (fset 'evil-visual-update-x-selection 'ignore)
 
-  ;; ;; set the actual freakin font size
-  ;; (set-face-attribute 'default nil :height 150)
-
   ;; no powerline freaking separator
   (setq powerline-default-separator 'nil)
 
@@ -189,26 +182,12 @@
    web-mode-code-indent-offset 2
    web-mode-attr-indent-offset 2)
   (setq-default js-indent-level 2)
-  ;; (setq typescript-indent-level 2)
-  ;; (setq typescript-expr-indent-offset 2)
 
   (setq c-default-style "java")
   (setq-default c-basic-offset 2)
 
-  ;; god damn it tide
-  (setq tide-format-options
-        '(:insertSpaceAfterFunctionKeywordForAnonymousFunctions
-          t
-          :placeOpenBraceOnNewLineForFunctions nil
-          :indentSize 2
-          :tabSize 2))
-
-  ;; no more fucking typescript
-  ;; turn on fuckin typescript mode
-  ;; (add-to-list 'auto-mode-alist '("\\.tsx?\\'" . typescript-mode))
-  ;; use prettier
-  ;; let's not turn this on by default?
-  ;; (add-hook 'typescript-mode-hook 'prettier-js-mode)
+  ;; react mode shit
+  (add-to-list 'auto-mode-alist '("\\.jsx?\\'" . react-mode))
 
   ;; fuck you
   (setq js2-strict-missing-semi-warning nil)
@@ -228,12 +207,6 @@
 
   ;; holy fucking hell package rot
   (setq ghc-report-errors nil)
-
-  ;; handlebars is web mode?
-  (add-to-list 'auto-mode-alist '("\\.foo\\'" . foo-mode))
-
-  ;; web mode for shit
-  (add-to-list 'auto-mode-alist '("\\.hbs?\\'" . web-mode))
 )
 (defun dotspacemacs/emacs-custom-settings ()
   "Emacs custom settings.
