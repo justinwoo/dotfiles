@@ -31,8 +31,9 @@
    dotspacemacs-additional-packages
    '(prettier-js
      ;; fuck this doesnt even work with spacemacs master
+     ;; fuck you spacemacs
      ;; im fucking blind
-     ;; (solarized-theme :location (recipe :fetcher github :repo "justinwoo/solarized-emacs"))
+     (solarized-theme :location (recipe :fetcher github :repo "justinwoo/solarized-emacs"))
      ;; fuck man
      (helm-projectile
       :location
@@ -62,7 +63,8 @@
                                 (projects . 7))
    dotspacemacs-startup-buffer-responsive t
    dotspacemacs-scratch-mode 'text-mode
-   dotspacemacs-themes '(misterioso
+   dotspacemacs-themes '(solarized-dark
+                         misterioso
                          spacemacs-dark
                          spacemacs-light
                          )
