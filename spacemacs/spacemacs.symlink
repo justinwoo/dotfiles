@@ -136,6 +136,9 @@
      (quote
       ("src/**/*.purs" "bower_components/purescript-*/src/**/*.purs" ".psc-package/*/*/*/src/**/*.purs"))))
 
+  ;; holy fucking shit
+  (setq-default search-invisible t)
+
   ;; yolo
   (global-company-mode)
 
