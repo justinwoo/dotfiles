@@ -62,7 +62,7 @@
    dotspacemacs-startup-lists '((recents . 5)
                                 (projects . 7))
    dotspacemacs-startup-buffer-responsive t
-   dotspacemacs-scratch-mode 'text-mode
+   dotspacemacs-scratch-mode 'org-mode
    dotspacemacs-themes '(solarized-dark
                          misterioso
                          spacemacs-dark
@@ -70,12 +70,10 @@
                          )
    dotspacemacs-mode-line-theme 'spacemacs
    dotspacemacs-colorize-cursor-according-to-state t
-   ;; this is where the ACTUAL font size gets set?
    dotspacemacs-default-font '("Ubuntu Mono"
                                :size 20
                                :weight normal
-                               :width normal
-                               :powerline-scale 1.1)
+                               :width normal)
    dotspacemacs-leader-key "SPC"
    dotspacemacs-emacs-command-key "SPC"
    dotspacemacs-ex-command-key ":"
