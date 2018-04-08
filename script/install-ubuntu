@@ -8,6 +8,6 @@ sudo add-apt-repository -y ppa:hvr/ghc
 
 sudo apt-get update
 
-sudo apt-get install -y i3 suckless-tools zsh xtrlock xbacklight stalonetray fdpowermon pasystray python-pygments mosh screen htop libtinfo-dev inotify-tools colordiff fonts-roboto cmake libav-tools normalize-audio libavcodec-extra curl libcurl4-openssl-dev libavcodec-dev libavdevice-dev libvulkan1
+sudo apt-get install -y suckless-tools zsh xtrlock xbacklight stalonetray fdpowermon pasystray python-pygments mosh screen htop libtinfo-dev inotify-tools colordiff fonts-roboto cmake libav-tools normalize-audio libavcodec-extra curl libcurl4-openssl-dev libavcodec-dev libavdevice-dev libvulkan1
 
 curl https://sh.rustup.rs -sSf | sh
