@@ -226,7 +226,9 @@ bindsym $sup+t mode "quickprograms"
 # shortcuts
 bindsym $sup+Shift+o exec nautilus ~/Pictures
 bindsym $sup+u [title="Slack"] scratchpad show
+bindsym $sup+x [title="Slack"] scratchpad show
 bindsym $sup+i [title="Telegram"] scratchpad show
+bindsym $sup+c [title="Telegram"] scratchpad show
 
 # Pulse Audio controls
 bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume 0 +5% #increase sound volume
