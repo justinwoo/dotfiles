@@ -227,6 +227,8 @@ bindsym $sup+t mode "quickprograms"
 
 # shortcuts
 bindsym $sup+Shift+o exec nautilus ~/Pictures
+bindsym $sup+p [instance="gnome-terminal"] scratchpad show
+bindsym $sup+o [instance="nautilus"] scratchpad show
 bindsym $sup+u [title="Slack"] scratchpad show
 bindsym $sup+x [title="Slack"] scratchpad show
 bindsym $sup+i [title="Telegram"] scratchpad show
