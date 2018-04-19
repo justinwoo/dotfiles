@@ -11,6 +11,7 @@ yarn.lock
 npm-debug.log*
 TAGS
 .\#*
+my-patch.diff
 dump.rdb
 .vscode
 UBER_SECRET_RUN
