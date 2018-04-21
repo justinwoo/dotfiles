@@ -230,10 +230,11 @@ bindsym $sup+Shift+p exec nautilus ~/Pictures
 bindsym $sup+semicolon [instance="vlc"] scratchpad show
 bindsym $sup+o [instance="gnome-terminal"] scratchpad show
 bindsym $sup+p [instance="nautilus"] scratchpad show
-bindsym $sup+u [title="Slack"] scratchpad show
-bindsym $sup+x [title="Slack"] scratchpad show
-bindsym $sup+i [title="Telegram"] scratchpad show
-bindsym $sup+c [title="Telegram"] scratchpad show
+bindsym $sup+y [instance="google-chrome"] scratchpad show
+bindsym $sup+i [title="Slack"] scratchpad show
+bindsym $sup+c [title="Slack"] scratchpad show
+bindsym $sup+u [title="Telegram"] scratchpad show
+bindsym $sup+x [title="Telegram"] scratchpad show
 
 # Pulse Audio controls
 bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume 0 +5% #increase sound volume
