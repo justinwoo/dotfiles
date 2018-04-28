@@ -61,11 +61,3 @@ if [[ -a ~/.localrc ]]
 then
   source ~/.localrc
 fi
-
-
-# tabtab source for serverless package
-# uninstall by removing these lines or running `tabtab uninstall serverless`
-[[ -f /home/justin/Code/tocoman/v5-webfront/node_modules/tabtab/.completions/serverless.zsh ]] && . /home/justin/Code/tocoman/v5-webfront/node_modules/tabtab/.completions/serverless.zsh
-# tabtab source for sls package
-# uninstall by removing these lines or running `tabtab uninstall sls`
-[[ -f /home/justin/Code/tocoman/v5-webfront/node_modules/tabtab/.completions/sls.zsh ]] && . /home/justin/Code/tocoman/v5-webfront/node_modules/tabtab/.completions/sls.zsh
