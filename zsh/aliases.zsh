@@ -14,6 +14,7 @@ alias ll='lstoless'
 alias pp='psc-package'
 alias p='pulp --psc-package'
 alias f='fd --type f | fzf'
+alias darkest='xbacklight -set 1'
 
 alias emk="emacsclient -e '(kill-emacs)'"
 alias emk2="ps -ef | grep emacs | awk '{print \$2}' | xargs kill"
