@@ -1,5 +1,2 @@
-alias sc='script/console'
-alias sg='script/generate'
-alias sd='script/destroy'
-alias bi='bundle install'
-alias be='bundle exec'
+alias bui='bundle install'
+alias bue='bundle exec'
