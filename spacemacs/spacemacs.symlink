@@ -32,7 +32,6 @@ values."
      (shell :variables
             shell-default-height 30
             shell-default-position 'bottom)
-     spell-checking
      syntax-checking
      version-control
      yaml
@@ -312,7 +311,7 @@ layers configuration. You are free to put any user code."
   (setq ghc-report-errors nil)
 
   ;; haskell layer normally just fucks up
-  (require 'haskell-mode)
+  ;; (require 'haskell-mode)
 )
 
 ;; Do not write anything past this comment. This is where Emacs will
