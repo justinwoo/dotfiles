@@ -1,0 +1,231 @@
+;; -*- mode: emacs-lisp -*-
+(defun dotspacemacs/layers ()
+  (setq-default
+   dotspacemacs-distribution 'spacemacs
+   dotspacemacs-enable-lazy-installation 'unused
+   dotspacemacs-ask-for-lazy-installation nil
+   dotspacemacs-configuration-layer-path '()
+   dotspacemacs-configuration-layers
+   '(haskell
+     rust
+     helm
+     (auto-completion
+      :variables
+      auto-completion-tab-key-behavior 'complete)
+     better-defaults
+     emacs-lisp
+     git
+     markdown
+     vimscript
+     yaml
+     javascript
+     react
+     treemacs
+     org
+     purescript
+     shell
+     syntax-checking
+     version-control
+     html
+     )
+   dotspacemacs-additional-packages
+   '(prettier-js
+     ;; fuck this doesnt even work with spacemacs master
+     ;; fuck you spacemacs
+     ;; im fucking blind
+     (solarized-theme :location (recipe :fetcher github :repo "justinwoo/solarized-emacs"))
+     ;; fuck man
+     (helm-projectile
+      :location
+      (recipe
+       :fetcher github
+       :repo "justinwoo/helm-projectile"
+       :branch "rollback-20eb422"
+       ))
+     )
+   dotspacemacs-frozen-packages '()
+   dotspacemacs-excluded-packages
+   '(editorconfig
+     )
+   dotspacemacs-install-packages 'used-only))
+
+(defun dotspacemacs/init ()
+  (setq-default
+   dotspacemacs-elpa-https t
+   dotspacemacs-elpa-timeout 5
+   dotspacemacs-use-spacelpa nil
+   dotspacemacs-verify-spacelpa-archives nil
+   dotspacemacs-elpa-subdirectory 'emacs-version
+   dotspacemacs-editing-style 'vim
+   dotspacemacs-verbose-loading nil
+   dotspacemacs-startup-banner 'official
+   dotspacemacs-startup-lists '((recents . 5)
+                                (projects . 7))
+   dotspacemacs-startup-buffer-responsive t
+   dotspacemacs-scratch-mode 'org-mode
+   dotspacemacs-themes '(solarized-dark
+                         misterioso
+                         spacemacs-dark
+                         spacemacs-light
+                         )
+   dotspacemacs-mode-line-theme 'spacemacs
+   dotspacemacs-colorize-cursor-according-to-state t
+   dotspacemacs-default-font '("Ubuntu Mono"
+                               :size 20
+                               :weight normal
+                               :width normal)
+   dotspacemacs-leader-key "SPC"
+   dotspacemacs-emacs-command-key "SPC"
+   dotspacemacs-ex-command-key ":"
+   dotspacemacs-emacs-leader-key "M-m"
+   dotspacemacs-major-mode-leader-key ","
+   dotspacemacs-major-mode-emacs-leader-key "C-M-m"
+   dotspacemacs-remap-Y-to-y$ t
+   dotspacemacs-auto-save-file-location 'cache
+   dotspacemacs-helm-resize nil
+   dotspacemacs-helm-no-header nil
+   dotspacemacs-helm-position 'bottom
+   dotspacemacs-which-key-delay 0.4
+   dotspacemacs-which-key-position 'bottom
+   dotspacemacs-loading-progress-bar nil
+   dotspacemacs-fullscreen-at-startup nil
+   dotspacemacs-fullscreen-use-non-native nil
+   dotspacemacs-maximized-at-startup t
+   dotspacemacs-active-transparency 90
+   dotspacemacs-inactive-transparency 90
+   dotspacemacs-smooth-scrolling nil
+   dotspacemacs-folding-method 'evil
+   dotspacemacs-smartparens-strict-mode nil
+   dotspacemacs-smart-closing-parenthesis nil
+   dotspacemacs-highlight-delimiters 'all
+   dotspacemacs-persistent-server nil
+   dotspacemacs-search-tools '("ag" "pt" "ack" "grep")
+   dotspacemacs-default-package-repository nil
+
+   ;; NUMBERS like CALL OF DUTY
+   dotspacemacs-line-numbers t
+   ))
+
+(defun dotspacemacs/user-init ()
+  )
+
+(defun dotspacemacs/user-config ()
+  ;; ;; load some local config
+  (when (file-exists-p "~/.user-config.el")
+    (load-file "~/.user-config.el"))
+
+  ;; rebind spc / and *
+  (evil-leader/set-key "/" 'spacemacs/helm-project-do-ag)
+  (evil-leader/set-key "*" 'spacemacs/helm-project-do-ag-region-or-symbol)
+  (setq helm-ag-base-command "rg --vimgrep --no-heading --smart-case")
+
+  ;; no more hl line
+  (global-hl-line-mode -1)
+
+  ;; guess im using this or something dunno
+  (setq org-agenda-files '("~/Code/notes/notes.org"))
+
+  ;; some purescript ide config
+  (custom-set-variables
+   '(psc-ide-source-globs
+     (quote
+      ("src/**/*.purs" "test/**/*.purs" "bower_components/purescript-*/src/**/*.purs" ".psc-package/*/*/*/src/**/*.purs"))))
+
+  ;; holy fucking shit
+  (setq-default search-invisible t)
+
+  ;; yolo
+  (global-company-mode)
+
+  ;; what kind fo weirdo uses the normal one
+  ;; use some company complete
+  (global-set-key (kbd "C-SPC") 'company-complete)
+  (define-key evil-insert-state-map (kbd "<tab>") 'company-complete-common)
+
+  ;; Why doesn't this work by default?
+  (global-set-key (kbd "C-i") 'evil-jump-forward)
+
+  ;; jesus christ delay popups are annoying
+  (setq company-idle-delay 'nil)
+
+  ;; i wish this were two separate commands
+  (setq-default git-magit-status-fullscreen t)
+
+  ;; jumalauta who thought this is helpful
+  (fset 'evil-visual-update-x-selection 'ignore)
+
+  ;; no powerline freaking separator
+  ;; what the fuck did this break forward search before
+  (setq powerline-default-separator 'bar)
+
+  ;; make ; do :
+  (define-key evil-normal-state-map (kbd ";") 'evil-ex)
+
+  ;; make Q do @q
+  (define-key evil-normal-state-map (kbd "Q") 'evil-execute-macro)
+
+  ;; escape key sequence
+  (setq-default evil-escape-key-sequence "kj")
+
+  ;; wtf who doesn't use 2-space JS indent
+  (setq-default
+   ;; js2-mode
+   js2-basic-offset 2
+   ;; web-mode
+   css-indent-offset 2
+   web-mode-markup-indent-offset 2
+   web-mode-css-indent-offset 2
+   web-mode-code-indent-offset 2
+   web-mode-attr-indent-offset 2)
+  (setq-default js-indent-level 2)
+
+  (setq c-default-style "java")
+  (setq-default c-basic-offset 2)
+
+  ;; react mode shit
+  (add-to-list 'auto-mode-alist '("\\.jsx?\\'" . react-mode))
+
+  ;; fuck you
+  (setq js2-strict-missing-semi-warning nil)
+
+  ;; prettier shit
+  (require 'prettier-js)
+  (evil-leader/set-key "mpm" 'prettier-js-mode)
+  (evil-leader/set-key "mpp" 'prettier-js)
+  (evil-leader/set-key "mps" (lambda ()
+                               (interactive)
+                               (customize-set-variable 'prettier-js-command "prettier-standard")
+                               (prettier-js)
+                               ))
+  (evil-leader/set-key "mpd" (lambda ()
+                               (interactive)
+                               (customize-set-variable 'prettier-js-command "prettier")
+                               (prettier-js)
+                               ))
+
+  ;; holy fucking hell package rot
+  (setq ghc-report-errors nil)
+
+  ;; haskell layer normally just fucks up
+  (require 'haskell-mode)
+)
+(defun dotspacemacs/emacs-custom-settings ()
+  "Emacs custom settings.
+This is an auto-generated function, do not modify its content directly, use
+Emacs customize menu instead.
+This function is called at the very end of Spacemacs initialization."
+(custom-set-variables
+ ;; custom-set-variables was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ '(package-selected-packages
+   (quote
+    (intero hlint-refactor hindent helm-hoogle haskell-snippets flycheck-haskell dante lcr company-ghci company-ghc ghc haskell-mode company-cabal cmm-mode yasnippet-snippets yaml-mode xterm-color ws-butler winum which-key web-mode web-beautify volatile-highlights vimrc-mode vi-tilde-fringe uuidgen use-package unfill treemacs-projectile treemacs-evil toml-mode toc-org tagedit symon string-inflection spaceline-all-the-icons solarized-theme smeargle slim-mode shell-pop scss-mode sass-mode restart-emacs rainbow-delimiters racer pug-mode psci psc-ide prettier-js popwin persp-mode pcre2el password-generator paradox overseer orgit org-projectile org-present org-pomodoro org-mime org-download org-bullets org-brain open-junk-file nameless mwim multi-term move-text mmm-mode markdown-toc magit-gitflow macrostep lorem-ipsum livid-mode linum-relative link-hint less-css-mode json-navigator json-mode js2-refactor js-doc indent-guide impatient-mode hungry-delete hl-todo highlight-parentheses highlight-numbers highlight-indentation helm-xref helm-themes helm-swoop helm-purpose helm-projectile helm-mode-manager helm-make helm-gitignore helm-flx helm-descbinds helm-css-scss helm-company helm-c-yasnippet helm-ag google-translate golden-ratio gnuplot gitconfig-mode gitattributes-mode git-timemachine git-messenger git-link git-gutter-fringe git-gutter-fringe+ gh-md fuzzy font-lock+ flycheck-rust flycheck-pos-tip flx-ido fill-column-indicator fancy-battery eyebrowse expand-region exec-path-from-shell evil-visualstar evil-visual-mark-mode evil-unimpaired evil-tutor evil-surround evil-search-highlight-persist evil-org evil-numbers evil-nerd-commenter evil-mc evil-matchit evil-magit evil-lisp-state evil-lion evil-indent-plus evil-iedit-state evil-exchange evil-escape evil-ediff evil-cleverparens evil-args evil-anzu eval-sexp-fu eshell-z eshell-prompt-extras esh-help emmet-mode elisp-slime-nav dumb-jump diminish diff-hl define-word dactyl-mode counsel-projectile company-web company-tern company-statistics column-enforce-mode clean-aindent-mode centered-cursor-mode cargo browse-at-remote auto-yasnippet auto-highlight-symbol auto-compile aggressive-indent adaptive-wrap ace-link ace-jump-helm-line ac-ispell))))
+(custom-set-faces
+ ;; custom-set-faces was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ )
+)
