@@ -311,7 +311,7 @@ layers configuration. You are free to put any user code."
   (setq ghc-report-errors nil)
 
   ;; haskell layer normally just fucks up
-  ;; (require 'haskell-mode)
+  (use-package 'haskell-mode)
 )
 
 ;; Do not write anything past this comment. This is where Emacs will
