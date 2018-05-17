@@ -24,7 +24,7 @@ values."
      ;; <M-m f e R> (Emacs style) to install them.
      ;; ----------------------------------------------------------------
      (auto-completion :variables
-                      auto-completion-tab-key-behavior 'cycle)
+                      auto-completion-tab-key-behavior 'complete)
      ;; better-defaults
      emacs-lisp
      git
@@ -245,7 +245,10 @@ layers configuration. You are free to put any user code."
   ;; what kind fo weirdo uses the normal one
   ;; use some company complete
   (global-set-key (kbd "C-SPC") 'company-complete)
+  (global-set-key (kbd "C-S-SPC") 'company-dabbrev)
+  (global-set-key (kbd "M-SPC") 'company-dabbrev)
   (define-key evil-insert-state-map (kbd "<tab>") 'company-complete-common)
+  (define-key evil-insert-state-map (kbd "C-p") 'company-dabbrev)
 
   ;; Why doesn't this work by default?
   (global-set-key (kbd "C-i") 'evil-jump-forward)
