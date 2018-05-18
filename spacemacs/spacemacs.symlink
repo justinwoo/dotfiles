@@ -258,7 +258,18 @@ layers configuration. You are free to put any user code."
   (setq company-idle-delay 'nil)
 
   ;; i wish this were two separate commands
-  (setq-default git-magit-status-fullscreen t)
+  (evil-leader/set-key "gs"
+    (lambda ()
+      (interactive)
+      (customize-set-variable 'magit-display-buffer-function 'magit-display-buffer-traditional)
+      (magit-status)
+      ))
+  (evil-leader/set-key "gS"
+    (lambda ()
+      (interactive)
+      (customize-set-variable 'magit-display-buffer-function 'magit-display-buffer-fullframe-status-v1)
+      (magit-status)
+      ))
 
   ;; jumalauta who thought this is helpful
   (fset 'evil-visual-update-x-selection 'ignore)
