@@ -292,7 +292,7 @@ layers configuration. You are free to put any user code."
   (setq-default c-basic-offset 2)
 
   ;; react mode shit
-  (add-to-list 'auto-mode-alist '("\\.jsx?\\'" . react-mode))
+  (add-to-list 'auto-mode-alist '("\\.jsx?\\'" . rjsx-mode))
 
   ;; fuck you
   (setq js2-strict-missing-semi-warning nil)
