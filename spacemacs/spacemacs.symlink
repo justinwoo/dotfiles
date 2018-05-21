@@ -467,6 +467,42 @@ layers configuration. You are free to put any user code."
   ;; escape key sequence
   (setq-default evil-escape-key-sequence "kj")
 
+  ;; react mode shit
+  (add-to-list 'auto-mode-alist '("\\.jsx?\\'" . rjsx-mode))
+
+  ;; fuck off
+  (setq js2-strict-missing-semi-warning nil)
+  (setq js2-missing-semi-one-line-override nil)
+
+  ;; wtf who doesn't use 2-space JS indent
+  (setq-default
+   ;; js2-mode
+   js2-basic-offset 2
+   ;; web-mode
+   css-indent-offset 2
+   web-mode-markup-indent-offset 2
+   web-mode-css-indent-offset 2
+   web-mode-code-indent-offset 2
+   web-mode-attr-indent-offset 2)
+  (setq-default js-indent-level 2)
+
+  (setq c-default-style "java")
+  (setq-default c-basic-offset 2)
+
+  ;; prettier shit
+  (require 'prettier-js)
+  (evil-leader/set-key "mpm" 'prettier-js-mode)
+  (evil-leader/set-key "mpp" 'prettier-js)
+  (evil-leader/set-key "mps" (lambda ()
+                               (interactive)
+                               (customize-set-variable 'prettier-js-command "prettier-standard")
+                               (prettier-js)
+                               ))
+  (evil-leader/set-key "mpd" (lambda ()
+                               (interactive)
+                               (customize-set-variable 'prettier-js-command "prettier")
+                               (prettier-js)
+                               ))
   )
 
 ;; Do not write anything past this comment. This is where Emacs will
