@@ -25,10 +25,10 @@ for_window [instance="evince"] move window to scratchpad, scratchpad show
 for_window [window_role="pop-up"] move window to scratchpad, scratchpad show
 
 # gaps
-gaps inner 10
-gaps outer 10
+# gaps inner 10
+# gaps outer 10
 # border
-for_window [class="^.*"] border pixel 3
+# for_window [class="^.*"] border pixel 3
 
 # aliases
 set $sup Mod4
