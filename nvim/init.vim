@@ -18,8 +18,8 @@ set undodir=~/.local/share/nvim/undo
 ""it's 2015 god damn it, editing shit simultaneously and corrupting files is normal
 set shortmess+=A
 
-""show me the numbers
-set number
+""show me the relative numbers
+set number relativenumber
 
 "make commands easier to input
 map ; :
