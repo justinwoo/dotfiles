@@ -55,6 +55,8 @@ alias gbupdate='git fetch origin $(ggbn) && git rebase FETCH_HEAD'
 alias gbupstream='git fetch upstream $(ggbn) && git rebase FETCH_HEAD'
 alias gupstream='git fetch upstream master && git rebase FETCH_HEAD'
 alias greset='git fetch origin $(ggbn) && git reset --hard FETCH_HEAD'
+alias gureset='git fetch upstream $(ggbn) && git reset --hard FETCH_HEAD'
+alias gjreset='git fetch justinwoo $(ggbn) && git reset --hard FETCH_HEAD'
 # update children
 alias gpullallchildren='ls -d */ | xargs -P10 -I{} git -C {} pull'
 alias gpac='gpullallchildren'
