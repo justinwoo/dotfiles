@@ -54,7 +54,6 @@ values."
                                                        (recipe :fetcher
                                                                github :repo
                                                                "justinwoo/solarized-emacs"))
-                                      fzf
                                       )
    ;; A list of packages and/or extensions that will not be install and loaded.
    dotspacemacs-excluded-packages '(neotree
@@ -447,9 +446,6 @@ layers configuration. You are free to put any user code."
       (customize-set-variable 'magit-display-buffer-function 'magit-display-buffer-fullframe-status-v1)
       (magit-status)
       ))
-
-  ;; fuck projectile is slow? how do i improve it
-  (evil-leader/set-key "pf" 'fzf)
 
   ;; jumalauta who thought this is helpful
   (fset 'evil-visual-update-x-selection 'ignore)
