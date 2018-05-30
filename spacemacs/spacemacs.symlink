@@ -135,12 +135,12 @@ It should only modify the values of Spacemacs settings."
    ;; Default font. `powerline-scale' allows to quickly tweak the mode-line
    ;; size to make separators look not too crappy.
    dotspacemacs-default-font '(
-                               ;; "Noto Sans Mono CJK SC"
-                               "Ubuntu Mono"
+                               "Noto Sans Mono CJK JP"
+                               ;; "Ubuntu Mono"
                                :size 16
                                :weight normal
                                :width normal
-                               :powerline-scale 1.1)
+                               :powerline-scale 1.0)
    ;; The leader key
    dotspacemacs-leader-key "SPC"
 
@@ -423,7 +423,7 @@ layers configuration. You are free to put any user code."
                     org-level-5))
       (set-face-attribute face nil :weight 'semi-bold :height 1.0)))
   (add-hook 'org-mode-hook 'my/org-mode-hook)
-  (setq org-bullets-bullet-list '("a" "b" "c" "d"))
+  (setq org-bullets-bullet-list '("大" "中" "小" "・"))
 
   ;; holy fucking shit
   (setq-default search-invisible t)
