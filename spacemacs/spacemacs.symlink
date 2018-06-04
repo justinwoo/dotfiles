@@ -433,6 +433,7 @@ layers configuration. You are free to put any user code."
 
   ;; yolo
   (global-company-mode)
+  (global-linum-mode)
 
   ;; what kind fo weirdo uses the normal one
   ;; use some company complete
