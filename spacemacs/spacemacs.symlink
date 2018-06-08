@@ -500,6 +500,9 @@ layers configuration. You are free to put any user code."
   (setq c-default-style "java")
   (setq-default c-basic-offset 2)
 
+  ;; let's try this
+  (evil-leader/set-key "pf" 'counsel-fzf)
+
   ;; prettier shit
   (require 'prettier-js)
   (evil-leader/set-key "mpm" 'prettier-js-mode)
