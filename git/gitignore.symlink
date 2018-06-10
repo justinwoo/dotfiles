@@ -21,3 +21,5 @@ dummy.sql
 tags
 TODOs.org
 .tern-port
+stack.yaml
+cc/
