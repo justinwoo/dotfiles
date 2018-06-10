@@ -286,7 +286,6 @@ client.urgent           $red        $red        $text
 # finds out, if available)
 bar {
         status_command i3status --config ~/.dotfiles/i3/i3status.conf
-        position top
         workspace_buttons yes
 
         colors {
