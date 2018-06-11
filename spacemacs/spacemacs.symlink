@@ -417,6 +417,12 @@ layers configuration. You are free to put any user code."
      (quote
       ("src/**/*.purs" "test/**/*.purs" "bower_components/purescript-*/src/**/*.purs" ".psc-package/*/*/*/src/**/*.purs"))))
 
+  (defun my/purs-hook ()
+    "why do i need a purs mode hook"
+    ;; why doesn't this work automatically
+    (spacemacs/toggle-relative-line-numbers))
+  (add-hook 'purescript-mode-hook 'my/purs-hook)
+
   ;; org is ugly
   (defun my/org-mode-hook ()
     "Stop the org-level headers from increasing in height relative to the other text."
