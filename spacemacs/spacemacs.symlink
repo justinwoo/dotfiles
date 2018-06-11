@@ -29,7 +29,6 @@ values."
      emacs-lisp
      git
      markdown
-     haskell
      org
      (shell :variables
             shell-default-height 30
@@ -49,12 +48,8 @@ values."
    ;; packages then consider to create a layer, you can also put the
    ;; configuration in `dotspacemacs/config'.
    dotspacemacs-additional-packages '(prettier-js
-                                      ;; im fucking blind
-                                      (solarized-theme :location
-                                                       (recipe :fetcher
-                                                               github :repo
-                                                               "justinwoo/solarized-emacs"))
                                       dhall-mode
+				      haskell-mode
                                       )
    ;; A list of packages and/or extensions that will not be install and loaded.
    dotspacemacs-excluded-packages '(neotree
@@ -439,6 +434,11 @@ layers configuration. You are free to put any user code."
   (use-package dhall-mode
     :ensure t
     :mode "\\.dhall\\'")
+
+  ;; haskell
+  (use-package haskell-mode
+    :ensure t
+    :mode "\\.hs\\'")
 
   ;; holy fucking shit
   (setq-default search-invisible t)
