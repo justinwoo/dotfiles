@@ -26,3 +26,4 @@ cc/
 .stack-work
 dist
 dist-newstyle
+.ghc.environment.*
