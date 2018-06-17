@@ -10,7 +10,7 @@ exec ~/.dotfiles/bin/set-bg
 exec /usr/bin/nm-applet
 
 # set the font
-font pango:Ubuntu Mono Regular 14
+font pango:Noto Sans Mono CJK JP 14
 
 # for_window
 for_window [instance="slack"] move window to scratchpad, scratchpad show
