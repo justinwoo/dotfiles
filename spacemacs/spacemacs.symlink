@@ -66,7 +66,13 @@ values."
    ;; packages then consider to create a layer, you can also put the
    ;; configuration in `dotspacemacs/config'.
    dotspacemacs-additional-packages '(prettier-js
-                                      dhall-mode
+                                      ;; dhall-mode
+                                      (dhall-mode
+                                       :location
+                                       (recipe
+                                        :fetcher github
+                                        :repo "justinwoo/dhall-mode"
+                                        :branch "dhall-format-arg"))
                                       haskell-mode
                                       intero
                                       counsel
