@@ -47,7 +47,7 @@ values."
      git
      markdown
      neotree
-     org
+     (org :variables org-projectile-file "TODOs.org")
      (shell :variables
             shell-default-height 30
             shell-default-position 'bottom)
