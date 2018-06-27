@@ -76,5 +76,6 @@ Plug 'tpope/vim-markdown', { 'for': 'markdown' } " markdown support
 Plug 'elzr/vim-json', { 'for': 'json' } " JSON support
 Plug 'Shougo/vimproc.vim', { 'do': 'make' } " interactive command execution in vim
 Plug 'timcharper/textile.vim', { 'for': 'textile' } " textile support
+Plug 'vmchale/dhall-vim' " Dhall
 
 call plug#end()
