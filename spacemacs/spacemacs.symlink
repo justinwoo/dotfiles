@@ -72,7 +72,7 @@ values."
                                        (recipe
                                         :fetcher github
                                         :repo "justinwoo/dhall-mode"
-                                        :branch "dhall-format-arg"))
+                                        :branch "my-fixes"))
                                       haskell-mode
                                       intero
                                       counsel
