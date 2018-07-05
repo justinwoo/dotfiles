@@ -542,13 +542,13 @@ layers configuration. You are free to put any user code."
   (setq company-idle-delay 'nil)
 
   ;; i wish this were two separate commands
-  (evil-leader/set-key "gs"
+  (evil-leader/set-key "gS"
     (lambda ()
       (interactive)
       (customize-set-variable 'magit-display-buffer-function 'magit-display-buffer-traditional)
       (magit-status)
       ))
-  (evil-leader/set-key "gS"
+  (evil-leader/set-key "gs"
     (lambda ()
       (interactive)
       (customize-set-variable 'magit-display-buffer-function 'magit-display-buffer-fullframe-status-v1)
