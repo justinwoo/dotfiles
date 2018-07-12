@@ -260,6 +260,7 @@ bindsym $sup+Shift+Next exec playerctl next
 bindsym XF86AudioMicMute exec amixer set Capture toggle
 
 # Sreen brightness controls
+bindsym $ctrl+$sup+$mod+b exec xbacklight -set 1 # set minimum brightness
 bindsym XF86MonBrightnessUp exec xbacklight -inc 10 # increase screen brightness
 bindsym XF86MonBrightnessDown exec xbacklight -dec 10 # decrease screen brightness
 bindsym $sup+$ctrl+Prior exec xbacklight -inc 10 # increase screen brightness
