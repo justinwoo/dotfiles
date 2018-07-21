@@ -74,7 +74,7 @@ values."
                                         :repo "justinwoo/dhall-mode"
                                         :branch "my-fixes"))
                                       haskell-mode
-                                      intero
+                                      ;; intero
                                       counsel
                                       )
    ;; A list of packages and/or extensions that will not be install and loaded.
