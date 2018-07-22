@@ -1,1 +1,1 @@
-export PATH="$HOME/.rbenv/bin:./bin:$PATH"
+export PATH="$HOME/.rbenv/bin:$PATH"
