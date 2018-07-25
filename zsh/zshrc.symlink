@@ -43,9 +43,6 @@ unset config_files
 # run fzf if installed
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
-# run vte if exists
-[ -f /etc/profile.d/vte.sh ] && . /etc/profile.d/vte.sh
-
 # local should come last???
 if [[ -a ~/.localrc ]]
 then

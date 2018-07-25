@@ -1,3 +1,0 @@
-'body':
-  'cmd-k v': 'pane:split-right'
-  'cmd-k s': 'pane:split-down'
