@@ -3,7 +3,6 @@ alias vi='nvim'
 alias nv="nvim"
 alias emd='emacs --daemon'
 alias em='emacsclient -t'
-alias enc='nix-shell -p --run "emacs . & disown" 2> /dev/null'
 alias ge='emacsclient -nc'
 alias pb='pbcopy'
 alias po='pbpaste'
