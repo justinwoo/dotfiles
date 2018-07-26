@@ -1,2 +1,7 @@
 # Only load Liquid Prompt in interactive shells, not from a script or from scp
-[[ $- = *i* ]] && source $INSTALLED/liquidprompt/liquidprompt
+if [[ $- = *i* ]]
+then
+  source $INSTALLED/liquidprompt/liquidprompt
+
+  export LP_USER=zsh
+fi
