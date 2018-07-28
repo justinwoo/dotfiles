@@ -29,6 +29,14 @@ then
   source ~/.localrc
 fi
 
+if [[ -a $(which xmodmap) ]]
+then
+  xmodmap -e "keycode 94 = Shift_L"
+  xmodmap -e "keycode 67 = Escape"
+  xmodmap -e "keycode 166 = Prior"
+  xmodmap -e "keycode 167 = Next"
+fi
+
 source $DOT/bash/aliases.bash
 source $DOT/fzf/prompt.bash
 source $DOT/fzf/setup.bash
