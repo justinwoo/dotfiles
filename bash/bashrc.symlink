@@ -1,9 +1,12 @@
 # -*- mode: shell-script -*-
 
-# don't put duplicate lines or lines starting with space in the history.
-HISTCONTROL=ignoreboth
-shopt -s histappend
-shopt -s checkwinsize
+# Eternal bash history.
+# ---------------------
+export HISTFILESIZE=-1
+export HISTSIZE=-1
+export HISTTIMEFORMAT="[%F %T] "
+export HISTFILE=~/.bash_eternal_history
+export PROMPT_COMMAND="history -a; $PROMPT_COMMAND"
 
 if ! shopt -oq posix; then
   if [ -f /usr/share/bash-completion/bash_completion ]; then
