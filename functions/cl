@@ -1,0 +1,5 @@
+cl() {
+  CLIP=$("$@")
+  echo $CLIP | pb
+  echo $CLIP
+}

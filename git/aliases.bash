@@ -35,7 +35,6 @@ alias gic='git checkout'
 
 # hub
 alias hc='hub clone'
-alias hpr='hub pull-request'
 alias hb='hub browse'
 alias hrr='hub remote rename'
 
