@@ -1,4 +1,0 @@
-# salt the earth
-s () {
-  rg -iF $2 $1
-}

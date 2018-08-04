@@ -40,8 +40,6 @@ then
   xmodmap -e "keycode 167 = Next"
 fi
 
-source $DOT/functions/cl
-
 source $DOT/bash/aliases.bash
 source $DOT/fzf/prompt.bash
 source $DOT/fzf/setup.bash

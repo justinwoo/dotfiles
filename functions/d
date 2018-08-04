@@ -1,5 +1,0 @@
-#!/bin/zsh
-#
-# same as C but go to documents on a mac
-
-cd "$HOME/Documents"
