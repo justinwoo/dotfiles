@@ -1,5 +1,9 @@
 source ~/.config/nvim/plugins.vim
 
+""set the most obvious netrw style
+let g:netrw_liststyle = 3
+let g:netrw_winsize = 25
+
 ""use the system clipboard
 set clipboard=unnamedplus
 
@@ -41,7 +45,7 @@ map `o <C-W><C-W>
 map <leader>q :q<cr>
 
 "want some familiar keybindings
-map <leader>n :NERDTreeToggle<cr>
+map <leader>n :Vexplore<cr>
 map <C-P> :FZF <cr>
 map <leader>/ :Ack 
 map <leader>gb :Gblame<cr>
@@ -62,11 +66,6 @@ helptags ~/.local/share/nvim/plugged/psc-ide-vim/doc
 if filereadable(glob("~/.vimrc.local"))
   source ~/.vimrc.local
 endif
-
-"fucking nerdtree
-let NERDTreeShowHidden=1
-let NERDTreeDirArrowExpandable = '+'
-let NERDTreeDirArrowCollapsible = '-'
 
 "Ackvim use rg
 if executable('rg')

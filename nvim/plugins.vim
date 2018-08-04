@@ -6,7 +6,6 @@ Plug 'chriskempson/base16-vim'
 
 " utilities
 Plug 'vim-syntastic/syntastic'
-Plug 'scrooloose/nerdtree'
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim'
 Plug 'junegunn/vim-easy-align'
