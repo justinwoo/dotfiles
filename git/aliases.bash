@@ -36,7 +36,10 @@ alias gic='git checkout'
 # hub
 alias hc='hub clone'
 alias hb='hub browse'
+alias hpr='hub pull-request'
 alias hrr='hub remote rename'
+alias hrrou='hub remote rename origin upstream'
+alias hrrjo='hub remote rename justinwoo origin'
 
 # pretty colors
 alias gl='git log --graph --pretty=format:'\''%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset'\'' --abbrev-commit'
