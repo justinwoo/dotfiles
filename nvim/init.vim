@@ -5,7 +5,7 @@ let g:netrw_liststyle = 3
 let g:netrw_winsize = 25
 
 ""use the system clipboard
-set clipboard=unnamedplus
+set clipboard=unnamed
 
 "asdfsdf
 set shiftwidth=2

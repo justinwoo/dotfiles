@@ -32,6 +32,11 @@ then
   source ~/.localrc
 fi
 
+if [[ -a $(which xset) ]]
+then
+  xset r rate 350 50
+fi
+
 if [[ -a $(which xmodmap) ]]
 then
   xmodmap -e "keycode 94 = Shift_L"
