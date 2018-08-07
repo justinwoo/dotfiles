@@ -35,11 +35,10 @@ imap kj <Esc>
 map Q @q
 
 "leader
-map <space> \
+map <space> <leader>
 
 "make changing panes easier
 map <leader>o <C-W><C-W>
-map `o <C-W><C-W>
 
 "closing easier
 map <leader>q :q<cr>
@@ -54,7 +53,6 @@ map <leader>gd :Gdiff<cr>
 "make opening splits easy
 map <leader>v :vsplit<cr><C-W><C-W>
 map <leader>s :split<cr><C-W><C-W>
-map <leader>z :ZoomWin<cr><C-W><C-W>
 map <leader>u :MundoToggle<cr><C-W><C-W>
 map <leader>b :BuffergatorToggle<cr><C-W><C-W>
 map <leader>c :Commentary<cr><C-W><C-W>
