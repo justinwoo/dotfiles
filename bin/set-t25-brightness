@@ -2,8 +2,8 @@
 my $numArgs = $#ARGV;
 
 if ($numArgs < 0) {
-  print "I need a value to set the brightness to";
-  print "set-t25-brightness 25";
+  print "I need a value to set the brightness to:\n";
+  print "e.g. set-t25-brightness 25\n";
   exit;
 }
 
