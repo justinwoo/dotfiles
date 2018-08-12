@@ -493,7 +493,7 @@ layers configuration. You are free to put any user code."
     (load-file "~/.user-config.el"))
 
   ;; fucking flycheck
-  (setq flycheck-check-syntax-automatically '(mode-enabled save))
+  ;; (setq flycheck-check-syntax-automatically '(mode-enabled save))
 
   ;; rebind spc / and *
   (evil-leader/set-key "/" 'spacemacs/helm-project-do-ag)
