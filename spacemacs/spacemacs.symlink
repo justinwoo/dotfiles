@@ -493,7 +493,30 @@ layers configuration. You are free to put any user code."
     (load-file "~/.user-config.el"))
 
   ;; fucking flycheck
-  ;; (setq flycheck-check-syntax-automatically '(mode-enabled save))
+  (setq flycheck-check-syntax-automatically '(mode-enabled
+                                              idle-change
+                                              new-line
+                                              save
+                                              ))
+  (setq flycheck-idle-change-delay 1)
+  (evil-leader/set-key "mpw" (lambda ()
+                               (interactive)
+                               (customize-set-variable
+                                'flycheck-check-syntax-automatically
+                                '(mode-enabled
+                                  save
+                                  ))
+                               (message "Set flycheck to check on save only")))
+  (evil-leader/set-key "mpe" (lambda ()
+                               (interactive)
+                               (customize-set-variable
+                                'flycheck-check-syntax-automatically
+                                '(mode-enabled
+                                  idle-change
+                                  new-line
+                                  save
+                                  ))
+                               (message "Set flycheck to check on change")))
 
   ;; rebind spc / and *
   (evil-leader/set-key "/" 'spacemacs/helm-project-do-ag)
