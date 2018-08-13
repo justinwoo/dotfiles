@@ -530,6 +530,9 @@ layers configuration. You are free to put any user code."
   (evil-leader/set-key "*" 'spacemacs/helm-project-do-ag-region-or-symbol)
   (setq helm-ag-base-command "rg --vimgrep --no-heading --smart-case")
 
+  ;; wakeup helm
+  (require 'helm)
+
   ;; let's see
   (setq x-wait-for-event-timeout nil)
 
