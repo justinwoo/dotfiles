@@ -1,0 +1,3 @@
+#!/usr/bin/perl
+
+print `curl -X POST '$ARGV[0]' -d \@$ARGV[1] -H "Content-type: application/json"`;
