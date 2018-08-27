@@ -17,6 +17,7 @@ dump.rdb
 UBER_SECRET_RUN
 .dir-locals.el
 dummy.sql
+SQLQuery*.sql
 .psc-package-backup
 tags
 TODOs.org
