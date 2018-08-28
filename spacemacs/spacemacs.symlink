@@ -575,6 +575,8 @@ layers configuration. You are free to put any user code."
   ;; yolo
   (global-company-mode)
 
+  (evil-leader/set-key "o" 'other-window)
+
   ;; what kind fo weirdo uses the normal one
   ;; use some company complete
   (global-set-key (kbd "C-SPC") 'company-complete)
