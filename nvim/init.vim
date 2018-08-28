@@ -26,7 +26,8 @@ set shortmess+=A
 set number relativenumber
 
 "make commands easier to input
-map ; :
+noremap ; :
+noremap : ;
 
 "reaching for esc is hard
 imap kj <Esc>

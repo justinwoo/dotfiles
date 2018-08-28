@@ -616,6 +616,7 @@ layers configuration. You are free to put any user code."
 
   ;; make ; do :
   (define-key evil-normal-state-map (kbd ";") 'evil-ex)
+  (define-key evil-normal-state-map (kbd ":") 'evil-repeat-find-char)
 
   ;; make Q do @q
   (define-key evil-normal-state-map (kbd "Q") 'evil-execute-macro)
