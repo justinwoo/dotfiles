@@ -27,7 +27,7 @@ set number relativenumber
 
 "make commands easier to input
 noremap ; :
-noremap : ;
+noremap , ;
 
 "reaching for esc is hard
 imap kj <Esc>
