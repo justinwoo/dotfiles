@@ -148,10 +148,11 @@ bindsym $sup+3 workspace 3
 bindsym $sup+4 workspace 4
 bindsym $sup+5 workspace 5
 bindsym $sup+6 workspace 6
-bindsym $sup+7 workspace 7
-bindsym $sup+8 workspace 8
-bindsym $sup+9 workspace 9
-bindsym $sup+0 workspace 10
+# who needs 10
+# bindsym $sup+7 workspace 7
+# bindsym $sup+8 workspace 8
+# bindsym $sup+9 workspace 9
+# bindsym $sup+0 workspace 10
 
 # move focused container to workspace
 bindsym $sup+Shift+1 move container to workspace 1
@@ -160,10 +161,11 @@ bindsym $sup+Shift+3 move container to workspace 3
 bindsym $sup+Shift+4 move container to workspace 4
 bindsym $sup+Shift+5 move container to workspace 5
 bindsym $sup+Shift+6 move container to workspace 6
-bindsym $sup+Shift+7 move container to workspace 7
-bindsym $sup+Shift+8 move container to workspace 8
-bindsym $sup+Shift+9 move container to workspace 9
-bindsym $sup+Shift+0 move container to workspace 10
+# who needs 10
+# bindsym $sup+Shift+7 move container to workspace 7
+# bindsym $sup+Shift+8 move container to workspace 8
+# bindsym $sup+Shift+9 move container to workspace 9
+# bindsym $sup+Shift+0 move container to workspace 10
 
 # move workspaces
 bindsym $sup+Shift+bracketright move workspace to output right
@@ -229,6 +231,7 @@ mode "quickprograms" {
 bindsym $sup+t mode "quickprograms"
 
 # shortcuts
+bindsym $sup+Shift+0 exec gimp
 bindsym $sup+Shift+Return exec chrome
 bindsym $sup+Shift+p exec nautilus ~/Pictures
 bindsym $sup+semicolon [instance="vlc"] scratchpad show
@@ -236,6 +239,7 @@ bindsym $sup+Shift+semicolon [instance="filezilla"] scratchpad show
 bindsym $sup+o [instance="gnome-terminal"] scratchpad show
 bindsym $sup+p [instance="nautilus"] scratchpad show
 bindsym $sup+y [instance="google-chrome"] scratchpad show
+bindsym $sup+0 [instance="gimp"] scratchpad show
 bindsym $sup+i [title="Slack"] scratchpad show
 bindsym $sup+c [title="Slack"] scratchpad show
 bindsym $sup+u [title="Telegram"] scratchpad show
