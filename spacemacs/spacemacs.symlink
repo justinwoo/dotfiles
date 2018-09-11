@@ -482,7 +482,7 @@ layers configuration. You are free to put any user code."
                                               new-line
                                               save
                                               ))
-  (setq flycheck-idle-change-delay 1)
+  (setq flycheck-idle-change-delay 0.02)
 
   (defun set-flycheck-save-only ()
     "set flycheck to check on save only"
