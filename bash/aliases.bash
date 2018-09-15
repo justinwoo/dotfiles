@@ -16,7 +16,7 @@ alias first='ls -t | head -1'
 alias ll='lstoless'
 alias f='fd --type f | fzf'
 alias darkest='xbacklight -set 1'
-alias pinn='parcel index.html --no-cache --no-hmr'
+alias wifi='nmcli -c yes d w | head -10'
 
 alias emk="emacsclient -e '(kill-emacs)'"
 alias emk2="ps -ef | grep emacs | awk '{print \$2}' | xargs kill"
