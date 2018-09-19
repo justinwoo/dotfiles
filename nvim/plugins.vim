@@ -34,7 +34,6 @@ Plug 'mxw/vim-jsx', { 'for': ['javascript.jsx', 'javascript'] } " JSX support
 
 " PureScript
 Plug 'purescript-contrib/purescript-vim', { 'for': ['purescript', 'purs'] }
-Plug 'FrigoEU/psc-ide-vim', { 'for': ['purescript', 'purs'] }
 
 " Haskell
 Plug 'neovimhaskell/haskell-vim'
