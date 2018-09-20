@@ -56,7 +56,7 @@ map <leader>v :vsplit<cr><C-W><C-W>
 map <leader>s :split<cr><C-W><C-W>
 map <leader>u :MundoToggle<cr><C-W><C-W>
 map <leader>b :BuffergatorToggle<cr><C-W><C-W>
-map <leader>c :Commentary<cr><C-W><C-W>
+map <leader>c :Commentary<cr>
 
 "psc-ide-vim help tags
 helptags ~/.local/share/nvim/plugged/psc-ide-vim/doc
