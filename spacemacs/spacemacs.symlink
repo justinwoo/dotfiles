@@ -690,18 +690,19 @@ layers configuration. You are free to put any user code."
   (setq-default c-basic-offset 2)
 
   ;; prettier shit
-  (require 'prettier-js)
   (evil-leader/set-key "mpm" 'prettier-js-mode)
   (evil-leader/set-key "mpp" 'prettier-js)
   (defun run-prettier-standard ()
     "run prettier-standard"
     (interactive)
+    (require 'prettier-js)
     (customize-set-variable 'prettier-js-command "prettier-standard")
     (prettier-js)
     )
   (defun run-prettier ()
     "run normal prettier"
     (interactive)
+    (require 'prettier-js)
     (customize-set-variable 'prettier-js-command "prettier")
     (prettier-js)
     )
