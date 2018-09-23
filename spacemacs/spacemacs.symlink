@@ -615,10 +615,10 @@ layers configuration. You are free to put any user code."
     "set psc-ide-source-globs using psc-package sources"
     (interactive (list (read-directory-name "Project root?" (psc-ide-suggest-project-dir))))
     (when (get-buffer "*psc-ide-server*") (kill-buffer "*psc-ide-server*"))
-    (let* ((command (format "cd %s && psc-package sources" root))
-           (results "*PSC-PACKAGE SOURCES*")
+    (cd root)
+    (let* ((results "*PSC-PACKAGE SOURCES*")
            (errors "*PSC-PACKAGE ERRORS*"))
-      (shell-command command results errors)
+      (shell-command "psc-package sources" results errors)
       (if (get-buffer errors)
           (switch-to-buffer-other-window errors)
         (progn
