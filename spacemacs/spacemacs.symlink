@@ -533,18 +533,6 @@ layers configuration. You are free to put any user code."
   ;; guess im using this or something dunno
   (setq org-agenda-files '("~/Code/notes/notes.org"))
 
-  ;; some purescript ide config
-  (custom-set-variables
-   '(psc-ide-source-globs
-     (quote
-      ("src/**/*.purs" "test/**/*.purs" "bower_components/purescript-*/src/**/*.purs" ".psc-package/*/*/*/src/**/*.purs"))))
-
-  (defun my/purs-hook ()
-    "why do i need a purs mode hook"
-    ;; why doesn't this work automatically
-    (spacemacs/toggle-relative-line-numbers))
-  (add-hook 'purescript-mode-hook 'my/purs-hook)
-
   ;; why was this unbound
   (global-set-key (kbd "M-x") 'helm-M-x)
 
@@ -581,6 +569,12 @@ layers configuration. You are free to put any user code."
     :ensure t
     :diminish 'purescript-indentation-mode)
 
+  (defun my/purs-hook ()
+    "why do i need a purs mode hook"
+    ;; why doesn't this work automatically
+    (spacemacs/toggle-relative-line-numbers))
+  (add-hook 'purescript-mode-hook 'my/purs-hook)
+
   (use-package psc-ide
     :ensure t
     :load-path "~/Code/psc-ide-emacs/"
@@ -598,6 +592,7 @@ layers configuration. You are free to put any user code."
         "ms"  'psc-ide-server-start
         "mb"  'psc-ide-rebuild
         "mq"  'psc-ide-server-quit
+        "mp"  'my/set-source-globs-with-psc-package-sources
         "ml"  'psc-ide-load-all
         "mL"  'psc-ide-load-module
         "mia" 'psc-ide-add-import
@@ -605,6 +600,38 @@ layers configuration. You are free to put any user code."
         "gg"  'psc-ide-goto-definition
         "ht"  'psc-ide-show-type)
       ))
+
+  ;; default override for psc-ide paths
+  (custom-set-variables
+   '(psc-ide-source-globs
+     (quote
+      ("src/**/*.purs test/**/*.purs" "bower_components/purescript-*/src/**/*.purs" ".psc-package/*/*/*/src/**/*.purs"))))
+
+  ;; for setting psc-package sources from projectile project root
+  (defun my/set-source-globs-with-psc-package-sources (root)
+    "set psc-ide-source-globs using psc-package sources"
+    (interactive (list (read-directory-name "Project root?" (psc-ide-suggest-project-dir))))
+    (when (get-buffer "*psc-ide-server*") (kill-buffer "*psc-ide-server*"))
+    (let* ((command (format "cd %s && psc-package sources" root))
+           (results "*PSC-PACKAGE SOURCES*")
+           (errors "*PSC-PACKAGE ERRORS*"))
+      (shell-command command results errors)
+      (if (get-buffer errors)
+          (switch-to-buffer-other-window errors)
+        (progn
+          (with-current-buffer results
+            (let* ((globs (split-string (buffer-string))))
+              (custom-set-variables
+               '(psc-ide-source-globs
+                 (append globs
+                         (quote ("src/**/*.purs"
+                                 "test/**/*.purs"
+                                 "bower_components/purescript-*/src/**/*.purs")))))
+              ;; (message "debug globs output: %s" globs)
+              (kill-buffer results)))
+          (message "Set source globs from psc-package. Starting server...")
+          (psc-ide-server-start-impl root)
+          (run-at-time "1 sec" nil 'psc-ide-load-all)))))
 
   ;; for references: M-?
   (add-to-list 'xref-backend-functions 'psc-ide-xref-backend)
@@ -724,7 +751,7 @@ This function is called at the very end of Spacemacs initialization."
     (purescript-mode zenburn-theme yasnippet-snippets yaml-mode xterm-color ws-butler winum which-key web-mode web-beautify volatile-highlights vi-tilde-fringe uuidgen use-package toml-mode toc-org tagedit symon string-inflection spaceline-all-the-icons solarized-theme smeargle slim-mode shell-pop scss-mode sass-mode rjsx-mode restart-emacs rainbow-delimiters racer pug-mode psci psc-ide prettier-js popwin persp-mode pcre2el password-generator paradox overseer orgit org-projectile org-present org-pomodoro org-mime org-download org-bullets org-brain open-junk-file nix-mode neotree nameless multi-term move-text monokai-theme mmm-mode markdown-toc magit-svn magit-gitflow macrostep lorem-ipsum livid-mode link-hint json-navigator json-mode js2-refactor js-doc indent-guide impatient-mode hungry-delete hl-todo highlight-parentheses highlight-numbers highlight-indentation helm-xref helm-themes helm-swoop helm-purpose helm-projectile helm-mode-manager helm-make helm-gitignore helm-git-grep helm-flx helm-descbinds helm-css-scss helm-company helm-c-yasnippet helm-ag haskell-mode google-translate golden-ratio gnuplot gitignore-templates gitconfig-mode gitattributes-mode git-timemachine git-messenger git-link git-gutter-fringe git-gutter-fringe+ gh-md fuzzy font-lock+ flycheck-rust flycheck-pos-tip flx-ido fill-column-indicator fancy-battery eyebrowse expand-region evil-visualstar evil-visual-mark-mode evil-unimpaired evil-tutor evil-surround evil-org evil-numbers evil-nerd-commenter evil-mc evil-matchit evil-magit evil-lisp-state evil-lion evil-indent-plus evil-iedit-state evil-goggles evil-exchange evil-escape evil-ediff evil-cleverparens evil-args evil-anzu eval-sexp-fu eshell-z eshell-prompt-extras esh-help emmet-mode elisp-slime-nav dumb-jump dotenv-mode doom-modeline diminish diff-hl dhall-mode define-word counsel-projectile company-web company-tern company-statistics column-enforce-mode clean-aindent-mode centered-cursor-mode cargo browse-at-remote auto-yasnippet auto-highlight-symbol auto-compile aggressive-indent ace-window ace-link ace-jump-helm-line ac-ispell)))
  '(psc-ide-source-globs
    (quote
-    ("src/**/*.purs" "test/**/*.purs" "bower_components/purescript-*/src/**/*.purs" ".psc-package/*/*/*/src/**/*.purs"))))
+    ("src/**/*.purs test/**/*.purs" "bower_components/purescript-*/src/**/*.purs" ".psc-package/*/*/*/src/**/*.purs"))))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
