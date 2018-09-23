@@ -575,6 +575,9 @@ layers configuration. You are free to put any user code."
     (spacemacs/toggle-relative-line-numbers))
   (add-hook 'purescript-mode-hook 'my/purs-hook)
 
+  (use-package s
+    :load-path "~/.dotfiles/elisp/")
+
   (use-package psc-ide
     :ensure t
     :load-path "~/Code/psc-ide-emacs/"
@@ -719,13 +722,27 @@ layers configuration. You are free to put any user code."
   ;; prettier shit
   (evil-leader/set-key "mpm" 'prettier-js-mode)
   (evil-leader/set-key "mpp" 'prettier-js)
+
   (defun run-prettier-standard ()
     "run prettier-standard"
     (interactive)
-    (require 'prettier-js)
-    (customize-set-variable 'prettier-js-command "prettier-standard")
-    (prettier-js)
-    )
+    ;; (require 'prettier-js)
+    ;; (customize-set-variable 'prettier-js-command "prettier-standard")
+    ;; (prettier-js)
+    (let* ((command (format "cd %s && prettier-standard src/**/*.js" (projectile-project-root)))
+           (results "*PRETTIER-STANDARD SOURCES*")
+           (errors "*PRETTIER-STANDARD ERRORS*"))
+      (shell-command command results errors)
+      (if (get-buffer errors)
+        (progn
+          (with-current-buffer errors
+            (message (string-trim (buffer-string))))
+          (kill-buffer errors))
+        (progn
+          (with-current-buffer results
+            (message (string-trim (buffer-string))))
+          (kill-buffer results)))))
+
   (defun run-prettier ()
     "run normal prettier"
     (interactive)
