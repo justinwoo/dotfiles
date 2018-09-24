@@ -601,8 +601,14 @@ layers configuration. You are free to put any user code."
         "mia" 'psc-ide-add-import
         "mis" 'psc-ide-flycheck-insert-suggestion
         "gg"  'psc-ide-goto-definition
+        "hT"  'psc-ide-show-type-expanded
         "ht"  'psc-ide-show-type)
       ))
+
+  (defun psc-ide-show-type-expanded ()
+    "show the type at point, expanded"
+    (interactive)
+    (psc-ide-show-type t))
 
   ;; default override for psc-ide paths
   (custom-set-variables
