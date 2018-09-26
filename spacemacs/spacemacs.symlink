@@ -515,6 +515,8 @@ layers configuration. You are free to put any user code."
 
   (evil-leader/set-key "mpw" 'set-flycheck-save-only)
   (evil-leader/set-key "mpe" 'set-flycheck-on-change)
+  (evil-leader/set-key "en" 'flycheck-next-error)
+  (evil-leader/set-key "ep" 'flycheck-previous-error)
 
   ;; rebind spc / and *
   (evil-leader/set-key "/" 'spacemacs/helm-project-do-ag)
