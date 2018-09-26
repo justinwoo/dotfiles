@@ -735,7 +735,7 @@ layers configuration. You are free to put any user code."
     ;; (require 'prettier-js)
     ;; (customize-set-variable 'prettier-js-command "prettier-standard")
     ;; (prettier-js)
-    (let* ((command (format "cd %s && prettier-standard 'src/**/*.js'" (projectile-project-root)))
+    (let* ((command (format "cd %s && prettier-standard %s" (projectile-project-root) buffer-file-name))
            (results "*PRETTIER-STANDARD SOURCES*")
            (errors "*PRETTIER-STANDARD ERRORS*"))
       (shell-command command results errors)
