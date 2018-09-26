@@ -1,5 +1,7 @@
 # -*- mode: shell-script -*-
 
+shopt -s globstar
+
 # Eternal bash history.
 # ---------------------
 export HISTFILESIZE=-1
