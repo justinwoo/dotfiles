@@ -54,7 +54,7 @@ This function should only modify configuration layer settings."
      syntax-checking
      version-control
      yaml
-     javascript
+     ;; javascript
      react
      ;; purescript
      html
