@@ -458,14 +458,8 @@ This function is called only while dumping Spacemacs configuration. You can
 dump."
   )
 
-(defun dotspacemacs/user-config ()
-  "Configuration function for user code.
- This function is called at the very end of Spacemacs initialization after
-layers configuration. You are free to put any user code."
-  ;; load some local config
-  (when (file-exists-p "~/.user-config.el")
-    (load-file "~/.user-config.el"))
-
+(defun my/flycheck-config ()
+  "my flycheck overrides"
   ;; fucking flycheck
   (setq flycheck-check-syntax-automatically '(mode-enabled
                                               idle-change
@@ -499,29 +493,10 @@ layers configuration. You are free to put any user code."
   (evil-leader/set-key "mpw" 'set-flycheck-save-only)
   (evil-leader/set-key "mpe" 'set-flycheck-on-change)
   (evil-leader/set-key "en" 'flycheck-next-error)
-  (evil-leader/set-key "ep" 'flycheck-previous-error)
+  (evil-leader/set-key "ep" 'flycheck-previous-error))
 
-  ;; rebind spc / and *
-  (evil-leader/set-key "/" 'spacemacs/helm-project-do-ag)
-  (evil-leader/set-key "*" 'spacemacs/helm-project-do-ag-region-or-symbol)
-  (setq helm-ag-base-command "rg --vimgrep --no-heading --smart-case")
-
-  ;; wakeup helm
-  (require 'helm)
-
-  ;; let's see
-  (setq x-wait-for-event-timeout nil)
-
-  ;; no more hl line
-  (global-hl-line-mode -1)
-
-  ;; guess im using this or something dunno
-  (setq org-agenda-files '("~/Code/notes/notes.org"))
-
-  ;; why was this unbound
-  (global-set-key (kbd "M-x") 'helm-M-x)
-
-  ;; org is ugly
+(defun my/org-mode-config ()
+  "make org mode less ugly"
   (defun my/org-mode-hook ()
     "Stop the org-level headers from increasing in height relative to the other text."
     (dolist (face '(org-level-1
@@ -531,25 +506,11 @@ layers configuration. You are free to put any user code."
                     org-level-5))
       (set-face-attribute face nil :weight 'semi-bold :height 1.0)))
   (add-hook 'org-mode-hook 'my/org-mode-hook)
-  (setq org-bullets-bullet-list '("大" "中" "小" "・"))
+  (setq org-bullets-bullet-list '("大" "中" "小" "・")))
 
-  ;; dhall
-  (use-package dhall-mode
-    :ensure t
-    :mode "\\.dhall\\'")
-
-  ;; haskell
-  (use-package haskell-mode
-    :ensure t
-    :mode "\\.hs\\'")
-  ;; (add-hook 'haskell-mode-hook 'intero-mode)
-
-  ;; nix
-  (use-package nix-mode
-    :ensure t
-    :mode "\\.nix\\'")
-
-  ;; purescript
+(defun my/purescript-config ()
+  "purescript"
+    ;; purescript
   (use-package purescript-mode
     :ensure t
     :diminish 'purescript-indentation-mode)
@@ -598,64 +559,26 @@ layers configuration. You are free to put any user code."
   (add-to-list 'xref-backend-functions 'psc-ide-xref-backend)
 
   (with-eval-after-load 'company
-    (add-to-list 'company-backends 'company-psc-ide-backend))
+    (add-to-list 'company-backends 'company-psc-ide-backend)))
 
-  ;; holy fucking shit
-  (setq-default search-invisible t)
-
-  ;; yolo
+(defun my/company-config ()
+  "company config"
   (global-company-mode)
 
   (evil-leader/set-key "o" 'other-window)
 
-  ;; what kind fo weirdo uses the normal one
-  ;; use some company complete
   (global-set-key (kbd "C-SPC") 'company-complete)
   (global-set-key (kbd "C-S-SPC") 'company-dabbrev)
   (global-set-key (kbd "M-SPC") 'company-dabbrev)
+
   (define-key evil-insert-state-map (kbd "<tab>") 'company-complete-common)
   (define-key evil-insert-state-map (kbd "C-p") 'company-dabbrev)
 
-  ;; Why doesn't this work by default?
-  (global-set-key (kbd "C-i") 'evil-jump-forward)
+  (setq company-idle-delay 'nil))
 
-  ;; jesus christ delay popups are annoying
-  (setq company-idle-delay 'nil)
-
-  ;; i wish this were two separate commands
-  (defun magit-traditional-status ()
-    "open magit-status with the traditional half-frame view"
-    (interactive)
-    (customize-set-variable 'magit-display-buffer-function 'magit-display-buffer-traditional)
-    (magit-status)
-    )
-  (defun magit-fullframe-status ()
-    "open magit-status with a fullframe view"
-    (interactive)
-    (customize-set-variable 'magit-display-buffer-function 'magit-display-buffer-fullframe-status-v1)
-    (magit-status)
-    )
-  (evil-leader/set-key "gS" 'magit-traditional-status)
-  (evil-leader/set-key "gs" 'magit-fullframe-status)
-
-  ;; jumalauta who thought this is helpful
-  (fset 'evil-visual-update-x-selection 'ignore)
-
-  ;; no powerline freaking separator
-  ;; what the fuck did this break forward search before
-  (setq powerline-default-separator 'bar)
-
-  ;; make ; do :
-  (define-key evil-normal-state-map (kbd ";") 'evil-ex)
-  (define-key evil-normal-state-map (kbd ":") 'evil-repeat-find-char)
-
-  ;; make Q do @q
-  (define-key evil-normal-state-map (kbd "Q") 'evil-execute-macro)
-
-  ;; escape key sequence
-  (setq-default evil-escape-key-sequence "kj")
-
-  ;; react mode shit
+(defun my/js-prettier-config ()
+  "my JS and prettier config"
+    ;; react mode shit
   (add-to-list 'auto-mode-alist '("\\.jsx?\\'" . rjsx-mode))
 
   ;; fuck off
@@ -709,8 +632,99 @@ layers configuration. You are free to put any user code."
     (prettier-js)
     )
   (evil-leader/set-key "mps" 'run-prettier-standard)
-  (evil-leader/set-key "mpd" 'run-prettier)
+  (evil-leader/set-key "mpd" 'run-prettier))
+
+(defun my/magit-config ()
+  "magit config"
+  (defun magit-traditional-status ()
+    "open magit-status with the traditional half-frame view"
+    (interactive)
+    (customize-set-variable 'magit-display-buffer-function 'magit-display-buffer-traditional)
+    (magit-status)
+    )
+  (defun magit-fullframe-status ()
+    "open magit-status with a fullframe view"
+    (interactive)
+    (customize-set-variable 'magit-display-buffer-function 'magit-display-buffer-fullframe-status-v1)
+    (magit-status)
+    )
+  (evil-leader/set-key "gS" 'magit-traditional-status)
+  (evil-leader/set-key "gs" 'magit-fullframe-status))
+
+(defun dotspacemacs/user-config ()
+  "Configuration function for user code.
+ This function is called at the very end of Spacemacs initialization after
+layers configuration. You are free to put any user code."
+  ;; load some local config
+  (when (file-exists-p "~/.user-config.el")
+    (load-file "~/.user-config.el"))
+
+  (my/flycheck-config)
+  (my/org-mode-config)
+  (my/purescript-config)
+  (my/company-config)
+  (my/js-prettier-config)
+  (my/magit-config)
+
+  ;; rebind spc / and *
+  (evil-leader/set-key "/" 'spacemacs/helm-project-do-ag)
+  (evil-leader/set-key "*" 'spacemacs/helm-project-do-ag-region-or-symbol)
+  (setq helm-ag-base-command "rg --vimgrep --no-heading --smart-case")
+
+  ;; wakeup helm
+  (require 'helm)
+
+  ;; let's see
+  (setq x-wait-for-event-timeout nil)
+
+  ;; no more hl line
+  (global-hl-line-mode -1)
+
+  ;; guess im using this or something dunno
+  (setq org-agenda-files '("~/Code/notes/notes.org"))
+
+  ;; why was this unbound
+  (global-set-key (kbd "M-x") 'helm-M-x)
+
+  ;; dhall
+  (use-package dhall-mode
+    :ensure t
+    :mode "\\.dhall\\'")
+
+  ;; haskell
+  (use-package haskell-mode
+    :ensure t
+    :mode "\\.hs\\'")
+
+  ;; nix
+  (use-package nix-mode
+    :ensure t
+    :mode "\\.nix\\'")
+
+  ;; holy fucking shit
+  (setq-default search-invisible t)
+
+  ;; Why doesn't this work by default?
+  (global-set-key (kbd "C-i") 'evil-jump-forward)
+
+  ;; jumalauta who thought this is helpful
+  (fset 'evil-visual-update-x-selection 'ignore)
+
+  ;; make ; do :
+  (define-key evil-normal-state-map (kbd ";") 'evil-ex)
+  (define-key evil-normal-state-map (kbd ":") 'evil-repeat-find-char)
+
+  ;; make Q do @q
+  (define-key evil-normal-state-map (kbd "Q") 'evil-execute-macro)
+
+  ;; escape key sequence
+  (setq-default evil-escape-key-sequence "kj")
+
+  ;; no powerline freaking separator
+  ;; what the fuck did this break forward search before
+  (setq powerline-default-separator 'bar)
   )
+
 (defun dotspacemacs/emacs-custom-settings ()
   "Emacs custom settings.
 This is an auto-generated function, do not modify its content directly, use
