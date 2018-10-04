@@ -68,6 +68,7 @@ This function should only modify configuration layer settings."
                                       purescript-mode
                                       counsel
                                       web-mode
+                                      rjsx-mode
                                       )
    ;; A list of packages and/or extensions that will not be install and loaded.
    dotspacemacs-excluded-packages '(editorconfig
@@ -521,9 +522,6 @@ dump."
     (spacemacs/toggle-relative-line-numbers))
   (add-hook 'purescript-mode-hook 'my/purs-hook)
 
-  (use-package s
-    :load-path "~/.dotfiles/elisp/")
-
   (use-package psc-ide
     :ensure t
     :load-path "~/Code/psc-ide-emacs/"
@@ -578,8 +576,18 @@ dump."
 
 (defun my/js-prettier-config ()
   "my JS and prettier config"
-    ;; react mode shit
-  (add-to-list 'auto-mode-alist '("\\.jsx?\\'" . rjsx-mode))
+  (use-package rjsx-mode
+    :mode "\\.js\\'"
+    :init
+    (spacemacs/toggle-relative-line-numbers))
+
+  (use-package web-mode
+    :ensure t
+    :mode ("\\.html\\'"
+           "\\.css\\'"
+           "\\.scss\\'")
+    :init
+    (spacemacs/toggle-relative-line-numbers))
 
   ;; fuck off
   (setq js2-strict-missing-semi-warning nil)
@@ -607,18 +615,15 @@ dump."
   (defun run-prettier-standard ()
     "run prettier-standard"
     (interactive)
-    ;; (require 'prettier-js)
-    ;; (customize-set-variable 'prettier-js-command "prettier-standard")
-    ;; (prettier-js)
     (let* ((command (format "cd %s && prettier-standard %s" (projectile-project-root) buffer-file-name))
            (results "*PRETTIER-STANDARD SOURCES*")
            (errors "*PRETTIER-STANDARD ERRORS*"))
       (shell-command command results errors)
       (if (get-buffer errors)
-        (progn
-          (with-current-buffer errors
-            (message (string-trim (buffer-string))))
-          (kill-buffer errors))
+          (progn
+            (with-current-buffer errors
+              (message (string-trim (buffer-string))))
+            (kill-buffer errors))
         (progn
           (with-current-buffer results
             (message (string-trim (buffer-string))))
@@ -700,15 +705,6 @@ layers configuration. You are free to put any user code."
   (use-package nix-mode
     :ensure t
     :mode "\\.nix\\'")
-
-  ;; web
-  (use-package web-mode
-    :ensure t
-    :mode ("\\.js\\'"
-           "\\.ts\\'"
-           "\\.html\\'"
-           "\\.css\\'"
-           "\\.scss\\'"))
 
   ;; holy fucking shit
   (setq-default search-invisible t)
