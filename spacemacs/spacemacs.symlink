@@ -543,10 +543,28 @@ dump."
         "mL"  'psc-ide-load-module
         "mia" 'psc-ide-add-import
         "mis" 'psc-ide-flycheck-insert-suggestion
+        "mii" 'my/purescript-region-imports-suggestions
         "gg"  'psc-ide-goto-definition
         "hT"  'psc-ide-show-type-expanded
         "ht"  'psc-ide-show-type)
       ))
+
+  (defun my/purescript-region-imports-suggestions ()
+    "Apply imports suggestions on region"
+    (interactive)
+    (if (region-active-p)
+        (progn
+          (let* ((line-start (line-number-at-pos (region-beginning)))
+                 (line-end (line-number-at-pos (region-end))))
+            (dolist (line (number-sequence line-start
+                                           (- line-end 1)))
+              (goto-line line)
+              (psc-ide-flycheck-insert-suggestion))
+            (goto-line line-start)
+            (evil-visual-line)
+            (evil-next-line (- line-end 1 line-start))
+            (flush-lines "^[[:space:]]*$" (region-beginning) (point))))
+      (message "You need an active region to use this.")))
 
   (defun psc-ide-show-type-expanded ()
     "show the type at point, expanded"
