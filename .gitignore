@@ -13,3 +13,5 @@ npm-debug.log
 node/npmrc.symlink
 
 vim/path*
+
+*.backup
