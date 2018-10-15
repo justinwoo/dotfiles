@@ -598,6 +598,7 @@ dump."
     :mode "\\.js\\'"
     :init
     (spacemacs/toggle-relative-line-numbers))
+  (add-hook 'rjsx-mode-hook 'flycheck-mode)
 
   (use-package web-mode
     :ensure t
