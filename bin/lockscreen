@@ -8,4 +8,8 @@ scrot -m $screenshot
 convert -scale 5% -scale 2000% $screenshot $screenshot
 composite -blend 50x50 -gravity center $resized $screenshot $resized
 convert -quality 20 $resized $image
-i3lock -i $image
+# i3lock -i $image
+
+# this probably will not work, use dconf editor i guess
+gsettings set org.gnome.desktop.screensaver picture-uri $image
+gnome-screensaver-command -l
