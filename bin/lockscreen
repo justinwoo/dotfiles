@@ -11,5 +11,6 @@ convert -quality 20 $resized $image
 # i3lock -i $image
 
 # this probably will not work, use dconf editor i guess
-gsettings set org.gnome.desktop.screensaver picture-uri $image
+gsettings set org.gnome.desktop.screensaver picture-uri "file://$image"
+gsettings set org.gnome.desktop.background picture-uri "file://$image"
 gnome-screensaver-command -l
