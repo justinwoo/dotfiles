@@ -31,3 +31,4 @@ dist-newstyle
 .ghc.environment.*
 scratch.el
 scratch
+dhall.tix
