@@ -65,6 +65,7 @@ This function should only modify configuration layer settings."
                                         :repo "justinwoo/dhall-mode"
                                         :branch "my-fixes"))
                                       haskell-mode
+                                      nix-mode
                                       purescript-mode
                                       counsel
                                       web-mode

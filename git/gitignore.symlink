@@ -30,3 +30,4 @@ dist
 dist-newstyle
 .ghc.environment.*
 scratch.el
+scratch
