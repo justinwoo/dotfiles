@@ -32,3 +32,5 @@ dist-newstyle
 scratch.el
 scratch
 dhall.tix
+*.bak
+*.BAK
