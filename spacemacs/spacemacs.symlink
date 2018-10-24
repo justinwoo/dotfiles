@@ -674,6 +674,7 @@ dump."
     (magit-status)
     )
   (evil-leader/set-key "gS" 'magit-traditional-status)
+  (evil-leader/set-key "ga" 'magit-traditional-status)
   (evil-leader/set-key "gs" 'magit-fullframe-status))
 
 (defun dotspacemacs/user-config ()
