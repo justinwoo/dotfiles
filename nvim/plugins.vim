@@ -49,5 +49,6 @@ Plug 'tpope/vim-markdown', { 'for': 'markdown' } " markdown support
 Plug 'elzr/vim-json', { 'for': 'json' } " JSON support
 Plug 'Shougo/vimproc.vim', { 'do': 'make' } " interactive command execution in vim
 Plug 'vmchale/dhall-vim' " Dhall
+Plug 'LnL7/vim-nix' " Nix
 
 call plug#end()
