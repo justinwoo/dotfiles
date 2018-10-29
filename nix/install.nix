@@ -14,6 +14,5 @@ in {
   inherit (pkgs)
     emacs
     neovim
-    nix-prefetch-github
-    nix-prefetch-git;
+    nix-prefetch-github;
 }
