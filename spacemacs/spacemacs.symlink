@@ -519,12 +519,6 @@ dump."
     :load-path "~/Code/purescript-mode/"
     :diminish 'purescript-indentation-mode)
 
-  (defun my/purs-hook ()
-    "why do i need a purs mode hook"
-    ;; why doesn't this work automatically
-    (spacemacs/toggle-relative-line-numbers))
-  (add-hook 'purescript-mode-hook 'my/purs-hook)
-
   (use-package psc-ide
     :ensure t
     :load-path "~/Code/psc-ide-emacs/"
