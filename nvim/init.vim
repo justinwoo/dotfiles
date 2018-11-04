@@ -60,9 +60,6 @@ map <leader>c :Commentary<cr>
 map <leader>= <C-W>=<cr>
 map <leader>w= <C-W>=<cr>
 
-"psc-ide-vim help tags
-helptags ~/.local/share/nvim/plugged/psc-ide-vim/doc
-
 "add any local configs that need to be added, if they exist
 if filereadable(glob("~/.vimrc.local"))
   source ~/.vimrc.local
