@@ -26,6 +26,7 @@ in {
     emacs
     neovim
     jq
+    perl
     nix-prefetch-git
     nix-prefetch-github;
 }
