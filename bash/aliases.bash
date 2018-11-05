@@ -16,7 +16,7 @@ alias first='ls -t | head -1'
 alias ll='lstoless'
 alias f='fd --type f | fzf'
 alias darkest='xbacklight -set 1'
-alias emk="ps -ef | grep emacs | awk '{print \$2}' | xargs kill"
+alias emk='pkill emacs'
 alias ns='nix-shell $SHELL_NIX'
 
 if [[ -f $(which xclip) ]]
