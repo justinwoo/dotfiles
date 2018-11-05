@@ -27,6 +27,7 @@ in {
     neovim
     jq
     perl
+    shellcheck
     nix-prefetch-git
     nix-prefetch-github;
 }
