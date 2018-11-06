@@ -29,6 +29,5 @@ in {
     perl
     perlcritic
     shellcheck
-    nix-prefetch-git
     nix-prefetch-github;
 }
