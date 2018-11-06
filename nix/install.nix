@@ -25,6 +25,7 @@ in {
   inherit (pkgs)
     emacs
     neovim
+    tmux
     jq
     perl
     perlcritic
