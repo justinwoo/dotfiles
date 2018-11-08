@@ -40,5 +40,6 @@ in   i3-pkgs
     perl
     perlcritic
     shellcheck
+    jupyter
     nix-prefetch-github;
   }
