@@ -17,9 +17,10 @@ alias ll='lstoless'
 alias f='fd --type f | fzf'
 alias darkest='xbacklight -set 1'
 alias emk='pkill emacs'
-alias ns='nix-shell $SHELL_NIX'
+alias ns='nix-shell -p'
+alias ns2='nix-shell $SHELL_NIX'
 
-if [[ -f $(which xclip) ]]
+if [[ -f $(command -v xclip) ]]
 then
   alias pbcopy='xclip -selection clipboard'
   alias pbout='xclip -selection clipboard -o'
