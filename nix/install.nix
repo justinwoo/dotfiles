@@ -14,6 +14,8 @@ let
     });
 
     inherit (pkgs)
+    scrot
+    i3status
     feh
     rofi;
   };
@@ -38,6 +40,7 @@ in   i3-pkgs
     tmux
     fzf
     ripgrep
+    fd
     jq
     cmake
     nix-bash-completions
