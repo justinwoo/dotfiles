@@ -36,7 +36,11 @@ in   i3-pkgs
     emacs
     neovim
     tmux
+    fzf
+    ripgrep
     jq
+    cmake
+    nix-bash-completions
     perl
     perlcritic
     shellcheck
