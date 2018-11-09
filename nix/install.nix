@@ -31,10 +31,18 @@ let
     spacchetti-cli;
   };
 
+  gnome3 = pkgs.gnome3;
+  gnome-pkgs = {
+    inherit (gnome3)
+    gnome-terminal;
+  };
+
 in   i3-pkgs
   // ps-pkgs
+  // gnome-pkgs
   // {
     inherit (pkgs)
+    noto-fonts-cjk
     emacs
     neovim
     tmux
