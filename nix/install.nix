@@ -33,6 +33,7 @@ in   i3-pkgs
   // ps-pkgs
   // {
     inherit (pkgs)
+    rxvt_unicode_with-plugins
     emacs
     neovim
     tmux
