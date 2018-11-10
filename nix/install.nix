@@ -38,6 +38,7 @@ in   i3-pkgs
     noto-fonts-cjk
     emacs
     neovim
+    tig
     tmux
     fzf
     ripgrep
