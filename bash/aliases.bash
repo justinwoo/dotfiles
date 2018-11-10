@@ -17,7 +17,7 @@ alias ll='lstoless'
 alias f='fd --type f | fzf'
 alias darkest='xbacklight -set 1'
 alias emk='pkill emacs'
-alias ns='nix-shell -p'
+alias ns='nix-shell'
 alias ns2='nix-shell $SHELL_NIX'
 
 if [[ -f $(command -v xclip) ]]
