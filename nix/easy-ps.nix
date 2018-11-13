@@ -4,7 +4,7 @@ let
   easyPS = import (pkgs.fetchFromGitHub {
     owner = "justinwoo";
     repo = "easy-purescript-nix";
-    rev = "45050a69fc60b9e7259053a9d68d42a0e47dbf33";
-    sha256 = "1ajnsiclzv4xcjd6dn6p8bwqmyjib7rjrya0m57gj1dwkzn9z3lk";
+    rev = "c6f4e8c4babe51b30aa44c7f6cac426775ab9afb";
+    sha256 = "1bb99qnnisnpin6q6nw1klf7nsjaimgbamfw70c19w0ya0sl15g0";
   });
 in easyPS
