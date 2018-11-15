@@ -31,8 +31,15 @@ let
     spacchetti-cli;
   };
 
+  gnome3-pkgs = {
+    inherit (pkgs.gnome3)
+    nautilus
+    evince;
+  };
+
 in   i3-pkgs
   // ps-pkgs
+  // gnome3-pkgs
   // {
     inherit (pkgs)
     noto-fonts-cjk
