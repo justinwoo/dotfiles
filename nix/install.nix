@@ -58,5 +58,7 @@ in   i3-pkgs
     perlcritic
     shellcheck
     jupyter
+    zlib
+    zlibStatic
     nix-prefetch-github;
   }
