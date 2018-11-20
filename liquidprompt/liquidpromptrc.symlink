@@ -30,7 +30,7 @@ LP_PATH_LENGTH=35
 
 # How many directories to keep at the beginning of a shortened path
 # Recommended value is 2
-LP_PATH_KEEP=2
+LP_PATH_KEEP=1
 
 # Do you want to display the hostname, even if not connected through network?
 # Defaults to 0 (do not display hostname when locally connected)
@@ -45,11 +45,11 @@ LP_USER_ALWAYS=0
 # Do you want to display the percentages of load/batteries along with their
 # corresponding marks? Set to 0 to only print the colored marks.
 # Defaults to 1 (display percentages)
-LP_PERCENTS_ALWAYS=1
+LP_PERCENTS_ALWAYS=0
 
 # Do you want to use the permissions feature ?
 # Recommended value is 1
-LP_ENABLE_PERM=1
+LP_ENABLE_PERM=0
 
 # Do you want to use the shorten path feature ?
 # Recommended value is 1
@@ -81,11 +81,11 @@ LP_ENABLE_GIT=1
 
 # Do you want to use the svn special features ?
 # Recommended value is 1
-LP_ENABLE_SVN=1
+LP_ENABLE_SVN=0
 
 # Do you want to use the mercurial special features ?
 # Recommended value is 1
-LP_ENABLE_HG=1
+LP_ENABLE_HG=0
 
 # Do you want to use the fossil special features ?
 # Recommended value is 1
@@ -105,11 +105,11 @@ LP_ENABLE_RUNTIME=0
 
 # Minimal runtime to be displayed
 # Recommended value is 2
-LP_RUNTIME_THRESHOLD=2
+LP_RUNTIME_THRESHOLD=1
 
 # Display the virtualenv that is currently activated, if any
 # Recommended value is 1
-LP_ENABLE_VIRTUALENV=1
+LP_ENABLE_VIRTUALENV=0
 
 # Display the enabled software collections, if any
 # Recommended value is 1
@@ -145,3 +145,4 @@ LP_ENABLE_SSH_COLORS=0
 LP_DISABLED_VCS_PATH=""
 
 # vim: set et sts=4 sw=4 tw=120 ft=sh:
+
