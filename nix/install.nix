@@ -33,7 +33,7 @@ let
 
   gnome3-pkgs = {
     inherit (pkgs.gnome3)
-    nautilus
+    # nautilus
     eog
     evince;
   };
