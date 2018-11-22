@@ -46,6 +46,8 @@ in   i3-pkgs
     noto-fonts-cjk
     emacs
     neovim
+    disper
+    autorandr
     tig
     tmux
     fzf
