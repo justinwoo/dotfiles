@@ -61,6 +61,8 @@ in   i3-pkgs
     shellcheck
     jupyter
     zlib
-    zlibStatic
-    nix-prefetch-github;
+    zlibStatic;
+
+    inherit(pkgs.gitAndTools)
+    hub;
   }
