@@ -46,6 +46,8 @@ in   i3-pkgs
     noto-fonts-cjk
     emacs
     neovim
+    bash-completion
+    nodejs-10_x
     disper
     autorandr
     tig
@@ -54,7 +56,7 @@ in   i3-pkgs
     ripgrep
     fd
     jq
-    cmake
+    colormake
     nix-bash-completions
     perl
     perlcritic
@@ -64,5 +66,6 @@ in   i3-pkgs
     zlibStatic;
 
     inherit(pkgs.gitAndTools)
+    git-extras
     hub;
   }
