@@ -58,6 +58,7 @@ source $DOT/i3/aliases.bash
 source $DOT/i3/install.bash
 source $DOT/i3/setup.bash
 source $DOT/liquidprompt/install.bash
+source $DOT/alacritty/install.bash
 source $DOT/nix/setup.bash
 source $DOT/node/aliases.bash
 source $DOT/node/path.bash
