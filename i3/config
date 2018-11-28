@@ -66,7 +66,7 @@ bindsym $ctrl+$sup+$mod+d exec touchpad-disable
 
 # start a terminal
 #bindsym $sup+Return exec i3-sensible-terminal
-bindsym $sup+Return exec gnome-terminal
+bindsym $sup+Return exec open-terminal
 
 # kill focused window
 bindsym $sup+Shift+q kill
@@ -237,7 +237,7 @@ bindsym $sup+Shift+Return exec chrome
 bindsym $sup+Shift+p exec nautilus ~/Pictures
 bindsym $sup+semicolon [instance="vlc"] scratchpad show
 bindsym $sup+Shift+semicolon [instance="filezilla"] scratchpad show
-bindsym $sup+o [instance="gnome-terminal"] scratchpad show
+bindsym $sup+o [class="(Alacritty|Gnome-terminal)"] scratchpad show
 bindsym $sup+p [instance="nautilus"] scratchpad show
 bindsym $sup+y [window_role="browser$"] scratchpad show
 bindsym $sup+0 [instance="gimp"] scratchpad show
