@@ -20,6 +20,22 @@ let
     rofi;
   };
 
+  alacritty = pkgs.stdenv.mkDerivation {
+    name = "alacritty";
+    src = pkgs.fetchurl {
+      url = "https://github.com/jwilm/alacritty/releases/download/v0.2.3/Alacritty-v0.2.3-x86_64.tar.gz";
+      sha256 = "1xjx4anwxp9drxxm852fh8yz7x6z1giqyapvcn05mpp71qiaqvcx";
+    };
+
+    unpackPhase = ''
+      mkdir -p $out/bin
+      tar xf $src -C $out/bin
+      chmod u+w $out/bin/alacritty
+    '';
+
+    dontInstall = true;
+  };
+
   ps-pkgs = {
     inherit (easy-ps.inputs)
     purs
@@ -42,6 +58,7 @@ in   i3-pkgs
   // ps-pkgs
   // gnome3-pkgs
   // {
+    inherit alacritty;
     inherit (pkgs)
     noto-fonts-cjk
     emacs
