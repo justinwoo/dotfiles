@@ -21,7 +21,7 @@ font:
     family: "Noto Sans Mono CJK JP"
   size: 11.0
   offset:
-    x: 0
+    x: 1
     y: 0
   glyph_offset:
     x: 0

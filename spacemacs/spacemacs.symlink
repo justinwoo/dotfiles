@@ -46,6 +46,7 @@ This function should only modify configuration layer settings."
      git
      markdown
      go
+     perl
      (org :variables org-projectile-file "TODOs.org")
      syntax-checking
      version-control
