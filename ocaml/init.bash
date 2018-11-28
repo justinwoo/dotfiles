@@ -1,5 +1,6 @@
-#!/usr/bin/env zsh
-# if test $(which opam)
-# then
-# 	. ~/.opam/opam-init/init.zsh > /dev/null 2> /dev/null || true
-# fi
+#!/usr/bin/env bash
+if [[ -f $(command -v opam) ]]
+then
+  "$HOME/.opam/opam-init/init.sh" > /dev/null 2> /dev/null || true
+  eval "$(opam env)"
+fi
