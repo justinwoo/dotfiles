@@ -20,6 +20,22 @@ let
     rofi;
   };
 
+  polyglot = pkgs.stdenv.mkDerivation {
+    name = "polyglot";
+    src = pkgs.fetchurl {
+      url = "https://github.com/vmchale/polyglot/releases/download/0.5.16/poly-x86_64-unknown-linux-icc";
+      sha256 = "1c9bk7bkrs39l660077cr356d5r0v0cmyh0swymcm6gy1dsivv4n";
+    };
+
+    unpackPhase = ''
+      mkdir -p $out/bin
+      cp $src $out/bin/polyglot
+      chmod +x $out/bin/polyglot
+    '';
+
+    dontInstall = true;
+  };
+
   alacritty = pkgs.stdenv.mkDerivation {
     name = "alacritty";
     src = pkgs.fetchurl {
@@ -58,6 +74,7 @@ in   i3-pkgs
   // ps-pkgs
   // gnome3-pkgs
   // {
+    inherit polyglot;
     inherit alacritty;
     inherit (pkgs)
     noto-fonts-cjk
