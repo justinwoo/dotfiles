@@ -50,5 +50,6 @@ Plug 'elzr/vim-json', { 'for': 'json' } " JSON support
 Plug 'Shougo/vimproc.vim', { 'do': 'make' } " interactive command execution in vim
 Plug 'vmchale/dhall-vim' " Dhall
 Plug 'LnL7/vim-nix' " Nix
+Plug 'ntpeters/vim-better-whitespace' " Nix
 
 call plug#end()
