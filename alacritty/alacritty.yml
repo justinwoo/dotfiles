@@ -19,9 +19,9 @@ font:
     family: "Noto Sans Mono CJK JP"
   italic:
     family: "Noto Sans Mono CJK JP"
-  size: 10.0
+  size: 8.0
   offset:
-    x: 0
+    x: 1
     y: 1
   glyph_offset:
     x: 0
