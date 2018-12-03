@@ -20,6 +20,13 @@ let
     rofi;
   };
 
+  prefetch-github = import (pkgs.fetchFromGitHub {
+    owner = "justinwoo";
+    repo = "prefetch-github";
+    rev = "02bf2850b52271b87d59a520c5dd2f1452c1dfa5";
+    sha256 = "1vr66wl9kh8vi0qjkl1bbq4pkim4ws8a8hckqgmmcgkwifmxbd9p";
+  }) {};
+
   polyglot = pkgs.stdenv.mkDerivation {
     name = "polyglot";
     src = pkgs.fetchurl {
@@ -74,6 +81,7 @@ in   i3-pkgs
   // ps-pkgs
   // gnome3-pkgs
   // {
+    inherit prefetch-github;
     inherit polyglot;
     inherit alacritty;
     inherit (pkgs)
