@@ -14,7 +14,7 @@ font pango:Noto Sans CJK JP 12
 
 # for_window
 for_window [instance="slack"] move window to scratchpad
-for_window [instance="Telegram"] move window to scratchpad
+for_window [title="Telegram"] move window to scratchpad
 for_window [instance="nautilus"] move window to scratchpad
 for_window [instance="vlc"] move window to scratchpad, scratchpad show
 for_window [instance="eog"] move window to scratchpad, scratchpad show
