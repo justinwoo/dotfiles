@@ -13,13 +13,13 @@ exec ~/.dotfiles/i3/start-wifi
 font pango:Noto Sans CJK JP 12
 
 # for_window
-for_window [instance="slack"] move window to scratchpad, scratchpad show
-for_window [instance="Telegram"] move window to scratchpad, scratchpad show
-for_window [instance="nautilus"] move window to scratchpad, scratchpad show
+for_window [instance="slack"] move window to scratchpad
+for_window [instance="Telegram"] move window to scratchpad
+for_window [instance="nautilus"] move window to scratchpad
 for_window [instance="vlc"] move window to scratchpad, scratchpad show
 for_window [instance="eog"] move window to scratchpad, scratchpad show
 for_window [instance="feh"] move window to scratchpad, scratchpad show
-for_window [instance="filezilla"] move window to scratchpad, scratchpad show
+for_window [instance="filezilla"] move window to scratchpad
 for_window [instance="VirtualBox"] move window to scratchpad, scratchpad show
 for_window [instance="Pinta"] move window to scratchpad, scratchpad show
 for_window [window_role="pop-up"] move window to scratchpad, scratchpad show
@@ -149,11 +149,10 @@ bindsym $sup+3 workspace 3
 bindsym $sup+4 workspace 4
 bindsym $sup+5 workspace 5
 bindsym $sup+6 workspace 6
-# who needs 10
-# bindsym $sup+7 workspace 7
-# bindsym $sup+8 workspace 8
-# bindsym $sup+9 workspace 9
-# bindsym $sup+0 workspace 10
+bindsym $sup+7 workspace 7
+bindsym $sup+8 workspace 8
+bindsym $sup+9 workspace 9
+bindsym $sup+0 workspace 10
 
 # move focused container to workspace
 bindsym $sup+Shift+1 move container to workspace 1
@@ -240,7 +239,6 @@ bindsym $sup+Shift+semicolon [instance="filezilla"] scratchpad show
 bindsym $sup+o [class="(Alacritty|Gnome-terminal)"] scratchpad show
 bindsym $sup+p [instance="nautilus"] scratchpad show
 bindsym $sup+y [window_role="browser$"] scratchpad show
-bindsym $sup+0 [instance="gimp"] scratchpad show
 bindsym $sup+m [instance="emacs"] scratchpad show
 bindsym $sup+i [title="Slack"] scratchpad show
 bindsym $sup+c [title="Slack"] scratchpad show
