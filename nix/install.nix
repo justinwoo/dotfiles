@@ -20,6 +20,18 @@ let
     rofi;
   };
 
+  # prefetch-github = pkgs.stdenv.mkDerivation {
+  #   name = "prefetch-github";
+  #   src = pkgs.fetchurl {
+  #     url = "https://github.com/justinwoo/prefetch-github/releases/download/test-travis/prefetch-github.tar.gz";
+  #     sha256 = "0kcrr2m2y8mi37bvwhc9k9mr4h08bl90sblff7adssbnk76pg47l";
+  #   };
+  #   installPhase = ''
+  #     mkdir -p $out/bin
+  #     install -D -m555 -T prefetch-github $out/bin/prefetch-github
+  #   '';
+  # };
+
   prefetch-github = import (pkgs.fetchFromGitHub {
     owner = "justinwoo";
     repo = "prefetch-github";
