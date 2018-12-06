@@ -86,6 +86,7 @@ in   i3-pkgs
     inherit alacritty;
     inherit (pkgs)
     noto-fonts-cjk
+    gnumake
     emacs
     neovim
     bash-completion
