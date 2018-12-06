@@ -13,16 +13,21 @@ exec ~/.dotfiles/i3/start-wifi
 font pango:Noto Sans CJK JP 12
 
 # for_window
+# see xprop, xwindow
+# wm_name = title
 for_window [instance="slack"] move window to scratchpad
-for_window [title="Telegram"] move window to scratchpad
-for_window [instance="nautilus"] move window to scratchpad
+for_window [title="Telegram"] move window to scratchpad, scratchpad show
+for_window [instance="nautilus"] move window to scratchpad, scratchpad show
 for_window [instance="vlc"] move window to scratchpad, scratchpad show
 for_window [instance="eog"] move window to scratchpad, scratchpad show
 for_window [instance="feh"] move window to scratchpad, scratchpad show
-for_window [instance="filezilla"] move window to scratchpad
+for_window [instance="filezilla"] move window to scratchpad, scratchpad show
 for_window [instance="VirtualBox"] move window to scratchpad, scratchpad show
 for_window [instance="Pinta"] move window to scratchpad, scratchpad show
 for_window [window_role="pop-up"] move window to scratchpad, scratchpad show
+for_window [window_role="dialog"] move window to scratchpad, scratchpad show
+
+ # normal, dialog, utility, toolbar, splash, menu, dropdown_menu, popup_menu, tooltip and notification
 
 # gaps
 # gaps inner 10
