@@ -1,5 +1,6 @@
 let
   pkgs = import <nixpkgs> {};
+  easy-dhall = import ./easy-dhall.nix;
   easy-ps = import ./easy-ps.nix;
 
   i3-pkgs = {
@@ -20,23 +21,11 @@ let
     rofi;
   };
 
-  # prefetch-github = pkgs.stdenv.mkDerivation {
-  #   name = "prefetch-github";
-  #   src = pkgs.fetchurl {
-  #     url = "https://github.com/justinwoo/prefetch-github/releases/download/test-travis/prefetch-github.tar.gz";
-  #     sha256 = "0kcrr2m2y8mi37bvwhc9k9mr4h08bl90sblff7adssbnk76pg47l";
-  #   };
-  #   installPhase = ''
-  #     mkdir -p $out/bin
-  #     install -D -m555 -T prefetch-github $out/bin/prefetch-github
-  #   '';
-  # };
-
   prefetch-github = import (pkgs.fetchFromGitHub {
     owner = "justinwoo";
     repo = "prefetch-github";
-    rev = "02bf2850b52271b87d59a520c5dd2f1452c1dfa5";
-    sha256 = "1vr66wl9kh8vi0qjkl1bbq4pkim4ws8a8hckqgmmcgkwifmxbd9p";
+    rev = "36c45f85048219f86e870f82fd6d1ba5172e8362";
+    sha256 = "1139wjvs9z1aclv8iqkgyspcyqdl457prc8mi7aw1fzfibf8zgp8";
   }) {};
 
   polyglot = pkgs.stdenv.mkDerivation {
@@ -75,11 +64,16 @@ let
     inherit (easy-ps.inputs)
     purs
     psc-package-simple
-
     purp
+    spacchetti-cli;
+  };
+
+  dhall-pkgs = {
+    inherit (easy-dhall)
     dhall-simple
     dhall-json-simple
-    spacchetti-cli;
+    dhall-bash-simple
+    dhall-text-simple;
   };
 
   gnome3-pkgs = {
@@ -90,6 +84,7 @@ let
   };
 
 in   i3-pkgs
+  // dhall-pkgs
   // ps-pkgs
   // gnome3-pkgs
   // {
