@@ -464,6 +464,9 @@ dump."
 
 (defun my/flycheck-config ()
   "my flycheck overrides"
+
+  (add-hook 'sh-mode-hook 'flycheck-mode)
+
   ;; fucking flycheck
   (setq flycheck-check-syntax-automatically '(mode-enabled
                                               idle-change
