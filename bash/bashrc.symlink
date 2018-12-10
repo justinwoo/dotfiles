@@ -75,6 +75,7 @@ source $DOT/system/env.bash
 source $DOT/tmux/aliases.bash
 source $DOT/z/init.bash
 source $DOT/z/path.bash
+source $DOT/laptop-helpers/path.bash
 source $DOT/liquidprompt/prompt.bash
 
 export LOCALE_ARCHIVE="$(readlink ~/.nix-profile/lib/locale)/locale-archive"
