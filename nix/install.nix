@@ -99,6 +99,7 @@ in   i3-pkgs
     emacs
     neovim
     bash-completion
+    pavucontrol
     nodejs-10_x
     disper
     autorandr
