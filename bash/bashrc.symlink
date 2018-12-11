@@ -73,9 +73,11 @@ source $DOT/rust/path.bash
 source $DOT/system/_path.bash
 source $DOT/system/env.bash
 source $DOT/tmux/aliases.bash
-source $DOT/z/init.bash
-source $DOT/z/path.bash
 source $DOT/laptop-helpers/path.bash
 source $DOT/liquidprompt/prompt.bash
+
+if [[ -f ~/.nix-profile/z/z.sh ]]; then
+  . ~/.nix-profile/z/z.sh
+fi
 
 export LOCALE_ARCHIVE="$(readlink ~/.nix-profile/lib/locale)/locale-archive"

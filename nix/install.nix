@@ -62,6 +62,8 @@ let
     dontInstall = true;
   };
 
+  z = import ./z.nix { inherit pkgs; };
+
   ps-pkgs = {
     inherit (easy-ps.inputs)
     purs
@@ -121,4 +123,6 @@ in   i3-pkgs
     inherit(pkgs.gitAndTools)
     git-extras
     hub;
+
+    inherit z;
   }
