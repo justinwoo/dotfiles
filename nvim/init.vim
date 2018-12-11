@@ -8,6 +8,9 @@ let g:netrw_browse_split = 0
 set clipboard=unnamedplus
 
 "asdfsdf
+set expandtab
+set tabstop=2
+set softtabstop=2
 set shiftwidth=2
 
 ""god damn
