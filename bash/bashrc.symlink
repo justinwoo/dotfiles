@@ -28,7 +28,6 @@ fi
 export LC_CTYPE=en_IE.UTF-8
 export DOT=$HOME/.dotfiles
 export NIX_PROFILE=$HOME/.nix-profile
-export ZSH=$HOME/.dotfiles
 export TERMINAL=gnome-terminal
 export INSTALLED=$DOT/installed
 export PROJECTS=~/Code
@@ -57,32 +56,9 @@ then
   xmodmap -e "keycode 167 = Next"
 fi
 
-source $DOT/bash/aliases.bash
-source $DOT/fzf/prompt.bash
-source $DOT/fzf/setup.bash
-source $DOT/git/aliases.bash
-source $DOT/haskell/path.bash
-source $DOT/i3/aliases.bash
-source $DOT/i3/install.bash
-source $DOT/i3/setup.bash
-source $DOT/alacritty/install.bash
-source $DOT/autorandr/install.bash
-source $DOT/nix/setup.bash
-source $DOT/node/aliases.bash
-source $DOT/node/path.bash
-source $DOT/nvim/setup.bash
-source $DOT/ocaml/init.bash
-source $DOT/purescript/aliases.bash
-source $DOT/python/path.bash
-source $DOT/ruby/aliases.bash
-source $DOT/ruby/path.bash
-source $DOT/rust/path.bash
-source $DOT/system/_path.bash
-source $DOT/system/env.bash
-source $DOT/tmux/aliases.bash
-source $DOT/laptop-helpers/path.bash
-
-source $DOT/liquidprompt/prompt.bash
+for file in $DOT/*/*.bash; do
+  source $file;
+done;
 
 if [[ -f ~/.nix-profile/z/z.sh ]]; then
   . ~/.nix-profile/z/z.sh
