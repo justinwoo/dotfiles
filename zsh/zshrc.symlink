@@ -1,7 +1,7 @@
 # set locale CTYPE because otherwise my prompt is fucked
 export LC_CTYPE=en_IE.UTF-8
 
-# shortcut to this dotfiles path is $ZSH
+# shortcut to this dotfiles path is $DOT
 export ZSH=$HOME/.dotfiles
 
 # ypup
@@ -18,7 +18,7 @@ export WORKSPACE=~/workspace
 
 # all of our zsh files
 typeset -U config_files
-config_files=($ZSH/**/*.zsh)
+config_files=($DOT/**/*.zsh)
 
 # load the path files
 for file in ${(M)config_files:#*/path.zsh}

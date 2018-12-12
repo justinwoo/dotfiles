@@ -27,6 +27,7 @@ fi
 
 export LC_CTYPE=en_IE.UTF-8
 export DOT=$HOME/.dotfiles
+export NIX_PROFILE=$HOME/.nix-profile
 export ZSH=$HOME/.dotfiles
 export TERMINAL=gnome-terminal
 export INSTALLED=$DOT/installed

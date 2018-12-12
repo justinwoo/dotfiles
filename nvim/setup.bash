@@ -2,7 +2,7 @@ NVIM_HOME=$HOME/.config/nvim
 
 if [[ ! -a $NVIM_HOME ]]
 then
-    ln -s $ZSH/nvim $NVIM_HOME
+    ln -s $DOT/nvim $NVIM_HOME
 fi
 
 if [[ ! -a $HOME/.local/share/nvim/site/autoload/plug.vim ]]
