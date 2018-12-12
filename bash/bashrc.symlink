@@ -10,11 +10,18 @@ export HISTTIMEFORMAT="[%F %T] "
 export HISTFILE=~/.bash_eternal_history
 export PROMPT_COMMAND="history -a; $PROMPT_COMMAND"
 
+export XDG_DATA_DIRS="$HOME/.nix-profile/share:${XDG_DATA_DIRS:-/usr/local/share:/usr/share}"
+
 if ! shopt -oq posix; then
   if [ -f /usr/share/bash-completion/bash_completion ]; then
     . /usr/share/bash-completion/bash_completion
   elif [ -f /etc/bash_completion ]; then
     . /etc/bash_completion
+  fi
+
+  NIX_SHARE_COMPLETION=~/.nix-profile/share/bash-completion/bash_completion
+  if [ -f $NIX_SHARE_COMPLETION ]; then
+    . $NIX_SHARE_COMPLETION
   fi
 fi
 
