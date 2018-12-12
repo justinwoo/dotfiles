@@ -57,7 +57,6 @@ source $DOT/haskell/path.bash
 source $DOT/i3/aliases.bash
 source $DOT/i3/install.bash
 source $DOT/i3/setup.bash
-source $DOT/liquidprompt/install.bash
 source $DOT/alacritty/install.bash
 source $DOT/autorandr/install.bash
 source $DOT/nix/setup.bash
@@ -74,6 +73,7 @@ source $DOT/system/_path.bash
 source $DOT/system/env.bash
 source $DOT/tmux/aliases.bash
 source $DOT/laptop-helpers/path.bash
+
 source $DOT/liquidprompt/prompt.bash
 
 if [[ -f ~/.nix-profile/z/z.sh ]]; then

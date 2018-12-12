@@ -9,12 +9,12 @@ export LP_MARK_STASH="在庫"
 if [ ! -z "$PS1" ]
 then
   # shellcheck source=/dev/null
-  source "$INSTALLED/liquidprompt/liquidprompt";
+  source "$HOME/.nix-profile/liquidprompt/liquidprompt";
 
   if [ -z "$IN_NIX_SHELL"  ]
   then
     export LP_USER=bash
   else
-    export LP_USER=nix
+    export LP_USER="${LP_COLOR_TIME}nix"
   fi
 fi

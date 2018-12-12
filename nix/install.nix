@@ -63,6 +63,7 @@ let
   };
 
   z = import ./z.nix { inherit pkgs; };
+  liquidprompt = import ./liquidprompt.nix { inherit pkgs; };
 
   ps-pkgs = {
     inherit (easy-ps.inputs)
@@ -125,4 +126,5 @@ in   i3-pkgs
     hub;
 
     inherit z;
+    inherit liquidprompt;
   }
