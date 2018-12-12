@@ -4,6 +4,6 @@ let
 in import (pkgs.fetchFromGitHub {
   owner = "justinwoo";
   repo = "easy-dhall-nix";
-  rev = "bd6baadd52a866b2e52aae05c623fe503b6a0e40";
-  sha256 = "0l1rgdd6wv7ypn42xb7003a11jwnppw21glzhiw4qyv4bvmwsikz";
+  rev = "9e3b8744db0a9d369675a4b12a955614b8100449";
+  sha256 = "00ww6fhv8lvihjfzjzpd4kgfqx8isk4nalmc79vh9mhfv7ya0m5p";
 }) {}
