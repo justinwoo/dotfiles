@@ -1,10 +1,8 @@
-let
-  pkgs = import <nixpkgs> {};
+{ pkgs ? import <nixpkgs> {} }:
 
-  easyPS = import (pkgs.fetchFromGitHub {
-    owner = "justinwoo";
-    repo = "easy-purescript-nix";
-    rev = "5b71ea53e25a1f99229ee0b657b37c46f6fc0a45";
-    sha256 = "1qza198b93abr4klzvz55ccai99ji893j4kgv0dali827ryk7ph2";
-  });
-in easyPS
+import (pkgs.fetchFromGitHub {
+  owner = "justinwoo";
+  repo = "easy-purescript-nix";
+  rev = "8bfaa045ff37a81e90d66b93f4e6d68475e76cc2";
+  sha256 = "00nbwf6jvkpy7892k29fvxwxmyv0511scakkd2ja8d9q913chbdw";
+})
