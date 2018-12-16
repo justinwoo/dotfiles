@@ -6,3 +6,8 @@ then
   cd ~/.emacs.d || echo "Didn't clone ~/.emacs.d correctly"
   git co develop
 fi
+
+if [[ ! -e "$HOME"/local.org ]]
+then
+  touch "$HOME"/local.org
+fi

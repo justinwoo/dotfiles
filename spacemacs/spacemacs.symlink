@@ -707,7 +707,8 @@ layers configuration. You are free to put any user code."
   (global-hl-line-mode -1)
 
   ;; guess im using this or something dunno
-  (setq org-agenda-files '("~/Code/notes/notes.org"))
+  (setq org-agenda-files '("~/Code/notes/notes.org"
+                           "~/local.org"))
 
   ;; why was this unbound
   (global-set-key (kbd "M-x") 'helm-M-x)
