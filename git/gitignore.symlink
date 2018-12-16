@@ -20,6 +20,7 @@ dummy.sql
 SQLQuery*.sql
 .psc-package-backup
 tags
+TODOs.md
 TODOs.org
 TODOs.org_archive
 .tern-port
