@@ -7,7 +7,8 @@ then
   git co develop
 fi
 
-if [[ ! -e "$HOME"/local.org ]]
+if [[ ! -e "$HOME"/org/local.org ]]
 then
-  touch "$HOME"/local.org
+  mkdir -p "$HOME"/org
+  touch "$HOME"/org/local.org
 fi
