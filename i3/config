@@ -24,6 +24,7 @@ for_window [instance="feh"] move window to scratchpad, scratchpad show
 for_window [instance="filezilla"] move window to scratchpad, scratchpad show
 for_window [instance="VirtualBox"] move window to scratchpad, scratchpad show
 for_window [instance="Pinta"] move window to scratchpad, scratchpad show
+for_window [class="Shotwell"] move window to scratchpad, scratchpad show
 for_window [window_role="pop-up"] move window to scratchpad, scratchpad show
 for_window [window_role="dialog"] move window to scratchpad, scratchpad show
 
