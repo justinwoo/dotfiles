@@ -692,6 +692,9 @@ layers configuration. You are free to put any user code."
   (my/js-prettier-config)
   (my/magit-config)
 
+  ;; holy hell
+  (setq undo-tree-enable-undo-in-region nil)
+
   ;; rebind spc / and *
   (evil-leader/set-key "/" 'spacemacs/helm-project-do-ag)
   (evil-leader/set-key "*" 'spacemacs/helm-project-do-ag-region-or-symbol)
