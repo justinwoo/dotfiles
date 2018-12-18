@@ -1,14 +1,14 @@
 [user]
-        name = AUTHORNAME
-        email = AUTHOREMAIL
+        name = justinwoo
+        email = moomoowoo@gmail.com
 [credential]
-        helper = GIT_CREDENTIAL_HELPER
+        helper = cache
 [alias]
         co = checkout
-        promote = !$DOT/bin/git-promote
-        wtf     = !$DOT/bin/git-wtf
-        rank-contributors = !$DOT/bin/git-rank-contributors
-        count   = !git shortlog -sn
+        br = branch
+        st = status
+        re = rebase
+        count = !git shortlog -sn
 [color]
         diff = auto
         status = auto

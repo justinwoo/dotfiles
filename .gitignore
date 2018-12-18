@@ -1,17 +1,1 @@
-atom.symlink/.apm
-atom.symlink/.node-gyp
-atom.symlink/.storage
-atom.symlink/compile-cache/
-atom.symlink/packages
-atom.symlink/storage
-atom.symlink/themes
-atom.symlink/.apm
-
-git/gitconfig.symlink
-npm-debug.log
-
-node/npmrc.symlink
-
-vim/path*
-
 *.backup
