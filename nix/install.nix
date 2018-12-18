@@ -1,7 +1,7 @@
 let
   pkgs = import <nixpkgs> {};
   easy-dhall = import ./easy-dhall.nix;
-  easy-ps = import ./easy-ps.nix;
+  easy-ps = import ./easy-ps.nix {};
 
   i3-pkgs = {
     i3 = pkgs.i3;
