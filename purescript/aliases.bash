@@ -3,6 +3,7 @@ alias use-purs-0.12='ln -sf $INSTALLED/purescript-0.12.0/purescript/purs ~/.bin/
 
 alias bi='bower install'
 alias pp='psc-package'
+alias ppb='psc-package build'
 alias p='pulp --psc-package'
 alias pu='pulp'
 alias pub='pulp build'
