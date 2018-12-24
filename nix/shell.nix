@@ -4,5 +4,5 @@ let
 in pkg.stdenv.mkDerivation {
   name = "my-shell";
 
-  buildInputs = builtins.attrValues (import ./install.nix);
+  buildInputs = builtins.attrValues (import ./packages.nix);
 }

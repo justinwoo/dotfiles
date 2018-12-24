@@ -1,1 +1,1 @@
-`nix-env -f install.nix -i`
+`nix-env -f packages.nix -i`
