@@ -3,6 +3,7 @@
 {
   inherit (pkgs.emacsMelpa)
 
+  # these are all broken because of missing packages
   # doom-modeline
   # evil-escape
   # evil-unimpaired
