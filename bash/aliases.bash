@@ -1,5 +1,4 @@
 alias reload!='. ~/.bashrc'
-alias c='cd ~/Code'
 alias vi='nvim'
 alias nv="nvim"
 alias emd='emacs --daemon'
