@@ -26,8 +26,15 @@ let
   prefetch-github = import (pkgs.fetchFromGitHub {
     owner = "justinwoo";
     repo = "prefetch-github";
-    rev = "36c45f85048219f86e870f82fd6d1ba5172e8362";
-    sha256 = "1139wjvs9z1aclv8iqkgyspcyqdl457prc8mi7aw1fzfibf8zgp8";
+    rev = "01f2706918fa7c6dfbcd4d495fa94d933c86d9ff";
+    sha256 = "02gnrhqy02bc97wwff89h96hgri4r9m8ardqfay1fwg9pdghcj3p";
+  }) {};
+
+  update-fetch-derivations = import (pkgs.fetchFromGitHub {
+    owner = "justinwoo";
+    repo = "update-fetch-derivations";
+    rev = "fe451e679fcf62e4471a4d717096f8a272cf3688";
+    sha256 = "0if84dgb7hz061i83j4a8v4g0crcj2y9v6cl7sr50djlcy4qgrc1";
   }) {};
 
   polyglot = pkgs.stdenv.mkDerivation {
@@ -49,8 +56,8 @@ let
   alacritty = pkgs.stdenv.mkDerivation {
     name = "alacritty";
     src = pkgs.fetchurl {
-      url = "https://github.com/jwilm/alacritty/releases/download/v0.2.3/Alacritty-v0.2.3-x86_64.tar.gz";
-      sha256 = "1xjx4anwxp9drxxm852fh8yz7x6z1giqyapvcn05mpp71qiaqvcx";
+      url = "https://github.com/jwilm/alacritty/releases/download/v0.2.3/Alacritty-v0.2.4-x86_64.tar.gz";
+      sha256 = "1c851ym66fpjrpvkl4g9ivcpajdg5cq0c15jjlgic9smwxhq9rqx";
     };
 
     unpackPhase = ''
@@ -94,6 +101,7 @@ in   i3-pkgs
   // gnome3-pkgs
   // {
     inherit prefetch-github;
+    inherit update-fetch-derivations;
     inherit polyglot;
     inherit alacritty;
     inherit (pkgs)

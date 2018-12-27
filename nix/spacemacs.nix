@@ -18,13 +18,14 @@ in pkgs.stdenv.mkDerivation {
   src = pkgs.fetchFromGitHub {
     owner = "syl20bnr";
     repo = "spacemacs";
+    # warning: do not let this update to the useless master branch
     rev = "8b3a30f2409aa06053b32117504381c4cce1d8db";
     sha256 = "1z1gxm4vghm8h45drdb6s8lg0x10dxlxxbvmf05yymnnfkshy6vg";
   };
   phases = "unpackPhase";
   shellHook = ''
     echo $src
-    cp -v -R --no-preserve=mode $src ~/.emacs.d
+    cp -v -TR --no-preserve=mode $src ~/.emacs.d
     ${builtins.toString copyPackages}
   '';
 }

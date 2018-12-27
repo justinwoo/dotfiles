@@ -5,8 +5,8 @@ let
   src = pkgs.fetchFromGitHub {
     owner = "justinwoo";
     repo = "easy-markdown-beamer-pandoc";
-    rev = "6ee438bc9280e3baf1caa98b6aff16d6858abe45";
-    sha256 = "1wqziv503ps3i5nawbx4lygh5b2cqqpwlbs6yq3kprgnpbj3j428";
+    rev = "3bb267d687dc08f616a8892919a87d558c82eea3";
+    sha256 = "00na9h4y90nlml6kyr9i8968951nyc4b562bm68d4mh44f2km504";
   };
 
   set = import src;

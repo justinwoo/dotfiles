@@ -3,6 +3,6 @@
 import (pkgs.fetchFromGitHub {
   owner = "justinwoo";
   repo = "easy-purescript-nix";
-  rev = "8bfaa045ff37a81e90d66b93f4e6d68475e76cc2";
-  sha256 = "00nbwf6jvkpy7892k29fvxwxmyv0511scakkd2ja8d9q913chbdw";
+  rev = "951fed14efbe54fcd9edeab7a1ea45852cabf8dd";
+  sha256 = "062q72rkj7f5q1h87swi791j833w79s8ap6kxa2qmymvx69jkkpv";
 })
