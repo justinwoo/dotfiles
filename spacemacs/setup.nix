@@ -1,17 +1,18 @@
 #!/usr/bin/env nix-shell
-#!nix-shell ./spacemacs.nix --run exit
+#!nix-shell ./setup.nix --run exit
 
 { pkgs ? import <nixpkgs> {} }:
 
 let
-  melpaPackages = import ./emacs-packages.nix { inherit pkgs; };
-  cpPackages = drv: ''
+  melpaPackages = import ./melpa-packages.nix { inherit pkgs; };
+  cpMelpaPackages = drv: ''
     TARGET=~/.emacs.d/elpa/26.1/develop/
     mkdir -p $TARGET
     SITE_LOCATION=${drv.outPath}/share/emacs/site-lisp/elpa/*
+    echo "copying $SITE_LOCATION to $TARGET"
     cp -R --no-preserve=mode $SITE_LOCATION $TARGET
   '';
-  copyPackages = builtins.map cpPackages (builtins.attrValues melpaPackages);
+  copyMelpaPackages = builtins.map cpMelpaPackages (builtins.attrValues melpaPackages);
 
 in pkgs.stdenv.mkDerivation {
   name = "spacemacs-install";
@@ -25,7 +26,8 @@ in pkgs.stdenv.mkDerivation {
   phases = "unpackPhase";
   shellHook = ''
     echo $src
-    cp -v -TR --no-preserve=mode $src ~/.emacs.d
-    ${builtins.toString copyPackages}
+    echo "copying $src to ~/.emacs.d"
+    cp -TR --no-preserve=mode $src ~/.emacs.d
+    ${builtins.toString copyMelpaPackages}
   '';
 }

@@ -7,9 +7,7 @@
   # doom-modeline
   # evil-escape
   # evil-unimpaired
-  # font-lock-plus
   # shrink-path
-  # git-gutter-plus
 
   ac-ispell
   ace-jump-helm-line
@@ -76,6 +74,7 @@
   flx-ido
   flycheck
   flycheck-pos-tip
+  font-lock-plus
   fringe-helper
   fuzzy
   gh-md
@@ -83,6 +82,7 @@
   git-commit
   git-gutter
   git-gutter-fringe
+  git-gutter-plus
   git-link
   git-messenger
   git-timemachine
