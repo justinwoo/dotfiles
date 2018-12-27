@@ -116,10 +116,7 @@ in   i3-pkgs
     nix-bash-completions
     perl
     perlcritic
-    shellcheck
-    jupyter
-    zlib
-    zlibStatic;
+    shellcheck;
 
     inherit(pkgs.gitAndTools)
     git-extras
