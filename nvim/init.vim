@@ -61,6 +61,7 @@ map <leader>gc :Gcommand<cr>
 map <leader>do :diffget<cr>
 map <leader>dg :diffget<cr>
 map <leader>dp :diffput<cr>
+map <leader>du :diffupdate<cr>
 
 "make opening splits easy
 map <leader>v :vsplit<cr><C-W><C-W>
