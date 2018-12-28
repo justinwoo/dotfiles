@@ -50,9 +50,17 @@ map <leader>q :q<cr>
 "want some familiar keybindings
 map <leader>n :Vexplore<cr>
 map <C-P> :FZF <cr>
-map <leader>/ :Ack 
+map <leader>/ :Ack
 map <leader>gb :Gblame<cr>
 map <leader>gd :Gdiff<cr>
+map <leader>gw :Gwrite<cr>
+map <leader>gr :Gread<cr>
+map <leader>gs :Gstatus<cr>
+map <leader>gc :Gcommand<cr>
+
+map <leader>do :diffget<cr>
+map <leader>dg :diffget<cr>
+map <leader>dp :diffput<cr>
 
 "make opening splits easy
 map <leader>v :vsplit<cr><C-W><C-W>
@@ -62,7 +70,7 @@ map <leader>b :BuffergatorToggle<cr><C-W><C-W>
 map <leader>c :Commentary<cr>
 map <leader>= <C-W>=<cr>
 map <leader>w= <C-W>=<cr>
-
+map <leader>ww :StripWhiteSpace<cr>
 "add any local configs that need to be added, if they exist
 if filereadable(glob("~/.vimrc.local"))
   source ~/.vimrc.local
@@ -72,3 +80,6 @@ endif
 if executable('rg')
   let g:ackprg = 'rg --vimgrep'
 endif
+
+"yup
+command SourceDot :source ~/.dotfiles/nvim/init.vim
