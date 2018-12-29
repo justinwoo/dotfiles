@@ -4,15 +4,22 @@
 { pkgs ? import <nixpkgs> {} }:
 
 let
+  elpaDevelop = "~/.emacs.d/elpa/26.1/develop/";
   melpaPackages = import ./melpa-packages.nix { inherit pkgs; };
   cpMelpaPackages = drv: ''
-    TARGET=~/.emacs.d/elpa/26.1/develop/
-    mkdir -p $TARGET
+    mkdir -p ${elpaDevelop}
     SITE_LOCATION=${drv.outPath}/share/emacs/site-lisp/elpa/*
-    echo "copying $SITE_LOCATION to $TARGET"
-    cp -R --no-preserve=mode $SITE_LOCATION $TARGET
+    echo "copying $SITE_LOCATION to ${elpaDevelop}"
+    cp -R --no-preserve=mode $SITE_LOCATION ${elpaDevelop}
   '';
   copyMelpaPackages = builtins.map cpMelpaPackages (builtins.attrValues melpaPackages);
+
+  brokenPackages = pkgs.fetchFromGitHub {
+    owner = "justinwoo";
+    repo = "broken-emacs-packages";
+    rev = "368471f9ad949a5b7895aa15f76fb5bb02212802";
+    sha256 = "0dg0v2as0f0m3pyixbi8jkx7iacsrd3kijwn1ydqyylrsnm0w61v";
+  };
 
 in pkgs.stdenv.mkDerivation {
   name = "spacemacs-install";
@@ -29,5 +36,9 @@ in pkgs.stdenv.mkDerivation {
     echo "copying $src to ~/.emacs.d"
     cp -TR --no-preserve=mode $src ~/.emacs.d
     ${builtins.toString copyMelpaPackages}
+    echo "copying broken packages"
+    cp -R --no-preserve=mode ${brokenPackages.outPath}/* ${elpaDevelop}
+    find ${brokenPackages.outPath} -maxdepth 1 -type d \
+      -exec cp --no-preserve=mode -vR {} ${elpaDevelop} \;
   '';
 }
