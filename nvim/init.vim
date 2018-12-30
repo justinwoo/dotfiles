@@ -89,9 +89,9 @@ command SourceDot :source ~/.dotfiles/nvim/init.vim
 set hidden
 
 let g:LanguageClient_serverCommands = {
-    \ 'purescript': ['purescript-language-server'],
+    \ 'purescript': ['purescript-language-server', '--stdio', '--config', '{}']
     \ }
 
-nnoremap <silent> ,h :call LanguageClient#textDocument_hover()<CR>
-nnoremap <silent> ,d :call LanguageClient#textDocument_definition()<CR>
-nnoremap <silent> ,r :call LanguageClient#textDocument_rename()<CR>
+nnoremap ,h :call LanguageClient#textDocument_hover()<CR>
+nnoremap ,d :call LanguageClient#textDocument_definition()<CR>
+nnoremap ,r :call LanguageClient#textDocument_rename()<CR>
