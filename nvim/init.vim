@@ -83,7 +83,7 @@ if executable('rg')
 endif
 
 "yup
-command SourceDot :source ~/.dotfiles/nvim/init.vim
+command! SourceDot :source ~/.dotfiles/nvim/init.vim
 
 " Required for operations modifying multiple buffers like rename.
 set hidden
