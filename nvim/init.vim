@@ -95,3 +95,5 @@ let g:LanguageClient_serverCommands = {
 nnoremap ,h :call LanguageClient#textDocument_hover()<CR>
 nnoremap ,d :call LanguageClient#textDocument_definition()<CR>
 nnoremap ,r :call LanguageClient#textDocument_rename()<CR>
+
+au FileType purescript let &l:commentstring='-- %s'
