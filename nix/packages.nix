@@ -110,6 +110,7 @@ in   i3-pkgs
     emacs
     neovim
     bash-completion
+    playerctl
     pavucontrol
     nodejs-10_x
     disper
