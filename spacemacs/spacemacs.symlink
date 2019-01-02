@@ -1,5 +1,5 @@
-;; vim: syntax=lisp
 ;; -*- mode: emacs-lisp -*-
+;; vim: syntax=lisp
 ;; This file is loaded by Spacemacs at startup.
 ;; It must be stored in your home directory.
 
@@ -516,7 +516,6 @@ dump."
 
 (defun my/purescript-config ()
   "purescript"
-    ;; purescript
   (use-package purescript-mode
     :ensure t
     :load-path "~/Code/purescript-mode/"
@@ -754,4 +753,11 @@ layers configuration. You are free to put any user code."
   ;; no powerline freaking separator
   ;; what the fuck did this break forward search before
   (setq powerline-default-separator 'bar)
+
+  ;; good job evil indent
+  (defun turn-off-evil-auto-indent ()
+    (setq-local evil-auto-indent nil))
+
+  (add-hook 'haskell-mode-hook #'turn-off-evil-auto-indent)
+  (add-hook 'purescript-mode-hook #'turn-off-evil-auto-indent)
   )
