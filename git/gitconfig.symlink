@@ -5,6 +5,7 @@
         helper = cache
 [alias]
         co = checkout
+        cl = clean
         br = branch
         st = status
         re = rebase
