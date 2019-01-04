@@ -5,7 +5,6 @@
 
   # these are all broken because of missing packages
 
-  # doom-modeline
   # evil-escape
   # evil-unimpaired
 
@@ -40,6 +39,7 @@
   dhall-mode
   diff-hl
   diminish
+  doom-modeline
   dotenv-mode
   dumb-jump
   eldoc-eval
