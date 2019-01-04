@@ -17,6 +17,7 @@
   alert
   all-the-icons
   anzu
+  apiwrap
   async
   auto-compile
   auto-complete
@@ -79,6 +80,7 @@
   fuzzy
   gh-md
   ghub
+  ghub-plus
   git-commit
   git-gutter
   git-gutter-fringe
@@ -136,6 +138,7 @@
   magit-gitflow
   magit-popup
   magit-svn
+  magithub
   markdown-mode
   markdown-toc
   memoize

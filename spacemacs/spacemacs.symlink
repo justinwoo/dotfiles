@@ -59,7 +59,7 @@ This function should only modify configuration layer settings."
                                       dash
                                       dash-functional
                                       gxref
-                                      forge
+                                      magithub
                                       (dhall-mode
                                        :location
                                        (recipe
