@@ -20,8 +20,11 @@
         editor = vim
 [apply]
         whitespace = nowarn
-[mergetool]
-        keepBackup = false
+[merge]
+    tool = vimdiff
+    conflictstyle = diff3
+[mergetool "vimdiff"]
+    cmd = nvim -d $BASE $LOCAL $REMOTE $MERGED -c '$wincmd w' -c 'wincmd J'
 [difftool]
         prompt = false
 [help]
