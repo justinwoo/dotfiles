@@ -1,13 +1,13 @@
-{ pkgs ? import <nixpkgs> {} }:
+{ pkgs ? import ./pinned.nix {} }:
 
 {
   inherit (pkgs.emacsMelpa)
 
   # these are all broken because of missing packages
+
   # doom-modeline
   # evil-escape
   # evil-unimpaired
-  # shrink-path
 
   ac-ispell
   ace-jump-helm-line
@@ -178,6 +178,7 @@
   restart-emacs
   rjsx-mode
   s
+  shrink-path
   smartparens
   smeargle
   solarized-theme
