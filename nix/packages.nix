@@ -123,6 +123,7 @@ in   i3-pkgs
     jq
     colormake
     nix-bash-completions
+    sqlitebrowser
     perl
     perlcritic
     shellcheck;
