@@ -60,15 +60,8 @@ This function should only modify configuration layer settings."
                                       dash-functional
                                       gxref
                                       magithub
-                                      (dhall-mode
-                                       :location
-                                       (recipe
-                                        :fetcher github
-                                        :repo "justinwoo/dhall-mode"
-                                        :branch "my-fixes"))
+                                      dhall-mode
                                       haskell-mode
-                                      nix-mode
-                                      purescript-mode
                                       counsel
                                       web-mode
                                       rjsx-mode
@@ -519,12 +512,12 @@ dump."
   "purescript"
   (use-package purescript-mode
     :ensure t
-    :load-path "~/Code/purescript-mode/"
+    :load-path "~/.nix-profile/elisp/purescript-mode-local/"
     :diminish 'purescript-indentation-mode)
 
   (use-package psc-ide
     :ensure t
-    :load-path "~/Code/psc-ide-emacs/"
+    :load-path "~/.nix-profile/elisp/psc-ide-local/"
     :init
     (progn
       (add-hook 'purescript-mode-hook 'turn-on-purescript-indentation)
@@ -728,9 +721,13 @@ layers configuration. You are free to put any user code."
   ;; nix
   (use-package nix-mode
     :ensure t
+    :load-path "~/.nix-profile/elisp/nix-mode/"
     :mode "\\.nix\\'"
     :custom
     (nix-indent-function #'nix-indent-line))
+
+  ;; (with-eval-after-load 'company
+  ;;   (add-to-list 'company-backends 'company-psc-ide-backend)))
 
   ;; holy fucking shit
   (setq-default search-invisible t)
@@ -762,3 +759,5 @@ layers configuration. You are free to put any user code."
   (add-hook 'haskell-mode-hook #'turn-off-evil-auto-indent)
   (add-hook 'purescript-mode-hook #'turn-off-evil-auto-indent)
   )
+
+;; after this is trash

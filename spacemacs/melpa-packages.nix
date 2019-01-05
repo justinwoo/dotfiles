@@ -147,7 +147,6 @@
   move-text
   nameless
   neotree
-  nix-mode
   open-junk-file
   org-brain
   org-bullets
@@ -174,8 +173,6 @@
   powerline
   prettier-js
   projectile
-  psc-ide
-  purescript-mode
   rainbow-delimiters
   request
   restart-emacs
