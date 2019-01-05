@@ -121,6 +121,7 @@ in   i3-pkgs
     ripgrep
     fd
     jq
+    colordiff
     colormake
     nix-bash-completions
     sqlitebrowser
