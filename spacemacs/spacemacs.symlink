@@ -59,7 +59,6 @@ This function should only modify configuration layer settings."
                                       dash
                                       dash-functional
                                       gxref
-                                      magithub
                                       dhall-mode
                                       haskell-mode
                                       counsel
