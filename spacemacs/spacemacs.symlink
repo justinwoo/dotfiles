@@ -755,6 +755,9 @@ layers configuration. You are free to put any user code."
 
   (add-hook 'haskell-mode-hook #'turn-off-evil-auto-indent)
   (add-hook 'purescript-mode-hook #'turn-off-evil-auto-indent)
+  (add-to-list 'spacemacs-indent-sensitive-modes 'nix-mode)
+  (add-to-list 'spacemacs-indent-sensitive-modes 'purescript-mode)
+  (add-to-list 'spacemacs-indent-sensitive-modes 'haskell-mode)
   )
 
 ;; after this is trash
