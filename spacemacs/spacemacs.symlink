@@ -510,12 +510,10 @@ dump."
 (defun my/purescript-config ()
   "purescript"
   (use-package purescript-mode
-    :ensure t
     :load-path "~/.nix-profile/elisp/purescript-mode-local/"
     :diminish 'purescript-indentation-mode)
 
   (use-package psc-ide
-    :ensure t
     :load-path "~/.nix-profile/elisp/psc-ide-local/"
     :init
     (progn
@@ -719,7 +717,6 @@ layers configuration. You are free to put any user code."
 
   ;; nix
   (use-package nix-mode
-    :ensure t
     :load-path "~/.nix-profile/elisp/nix-mode/"
     :mode "\\.nix\\'"
     :custom
@@ -760,3 +757,5 @@ layers configuration. You are free to put any user code."
   )
 
 ;; after this is trash
+(setq custom-file "/dev/null")
+(load custom-file)
