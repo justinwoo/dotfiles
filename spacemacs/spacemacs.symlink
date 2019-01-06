@@ -510,8 +510,9 @@ dump."
 (defun my/purescript-config ()
   "purescript"
   (use-package purescript-mode
-    :load-path "~/.nix-profile/elisp/purescript-mode-local/"
-    :diminish 'purescript-indentation-mode)
+    :load-path "~/Code/new-purescript-mode/")
+    ;; :load-path "~/.nix-profile/elisp/purescript-mode-local/"
+    ;; :diminish 'purescript-indentation-mode)
 
   (use-package psc-ide
     :load-path "~/.nix-profile/elisp/psc-ide-local/"
