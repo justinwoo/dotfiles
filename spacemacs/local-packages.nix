@@ -24,8 +24,8 @@ in {
     owner = "justinwoo";
     repo = "psc-ide-emacs";
     # warning: uses my-changes
-    rev = "bbf6f8bd419e59cbaf5e6708c546ebd4cf750fad";
-    sha256 = "0rrc0zairry7pd0xqfxr2ai9dyvbq6b1wnclziyzn72yn9xivpcw";
+    rev = "13fd6bc538b86650037933c11c75ec341c6d9b04";
+    sha256 = "191zj51fqfikqzf44f35vhx5d1dbp99m7kkhd75r3p3nmdvnn8i8";
   });
 
   nix-mode = mkLocalPackageDrv "nix-mode"

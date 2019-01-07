@@ -516,6 +516,7 @@ dump."
 
   (use-package psc-ide
     :load-path "~/.nix-profile/elisp/psc-ide-local/"
+    ;; :load-path "~/Code/psc-ide-emacs/"
     :init
     (progn
       (add-hook 'purescript-mode-hook 'psc-ide-mode)
@@ -736,7 +737,6 @@ layers configuration. You are free to put any user code."
 
   ;; make ; do :
   (define-key evil-normal-state-map (kbd ";") 'evil-ex)
-  (define-key evil-normal-state-map (kbd ":") 'evil-repeat-find-char)
 
   ;; make Q do @q
   (define-key evil-normal-state-map (kbd "Q") 'evil-execute-macro)
