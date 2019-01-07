@@ -1,4 +1,4 @@
-{ pkgs ? import ./pinned.nix {} }:
+{ pkgs ? import ../nix/pinned.nix {} }:
 
 {
   inherit (pkgs.emacsMelpa)

@@ -1,4 +1,4 @@
-{ pkgs ? import ./pinned.nix {} }:
+{ pkgs ? import ../nix/pinned.nix {} }:
 
 let
   mkLocalPackageDrv = name: src:

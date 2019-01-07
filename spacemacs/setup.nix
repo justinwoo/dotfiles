@@ -1,7 +1,7 @@
 #!/usr/bin/env nix-shell
 #!nix-shell ./setup.nix --run exit
 
-{ pkgs ? import ./pinned.nix {} }:
+{ pkgs ? import ../nix/pinned.nix {} }:
 
 let
   elpaDevelop = "~/.emacs.d/elpa/26.1/develop/";
