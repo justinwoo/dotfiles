@@ -518,7 +518,6 @@ dump."
     :load-path "~/.nix-profile/elisp/psc-ide-local/"
     :init
     (progn
-      (add-hook 'purescript-mode-hook 'turn-on-purescript-indentation)
       (add-hook 'purescript-mode-hook 'psc-ide-mode)
       (add-hook 'purescript-mode-hook 'company-mode)
       (add-hook 'purescript-mode-hook 'flycheck-mode)
