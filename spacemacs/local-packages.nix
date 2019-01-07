@@ -23,9 +23,9 @@ in {
   (pkgs.fetchFromGitHub {
     owner = "justinwoo";
     repo = "psc-ide-emacs";
-    # warning: uses dont-filter-unimported-qualified
-    rev = "5cf3be7e5222b4df8fa6f9791b7fd41f793943d7";
-    sha256 = "1zb8idvdzxi42m6d93wycw4s0yimcc86vfihmc1nvkf6m8kb493n";
+    # warning: uses my-changes
+    rev = "bbf6f8bd419e59cbaf5e6708c546ebd4cf750fad";
+    sha256 = "0rrc0zairry7pd0xqfxr2ai9dyvbq6b1wnclziyzn72yn9xivpcw";
   });
 
   nix-mode = mkLocalPackageDrv "nix-mode"
