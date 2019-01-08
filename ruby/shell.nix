@@ -17,7 +17,6 @@ pkgs.stdenv.mkDerivation rec {
   libPath = pkgs.lib.makeLibraryPath buildInputs;
 
  shellHook = ''
-    # export PKG_CONFIG_PATH=${pkgs.libxml2}/lib/pkgconfig:${pkgs.libxslt}/lib/pkgconfig:${pkgs.zlib}/lib/pkgconfig:${pkgs.mysql}/lib/pkgconfig:${pkgs.imagemagickBig}/lib/pkgconfig
     export C_INCLUDE_PATH=${libPath}
 
     mkdir -p $HOME/.gems
