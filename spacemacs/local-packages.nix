@@ -11,14 +11,6 @@ let
   '';
 in {
 
-  purescript-mode = mkLocalPackageDrv "purescript-mode-local"
-  (pkgs.fetchFromGitHub {
-    owner = "justinwoo";
-    repo = "purescript-mode";
-    rev = "a6c7e4cc5ea29cf96478490a57d495e745d6e054";
-    sha256 = "0x6w9sgvq3xxxv4fni94acr2q683p81k7ipd7sc27yv8zzj2giyv";
-  });
-
   psc-ide-local = mkLocalPackageDrv "psc-ide-local"
   (pkgs.fetchFromGitHub {
     owner = "justinwoo";
