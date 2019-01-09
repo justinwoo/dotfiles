@@ -56,8 +56,8 @@ let
   alacritty = pkgs.stdenv.mkDerivation {
     name = "alacritty";
     src = pkgs.fetchurl {
-      url = "https://github.com/jwilm/alacritty/releases/download/v0.2.4/Alacritty-v0.2.4-x86_64.tar.gz";
-      sha256 = "1c851ym66fpjrpvkl4g9ivcpajdg5cq0c15jjlgic9smwxhq9rqx";
+      url = "https://github.com/jwilm/alacritty/releases/download/v0.2.5/Alacritty-v0.2.5-x86_64.tar.gz";
+      sha256 = "1w77apqkvmjcl54lvbi5awkxmg3zmxpsnc6rcisi63k3ck901hq2";
     };
 
     unpackPhase = ''
