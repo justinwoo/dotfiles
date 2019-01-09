@@ -528,8 +528,8 @@ dump."
     ;; :diminish 'purescript-indentation-mode)
 
   (use-package psc-ide
-    :load-path "~/.nix-profile/elisp/psc-ide-local/"
-    ;; :load-path "~/Code/psc-ide-emacs/"
+    ;; :load-path "~/.nix-profile/elisp/psc-ide-local/"
+    :load-path "~/Code/psc-ide-emacs/"
     :init
     (progn
       (add-hook 'purescript-mode-hook 'psc-ide-mode)
