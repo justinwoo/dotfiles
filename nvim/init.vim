@@ -7,6 +7,9 @@ let g:netrw_browse_split = 0
 ""use the system clipboard
 set clipboard=unnamedplus
 
+" dio porco
+set bg=light
+
 "asdfsdf
 set expandtab
 set tabstop=2
