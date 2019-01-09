@@ -507,6 +507,19 @@ dump."
   (add-hook 'org-mode-hook 'my/org-mode-hook)
   (setq org-bullets-bullet-list '("大" "中" "小" "・")))
 
+(defun my-build-psc-package-project ()
+  "build my project man"
+  (interactive)
+  (save-buffer)
+  (let ((default-directory (projectile-project-root))
+        (success-buffer-name "*PSC-PACKAGE BUILD SUCCESS*")
+        (error-buffer-name "*PSC-PACKAGE BUILD ERRORS*"))
+    (if (file-exists-p "psc-package.json")
+        (shell-command "psc-package build" success-buffer-name error-buffer-name)
+      (if (get-buffer error-buffer-name)
+          (switch-to-buffer-other-window error-buffer-name)
+        (switch-to-buffer-other-window success-buffer-name)))))
+
 (defun my/purescript-config ()
   "purescript"
   (use-package purescript-mode
@@ -529,6 +542,7 @@ dump."
         "mcs" 'psc-ide-case-split
         "ms"  'psc-ide-server-start
         "mb"  'psc-ide-rebuild
+        "mB"  'my-build-psc-package-project
         "mq"  'psc-ide-server-quit
         "ml"  'psc-ide-load-all
         "mL"  'psc-ide-load-module
