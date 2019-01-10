@@ -125,6 +125,7 @@ in   i3-pkgs
     colormake
     nix-bash-completions
     sqlitebrowser
+    gitg
     perl
     perlcritic
     shellcheck;
