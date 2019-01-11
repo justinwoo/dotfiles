@@ -3,7 +3,7 @@ let
   easy-dhall = import ./easy-dhall.nix;
   easy-ps = import ./easy-ps.nix {};
 
-  i3-pkgs = {
+  i3-pkgs = rec {
     i3 = pkgs.i3;
     # old overrides:
     # i3 = pkgs.i3.overrideAttrs (old: rec {
@@ -16,10 +16,24 @@ let
       # };
     # });
 
+    # polybar = pkgs.runCommand "polybar-i3-wrapped" {
+    #   src = pkgs.polybar;
+    #   buildInputs = [ pkgs.makeWrapper ];
+    # } ''
+    #   cp --no-preserve=mode -vR $src $out
+    #   chmod -R +x $out/bin
+    #   polybar=$out/bin/polybar
+    #   wrapProgram $polybar \
+    #     --prefix PATH : ${i3}/bin
+    # '';
+
+    polybar = pkgs.polybar.override {
+      i3Support = true;
+    };
+
     inherit (pkgs)
     scrot
     i3status
-    polybar
     feh
     rofi;
   };

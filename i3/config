@@ -6,6 +6,9 @@ exec fcitx-autostart
 # backgrounds
 exec ~/.dotfiles/bin/set-bg
 
+# polybar
+exec_always ~/.dotfiles/polybar/launch
+
 # start up wifi manager?
 exec ~/.dotfiles/i3/start-wifi
 
@@ -34,7 +37,7 @@ for_window [window_role="dialog"] move window to scratchpad, scratchpad show
 # gaps inner 10
 # gaps outer 10
 # border
-# for_window [class="^.*"] border pixel 3
+for_window [class="^.*"] border pixel 3
 
 # aliases
 set $sup Mod4
@@ -300,17 +303,17 @@ client.urgent           $red        $red        $text
 
 # Start i3bar to display a workspace bar (plus the system information i3status
 # finds out, if available)
-bar {
-        status_command i3status --config ~/.dotfiles/i3/i3status.conf
-        workspace_buttons yes
+# bar {
+#         status_command i3status --config ~/.dotfiles/i3/i3status.conf
+#         workspace_buttons yes
 
-        colors {
-            background         $background
-            statusline         $foreground
-            separator          $highlight
-            focused_workspace  $main-dark  $main-dark  $text
-            active_workspace   $green      $main-dark  $text
-            inactive_workspace $background $background $inactive
-            urgent_workspace   $red        $red        $text
-        }
-}
+#         colors {
+#             background         $background
+#             statusline         $foreground
+#             separator          $highlight
+#             focused_workspace  $main-dark  $main-dark  $text
+#             active_workspace   $green      $main-dark  $text
+#             inactive_workspace $background $background $inactive
+#             urgent_workspace   $red        $red        $text
+#         }
+# }
