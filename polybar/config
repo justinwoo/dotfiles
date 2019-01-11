@@ -54,7 +54,11 @@ interval = 25
 
 mount-0 = /
 
-label-mounted = Free: %free%
+label-mounted = %free%
+format-mounted = <label-mounted>
+format-mounted-prefix = "Free: "
+format-mounted-prefix-foreground = ${colors.foreground-alt}
+
 label-unmounted = %mountpoint% not mounted
 label-unmounted-foreground = ${colors.foreground-alt}
 
@@ -145,6 +149,7 @@ label = %date% %time%
 type = internal/alsa
 
 format-volume-prefix = "Sound: "
+format-volume-prefix-foreground = ${colors.foreground-alt}
 label-volume = %percentage%%
 label-volume-foreground = ${root.foreground}
 
