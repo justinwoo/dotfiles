@@ -19,6 +19,7 @@ let
     inherit (pkgs)
     scrot
     i3status
+    polybar
     feh
     rofi;
   };
