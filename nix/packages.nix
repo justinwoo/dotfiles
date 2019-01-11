@@ -16,17 +16,6 @@ let
       # };
     # });
 
-    # polybar = pkgs.runCommand "polybar-i3-wrapped" {
-    #   src = pkgs.polybar;
-    #   buildInputs = [ pkgs.makeWrapper ];
-    # } ''
-    #   cp --no-preserve=mode -vR $src $out
-    #   chmod -R +x $out/bin
-    #   polybar=$out/bin/polybar
-    #   wrapProgram $polybar \
-    #     --prefix PATH : ${i3}/bin
-    # '';
-
     polybar = pkgs.polybar.override {
       i3Support = true;
       pulseSupport = true;
