@@ -119,6 +119,7 @@ in   i3-pkgs
     tig
     tmux
     fzf
+    xdotool
     ripgrep
     fd
     jq
