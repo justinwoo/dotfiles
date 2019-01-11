@@ -29,6 +29,7 @@ let
 
     polybar = pkgs.polybar.override {
       i3Support = true;
+      pulseSupport = true;
     };
 
     inherit (pkgs)
