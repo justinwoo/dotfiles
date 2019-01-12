@@ -34,9 +34,9 @@ module-margin-right = 2
 
 font-0 = Noto Sans CJK JP:fontformat=truetype=14;1
 
-modules-left = i3
-modules-center = xwindow
-modules-right = wlan filesystem alsa pulseaudio battery date
+modules-left = i3 xwindow
+modules-center =
+modules-right = wlan filesystem pulseaudio battery date
 
 tray-position = right
 tray-padding = 2
@@ -56,7 +56,7 @@ mount-0 = /
 
 label-mounted = %free%
 format-mounted = <label-mounted>
-format-mounted-prefix = "Free: "
+format-mounted-prefix = "空: "
 format-mounted-prefix-foreground = ${colors.foreground-alt}
 
 label-unmounted = %mountpoint% not mounted
@@ -117,7 +117,7 @@ type = internal/network
 interface = wlp2s0
 interval = 3.0
 
-label-connected = "%ifname%: %essid% %local_ip% %signal%"
+label-connected = "%ifname%: %essid% %signal%%"
 format-connected-foreground = ${colors.green}
 format-disconnected =
 
@@ -137,27 +137,23 @@ format-disconnected =
 type = internal/date
 interval = 5
 
-date = " %Y-%m-%d"
+date = " %Y年%m月%d日"
 time = %H:%M
 
-format-prefix = "Date: "
+format-prefix = "現在: "
 format-prefix-foreground = ${colors.foreground-alt}
 
 label = %date% %time%
 
 [module/pulseaudio]
-inherit = module/alsa
 type = internal/pulseaudio
 
-[module/alsa]
-type = internal/alsa
-
-format-volume-prefix = "Sound: "
+format-volume-prefix = "音量: "
 format-volume-prefix-foreground = ${colors.foreground-alt}
 label-volume = %percentage%%
 label-volume-foreground = ${root.foreground}
 
-format-muted-prefix = "Muted: "
+format-muted-prefix = "無音: "
 format-muted-foreground = ${colors.yellow}
 label-muted = %percentage%%
 
@@ -166,6 +162,10 @@ type = internal/battery
 battery = BAT0
 adapter = ADP1
 full-at = 95
+label-discharging = %percentage%%
+format-discharging = <label-discharging>
+format-discharging-prefix = "電池: "
+format-discharging-prefix-foreground = ${colors.foreground-alt}
 
 [settings]
 screenchange-reload = true
