@@ -100,6 +100,8 @@ let
     evince;
   };
 
+  firefox = import ./firefox.nix { inherit pkgs; };
+
 in   i3-pkgs
   // dhall-pkgs
   // ps-pkgs
@@ -109,6 +111,7 @@ in   i3-pkgs
     inherit update-fetch-derivations;
     inherit polyglot;
     inherit alacritty;
+    inherit firefox;
     inherit (pkgs)
     noto-fonts-cjk
     gnumake
