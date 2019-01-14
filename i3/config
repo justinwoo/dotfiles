@@ -13,7 +13,7 @@ exec_always ~/.dotfiles/polybar/launch
 exec ~/.dotfiles/i3/start-wifi
 
 # set the font
-font pango:Noto Sans CJK JP 12
+font pango:Noto Sans CJK JP 10
 
 # for_window
 # see xprop, xwindow
@@ -33,11 +33,9 @@ for_window [window_role="dialog"] move window to scratchpad, scratchpad show
 
  # normal, dialog, utility, toolbar, splash, menu, dropdown_menu, popup_menu, tooltip and notification
 
-# gaps
-# gaps inner 10
-# gaps outer 10
 # border
-for_window [class="^.*"] border pixel 3
+for_window [class="^.*"] border normal 1
+hide_edge_borders both
 
 # aliases
 set $sup Mod4
