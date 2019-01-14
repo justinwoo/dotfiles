@@ -161,7 +161,17 @@ label-muted = %percentage%%
 type = internal/battery
 battery = BAT0
 adapter = ADP1
-full-at = 95
+
+label-full = %percentage%%
+format-full = <label-full>
+format-full-prefix = "満電: "
+format-full-prefix-foreground = ${colors.foreground-alt}
+
+label-charging = %percentage%%
+format-charging= <label-charging>
+format-charging-prefix = "充電: "
+format-charging-prefix-foreground = ${colors.foreground-alt}
+
 label-discharging = %percentage%%
 format-discharging = <label-discharging>
 format-discharging-prefix = "電池: "
