@@ -104,7 +104,7 @@ interface = wlp2s0
 interval = 3.0
 
 label-connected = "%ifname%: %essid% %signal%%"
-format-connected-foreground = ${colors.green}
+format-connected-underline = ${colors.green}
 format-disconnected =
 
 [module/eth]
