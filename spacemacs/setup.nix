@@ -4,7 +4,7 @@
 { pkgs ? import ../nix/pinned.nix {} }:
 
 let
-  elpaDevelop = "~/.emacs.d/elpa/26.1/develop/";
+  elpaDevelop = "~/.emacs.d/elpa/develop/";
   melpaPackages = import ./melpa-packages.nix { inherit pkgs; };
   cpMelpaPackages = drv: ''
     mkdir -p ${elpaDevelop}
