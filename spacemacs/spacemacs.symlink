@@ -521,6 +521,17 @@ dump."
         (switch-to-buffer-other-window error-buffer-name)
       (switch-to-buffer-other-window success-buffer-name))))
 
+(defun my-psc-ide-server-kill-buffer ()
+  "die"
+  (interactive)
+  (kill-buffer (get-buffer "*psc-ide-server*")))
+
+(defun my-psc-ide-server-restart ()
+  "die"
+  (interactive)
+  (kill-buffer (get-buffer "*psc-ide-server*"))
+  (psc-ide-server-start (psc-ide-suggest-project-dir)))
+
 (defun my/purescript-config ()
   "purescript"
   (use-package purescript-mode
@@ -542,9 +553,10 @@ dump."
         "mt"  'psc-ide-add-clause
         "mcs" 'psc-ide-case-split
         "ms"  'psc-ide-server-start
+        "mr"  'my-psc-ide-server-restart
         "mb"  'psc-ide-rebuild
         "mB"  'my-build-psc-package-project
-        "mq"  'psc-ide-server-quit
+        "mq"  'my-psc-ide-server-kill-buffer
         "ml"  'psc-ide-load-all
         "mL"  'psc-ide-load-module
         "mia" 'psc-ide-add-import
