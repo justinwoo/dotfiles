@@ -515,10 +515,11 @@ dump."
         (success-buffer-name "*PSC-PACKAGE BUILD SUCCESS*")
         (error-buffer-name "*PSC-PACKAGE BUILD ERRORS*"))
     (if (file-exists-p "psc-package.json")
-        (shell-command "psc-package build" success-buffer-name error-buffer-name)
-      (if (get-buffer error-buffer-name)
-          (switch-to-buffer-other-window error-buffer-name)
-        (switch-to-buffer-other-window success-buffer-name)))))
+        (shell-command "psc-package build -- 'test/**/*.purs'" success-buffer-name error-buffer-name)
+      (error "wtf no psc-package.json"))
+    (if (get-buffer error-buffer-name)
+        (switch-to-buffer-other-window error-buffer-name)
+      (switch-to-buffer-other-window success-buffer-name))))
 
 (defun my/purescript-config ()
   "purescript"
