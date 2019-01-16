@@ -302,6 +302,6 @@ set $green #859900
 set $primary #ffb52a
 
 client.focused          $blue  $blue  $base2
-client.unfocused        $base2 $base2 $base1
-client.focused_inactive $base2 $base2 $cyan
+client.unfocused        $base1 $base1 $base2
+client.focused_inactive $base1 $base1 $base2
 client.urgent           $red   $red   $base2
