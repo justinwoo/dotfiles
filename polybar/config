@@ -170,7 +170,8 @@ format-charging= <label-charging>
 format-charging-prefix = "充電: "
 format-charging-prefix-foreground = ${colors.foreground-alt}
 
-label-discharging = %percentage%%
+time-format = "%H:%M"
+label-discharging = %percentage%% (%time%)
 format-discharging = <label-discharging>
 format-discharging-prefix = "電池: "
 format-discharging-prefix-foreground = ${colors.foreground-alt}
