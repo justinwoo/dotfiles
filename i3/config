@@ -13,7 +13,7 @@ exec_always ~/.dotfiles/polybar/launch
 exec ~/.dotfiles/i3/start-wifi
 
 # set the font
-font pango:Noto Sans CJK JP 10
+font pango: Noto Sans CJK JP Bold 10
 
 # for_window
 # see xprop, xwindow
