@@ -1,15 +1,27 @@
 [colors]
-background = #222
-background-alt = #444
-foreground = #dfdfdf
-foreground-alt = #555
+# solarized
+base03 = #002b36
+base02 = #073642
+base01 = #586e75
+base00 = #657b83
+base0 = #839496
+base1 = #93a1a1
+base2 = #eee8d5
+base3 = #fdf6e3
+yellow = #b58900
+orange = #cb4b16
+red = #dc322f
+magenta = #d33682
+violet = #6c71c4
+blue = #268bd2
+cyan = #2aa198
+green = #859900
+
+foreground = ${colors.base03}
+foreground-alt = ${colors.base00}
+background = ${colors.base2}
+background-alt = ${colors.base1}
 primary = #ffb52a
-secondary = #e60053
-alert = #bd2c40
-highlight = #efef8f
-yellow = #ccdc90
-green = #88b090
-red = #ef2929
 
 [bar/example]
 width = 100%
@@ -95,7 +107,7 @@ label-visible-padding = ${self.label-focused-padding}
 
 ; urgent = Workspace with urgency hint set
 label-urgent = %index%!
-label-urgent-background = ${colors.alert}
+label-urgent-background = ${colors.red}
 label-urgent-padding = 2
 
 [module/wlan]
