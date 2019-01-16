@@ -514,12 +514,15 @@ dump."
   (let ((default-directory (projectile-project-root))
         (success-buffer-name "*PSC-PACKAGE BUILD SUCCESS*")
         (error-buffer-name "*PSC-PACKAGE BUILD ERRORS*"))
+    (when (buffer-live-p (get-buffer success-buffer-name)) (kill-buffer success-buffer-name))
+    (when (buffer-live-p (get-buffer error-buffer-name)) (kill-buffer error-buffer-name))
     (if (file-exists-p "psc-package.json")
         (shell-command "psc-package build -- 'test/**/*.purs'" success-buffer-name error-buffer-name)
       (error "wtf no psc-package.json"))
     (if (get-buffer error-buffer-name)
         (switch-to-buffer-other-window error-buffer-name)
-      (switch-to-buffer-other-window success-buffer-name))))
+      (switch-to-buffer-other-window success-buffer-name)
+      (print "Project build succeeded."))))
 
 (defun my-psc-ide-server-kill-buffer ()
   "die"
