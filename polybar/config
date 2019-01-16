@@ -24,7 +24,7 @@ line-size = 5
 line-color = #f00
 
 border-size = 3
-border-color = #00000000
+border-color = ${colors.background}
 
 padding-left = 1
 padding-right = 1
