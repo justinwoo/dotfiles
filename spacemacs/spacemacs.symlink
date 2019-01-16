@@ -522,7 +522,7 @@ dump."
     (if (get-buffer error-buffer-name)
         (switch-to-buffer-other-window error-buffer-name)
       (switch-to-buffer-other-window success-buffer-name)
-      (print "Project build succeeded."))))
+      (message "Project build succeeded."))))
 
 (defun my-psc-ide-server-kill-buffer ()
   "die"
