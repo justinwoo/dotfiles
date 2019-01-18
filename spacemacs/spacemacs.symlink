@@ -187,7 +187,6 @@ It should only modify the values of Spacemacs settings."
    dotspacemacs-themes '(
                          spacemacs-light
                          spacemacs-dark
-                         solarized-dark
                          leuven
                          monokai
                          zenburn)
