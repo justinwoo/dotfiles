@@ -21,7 +21,6 @@ foreground = ${colors.base03}
 foreground-alt = ${colors.base00}
 background = ${colors.base2}
 background-alt = ${colors.base1}
-primary = #ffb52a
 
 [bar/example]
 width = 100%
@@ -82,8 +81,8 @@ index-sort = true
 wrapping-scroll = false
 
 label-mode-padding = 2
-label-mode-foreground = #000
-label-mode-background = ${colors.primary}
+label-mode-foreground = ${colors.background}
+label-mode-background = ${colors.blue}
 
 label-empty = %index%
 label-empty-foreground = ${colors.foreground-alt}
@@ -91,7 +90,8 @@ label-empty-padding = 2
 
 ; focused = Active workspace on focused monitor
 label-focused = %index%
-label-focused-background = ${colors.primary}
+label-focused-foreground = ${colors.background}
+label-focused-background = ${colors.blue}
 label-focused-padding = 2
 
 ; unfocused = Inactive workspace on any monitor
