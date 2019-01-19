@@ -4,8 +4,11 @@
 
 set -e
 
-cd "$(dirname $0)"/..
+cd "$(dirname "$0")"/..
 
 # find the installers and run them iteratively
-find . -name install.sh | while read installer ; do sh -c "${installer}" ; done
-find . -name install.bash | while read installer ; do sh -c "${installer}" ; done
+find . -name install.sh | while read -r installer ; do sh -c "${installer}" ; done
+find . -name install.bash | while read -r installer ; do sh -c "${installer}" ; done
+
+echo
+echo 'Done.'
