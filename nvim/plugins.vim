@@ -2,7 +2,7 @@ call plug#begin('~/.local/share/nvim/plugged')
 
 " utilities
 Plug 'vim-syntastic/syntastic'
-Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
+Plug 'junegunn/fzf'
 Plug 'junegunn/fzf.vim'
 Plug 'junegunn/vim-easy-align'
 Plug 'mileszs/ack.vim' " search inside files using ack. Same as command line ack utility, but use :Ack

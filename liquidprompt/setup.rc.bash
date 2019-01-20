@@ -6,7 +6,7 @@ export LP_MARK_UNTRACKED="異物"
 export LP_MARK_STASH="在庫"
 
 # Only load Liquid Prompt in interactive shells, not from a script or from scp
-if [ ! -z "$PS1" ]
+if [ -n "$PS1" ]
 then
   # shellcheck source=/dev/null
   source "$HOME/.nix-profile/liquidprompt/liquidprompt";
